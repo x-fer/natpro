@@ -1,30 +1,33 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
+  title: 'NatPro',
+  tagline: 'Materijali za natjecateljsko programiranje',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'ivvlspirit', // Usually your GitHub org/user name.
+  projectName: 'natpro', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'NatPro',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
-          to: 'docs/',
+          to: 'docs/sadrzaj',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Materijali',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          to: 'blog', 
+          label: 'Blog', 
+          position: 'left'},
+        {
+          href: 'https://github.com/ivvlspirit/natpro',
           label: 'GitHub',
           position: 'right',
         },
@@ -34,11 +37,11 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Materijali',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: 'Sadržaj',
+              to: 'docs/sadrzaj',
             },
             {
               label: 'Second Doc',
@@ -50,16 +53,16 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'YouTube',
+              href: 'https://youtube.com/user/ivanvlahov922',
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://discord.gg/62mzTshz',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: 'https://twitter.com/IvanV8',
             },
           ],
         },
@@ -72,12 +75,12 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/ivvlspirit/natpro',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Ivan Vlahov. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -88,7 +91,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/ivvlspirit/natpro/tree/main/website',
         },
         blog: {
           showReadingTime: true,

@@ -17,7 +17,7 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/sadrzaj',
+          to: 'docs/uvod/sadrzaj',
           activeBasePath: 'docs',
           label: 'Materijali',
           position: 'left',
@@ -41,7 +41,7 @@ module.exports = {
           items: [
             {
               label: 'Sadržaj',
-              to: 'docs/sadrzaj',
+              to: 'docs/uvod/sadrzaj',
             },
             {
               label: 'Second Doc',

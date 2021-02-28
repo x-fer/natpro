@@ -88,7 +88,7 @@ Veza s referencom: ![alt text][logo]
 
 Možete koristiti i veze na mape u ovom projektu (slike spremajte u mapu `static/img`).
 
-![img](../static/img/logo.svg)
+![img](../../static/img/logo.svg)
 
 ---
 

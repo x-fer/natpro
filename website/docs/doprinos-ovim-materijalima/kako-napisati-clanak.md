@@ -6,13 +6,13 @@ title: Kako napisati članak?
 
 Da biste napravili _fork_ ovog repozitorija, trebate imati GitHub račun. Odite na stranicu repozitorija, te u gornjem desnom kutu pritisnite na gumb **Fork**.
 
-!['Fork gumb'](../static/img/fork-1.png)
+!['Fork gumb'](../../static/img/fork-1.png)
 
 Za sljedeći korak na računalu trebate imati instaliran git. Trebate _klonirati_ repozitorij na svoje računalo koristeći naredbu 
 
 `git clone https://github.com/vaše-korisničko-ime/natpro.git`
 
-u naredbenom retku (zamijenite dio vaše-korisničko-ime sa svojim korisničkim imenom), te u njemu možete početi pisati svoj novi članak u mapi `docs`.
+u naredbenom retku (zamijenite dio vaše-korisničko-ime sa svojim korisničkim imenom), te u njemu možete početi pisati svoj novi članak u mapi `docs/ime-poglavlja`, gdje `ime-poglavlja` označava stvarno ime poglavlja za koje pišete članak, napisano malim slovima, bez dijakritičkih i interpunkcijskih znakova, s crticama umjesto razmaka.
 
 Ime datoteke članka mora koliko-toliko odgovarati naslovu članka: umjesto razmaka treba koristiti crticu (-), umjesto slova čćđšž treba koristiti ccdsz, te ne koristiti interpunkcijske znakove. Na primjer, za članak s naslovom `Kako napisati članak?`, datoteka se treba zvati `kako-napisati-clanak.md`.
 

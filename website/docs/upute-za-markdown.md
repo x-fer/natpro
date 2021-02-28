@@ -78,15 +78,15 @@ Ovaj tekst služi samo da pokažemo da nakon njega mogu slijediti veze referenci
 
 ## Slike
 
-Here's our logo (hover to see the title text):
+Prikaz slika (prijeđite mišem preko slike za alt-tekst):
 
-Inline-style: ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 1')
+Veza u jednom redu: ![alternativni tekst](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo tekst 1')
 
-Reference-style: ![alt text][logo]
+Veza s referencom: ![alt text][logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 2'
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo tekst 2'
 
-Images from any folder can be used by providing path to file. Path should be relative to markdown file.
+Možete koristiti i veze na mape u ovom projektu (slike spremajte u mapu `static/img`).
 
 ![img](../static/img/logo.svg)
 
@@ -124,22 +124,22 @@ function naglasiMe() {
 
 ---
 
-## Tables
+## Tablice
 
-Colons can be used to align columns.
+Možete koristiti dvotočke da biste namjestili stupce.
 
-| Tables        |      Are      |   Cool |
-| ------------- | :-----------: | -----: |
-| col 3 is      | right-aligned | \$1600 |
-| col 2 is      |   centered    |   \$12 |
-| zebra stripes |   are neat    |    \$1 |
+| Tablice       |      Su         |  Kul   |
+| ------------- | :-----------:   | -----: |
+| stupac 3 je   | pomaknut udesno | $1600  |
+| stupac 2 je   |   centriran     |   $12  |
+| zebre su      |     super       |    $1  |
 
-There must be at least 3 dashes separating each header cell. The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
+Barem 3 crtice moraju dijeliti naslov od ostatka tablice. Vanjske uspravne crte (|) nisu obvezne, te nije potrebno uredno posložiti sve retke i stupce u Markdown obliku. Možete koristiti i Markdown u ćelijama tablica.
 
-| Markdown | Less      | Pretty     |
-| -------- | --------- | ---------- |
-| _Still_  | `renders` | **nicely** |
-| 1        | 2         | 3          |
+| Markdown | se        |    svejedno   |
+| -------- | --------- | ------------- |
+| _skroz_  | `dobro`   | **prikazuje** |
+| 1        | 2         | 3             |
 
 ---
 
@@ -156,7 +156,7 @@ Prekid citata.
 ## HTML
 
 <dl>
-  <dt>List definicija</dt>
+  <dt>Lista definicija</dt>
   <dd>Je nešto što ljudi nekad koriste</dd>
 
   <dt>Markdown u HTML-u</dt>

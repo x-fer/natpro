@@ -2,6 +2,4 @@
 title: Naslov velikim slovom
 ---
 
-Lorem ipsum dolor i tako dalje
-
-
+Ovdje ide sadržaj

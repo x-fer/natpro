@@ -15,6 +15,6 @@ module.exports = {
     // 'Stabla': [],
     // 'Stringovi': [],
     // 'Što dalje': []
-    'Doprinos ovim materijalima': ['upute-za-markdown', 'autori']
+    'Doprinos ovim materijalima': ['kako-napisati-clanak', 'kako-napisati-blog', 'upute-za-markdown', 'autori']
   },
 };

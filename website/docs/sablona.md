@@ -1,7 +1,5 @@
 ---
-id: naslov-malim-slovima-s-crticama
-title: Naslov velikim slovima
-sidebar_label: Isto kao i title
+title: Naslov velikim slovom
 ---
 
 Lorem ipsum dolor i tako dalje

@@ -1,7 +1,5 @@
 ---
-id: autori
 title: Autori
-sidebar_label: Autori
 ---
 
 Autori članaka na ovoj stranici su (abecednim redom):

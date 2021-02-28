@@ -1,7 +1,5 @@
 ---
-id: upute-za-markdown
 title: Upute za Markdown
-sidebar_label: Upute za Markdown
 ---
 
 Možete pisati članke koristeći [GitHub-flavored Markdown sintaksu](https://github.github.com/gfm/)

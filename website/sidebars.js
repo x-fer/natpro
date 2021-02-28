@@ -3,7 +3,7 @@ module.exports = {
     'Uvod': ['sadrzaj', 'preduvjeti', 'savjeti'],
     'Osnovni pojmovi': ['tipicni-program', 'tipovi-podataka', 'osnovna-matematika'],
     'O dobrim algoritmima': ['dobar-algoritam', 'asimptotska-slozenost'],
-    // 'Bitne strukture podataka': [],
+    'Bitne strukture podataka': ['vector', 'set', 'map', 'iteratori', 'ostale-strukture'],
     // 'Sortiranje i pretraživanje': [],
     // 'Pohlepni algoritmi': [],
     // 'Potpuno pretraživanje': [],

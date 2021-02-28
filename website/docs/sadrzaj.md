@@ -1,7 +1,5 @@
 ---
-id: sadrzaj
 title: Sadržaj
-sidebar_label: Sadržaj
 ---
 
 ### Za koga su ovi materijali?

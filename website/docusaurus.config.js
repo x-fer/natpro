@@ -1,7 +1,7 @@
 module.exports = {
   title: 'NatPro',
   tagline: 'Materijali za natjecateljsko programiranje',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://nat-pro.herokuapp.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -19,13 +19,21 @@ module.exports = {
         {
           to: 'docs/uvod/sadrzaj',
           activeBasePath: 'docs',
+          activeBaseRegex: 'docs\/((?!doprinos-ovim-materijalima).)*$',
           label: 'Materijali',
           position: 'left',
         },
         {
           to: 'blog', 
           label: 'Blog', 
-          position: 'left'},
+          position: 'left'
+        },
+        {
+          to: 'docs/doprinos-ovim-materijalima/kako-napisati-clanak',
+          activeBasePath: 'docs/doprinos-ovim-materijalima',
+          label: 'Doprinesite!',
+          position: 'left'
+        },
         {
           href: 'https://github.com/ivvlspirit/natpro',
           label: 'GitHub',
@@ -46,7 +54,7 @@ module.exports = {
           ],
         },
         {
-          title: 'Community',
+          title: 'Društvene mreže',
           items: [
             {
               label: 'YouTube',

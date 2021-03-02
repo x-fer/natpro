@@ -2,17 +2,17 @@
 <rss version="2.0">
     <channel>
         <title>NatPro Blog</title>
-        <link>https://your-docusaurus-test-site.com/blog</link>
+        <link>https://nat-pro.herokuapp.com/blog</link>
         <description>NatPro Blog</description>
-        <lastBuildDate>Thu, 30 May 2019 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 02 Mar 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[Welcome]]></title>
-            <link>https://your-docusaurus-test-site.com/blog/2019/05/30/welcome</link>
-            <guid>Welcome</guid>
-            <pubDate>Thu, 30 May 2019 00:00:00 GMT</pubDate>
-            <description><![CDATA[Blog features are powered by the blog plugin. Simply add files to the blog directory. It supports tags as well!]]></description>
+            <title><![CDATA[Dobrodošli]]></title>
+            <link>https://nat-pro.herokuapp.com/blog/2021/03/02/dobrodosli</link>
+            <guid>Dobrodošli</guid>
+            <pubDate>Tue, 02 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Dobrodošli na stranicu NatPro! Da biste započeli s radom, odite na stranicu Materijali gdje možete pronaći mnoštvo članaka o natjecateljskom programiranju te naučiti puno toga, a ako ste već upoznati s konceptima natjecateljskog programiranja, možete ponoviti gradivo!]]></description>
         </item>
     </channel>
 </rss>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://your-docusaurus-test-site.com/blog</id>
+    <id>https://nat-pro.herokuapp.com/blog</id>
     <title>NatPro Blog</title>
-    <updated>2019-05-30T00:00:00.000Z</updated>
+    <updated>2021-03-02T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://your-docusaurus-test-site.com/blog"/>
+    <link rel="alternate" href="https://nat-pro.herokuapp.com/blog"/>
     <subtitle>NatPro Blog</subtitle>
-    <icon>https://your-docusaurus-test-site.com/img/favicon.ico</icon>
+    <icon>https://nat-pro.herokuapp.com/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Welcome]]></title>
-        <id>Welcome</id>
-        <link href="https://your-docusaurus-test-site.com/blog/2019/05/30/welcome"/>
-        <updated>2019-05-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Blog features are powered by the blog plugin. Simply add files to the blog directory. It supports tags as well!]]></summary>
+        <title type="html"><![CDATA[Dobrodošli]]></title>
+        <id>Dobrodošli</id>
+        <link href="https://nat-pro.herokuapp.com/blog/2021/03/02/dobrodosli"/>
+        <updated>2021-03-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Dobrodošli na stranicu NatPro! Da biste započeli s radom, odite na stranicu Materijali gdje možete pronaći mnoštvo članaka o natjecateljskom programiranju te naučiti puno toga, a ako ste već upoznati s konceptima natjecateljskog programiranja, možete ponoviti gradivo!]]></summary>
     </entry>
 </feed>

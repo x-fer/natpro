@@ -15,9 +15,9 @@ Ako niste izabrali uređivač teksta u kojem ćete programirati, preporučujemo 
 ### Preporučene postavke
 
 Na sljedećim YouTube videima možete pronaći kako postaviti okruženje koje ćemo mi koristiti:
-- ['MinGW i g++'](https://www.youtube.com/watch?v=guM4XS43m4I)
-- ['Instalacija VSC-a'](https://www.youtube.com/watch?v=JGsyJI8XG0Y)
-- ['Postavljanje VSC-a za programiranje u C++-u'](https://www.youtube.com/watch?v=77v-Poud_io)
+- [MinGW i g++](https://www.youtube.com/watch?v=guM4XS43m4I)
+- [Instalacija VSC-a](https://www.youtube.com/watch?v=JGsyJI8XG0Y)
+- [Postavljanje VSC-a za programiranje u C++-u](https://www.youtube.com/watch?v=77v-Poud_io)
 
 
 

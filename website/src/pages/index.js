@@ -8,32 +8,35 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: 'Easy to Use',
+    title: 'Za početnike i one naprednije',
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Ovi materijali su koncipirani tako da budu dovoljno jednostavni za 
+        početnike, a dovoljno temeljiti i za one naprednije. Upoznat ćete se
+        s brojnim algoritmima i strukturama podataka te nekim trikovima za brže
+        rješavanje zadataka.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Puno primjera za kvalitetno učenje',
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Svaka tema popraćena je mnoštvom primjera s održanih natjecanja tako
+        da možete učiti i pripremati se za svoje natjecateljske avanture!
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Možete i doprinijeti',
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Ako primijetite da neka tema nedostaje, možete i sami napisati članak o
+        njoj! Pročitajte upute u poglavlju "Doprinos ovim materijalima" te pomozite
+        obogatiti sadržaj ove stranice!
       </>
     ),
   },
@@ -72,7 +75,7 @@ function Home() {
                 styles.getStarted,
               )}
               to={useBaseUrl('docs/uvod/sadrzaj')}>
-              Get Started
+              Započnite
             </Link>
           </div>
         </div>

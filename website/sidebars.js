@@ -4,7 +4,7 @@ module.exports = {
     'Osnovni pojmovi': ['tipicni-program', 'tipovi-podataka', 'osnovna-matematika'].map(title => 'osnovni-pojmovi/' + title),
     'O dobrim algoritmima': ['dobar-algoritam', 'asimptotska-slozenost'].map(title => 'o-dobrim-algoritmima/' + title),
     'Bitne strukture podataka': ['vector', 'set', 'map', 'iteratori', 'ostale-strukture'].map(title => 'bitne-strukture-podataka/' + title),
-    // 'Sortiranje i pretraživanje': [].map(title => 'sortiranje-i-pretrazivanje/' + title),
+    'Sortiranje i pretraživanje': ['sortiranje', 'binarno-pretrazivanje', 'ternarno-pretrazivanje', 'primjeri'].map(title => 'sortiranje-i-pretrazivanje/' + title),
     // 'Pohlepni algoritmi': [].map(title => 'pohlepni-algoritmi/' + title),
     // 'Potpuno pretraživanje': [].map(title => 'potpuno-pretrazivanje/' + title),
     // 'Dinamičko programiranje': [].map(title => 'dinamicko-programiranje/' + title),
@@ -15,6 +15,9 @@ module.exports = {
     // 'Stabla': [].map(title => 'stabla/' + title),
     // 'Stringovi': [].map(title => 'stringovi/' + title),
     // 'Što dalje': [].map(title => 'sto-dalje/' + title),
-    'Doprinos ovim materijalima': ['kako-napisati-clanak', 'kako-napisati-blog', 'upute-za-markdown', 'autori'].map(title => 'doprinos-ovim-materijalima/' + title)
+    // 'Doprinos ovim materijalima': ['kako-napisati-clanak', 'kako-napisati-blog', 'upute-za-markdown', 'autori'].map(title => 'doprinos-ovim-materijalima/' + title)
   },
+  doprinosSidebar: {
+    'Doprinos ovim materijalima': ['kako-napisati-clanak', 'kako-napisati-blog', 'prijava-pogreske', 'upute-za-markdown', 'autori'].map(title => 'doprinos-ovim-materijalima/' + title)
+  }
 };

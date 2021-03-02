@@ -1,0 +1,28 @@
+{
+  "name": "natpro",
+  "version": "1.0.0",
+  "description": "Materijali za natjecateljsko programiranje",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivvlspirit/natpro.git"
+  },
+  "keywords": [
+    "cpp",
+    "dsa",
+    "algorithms"
+  ],
+  "author": "Ivan Vlahov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivvlspirit/natpro/issues"
+  },
+  "homepage": "https://github.com/ivvlspirit/natpro#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

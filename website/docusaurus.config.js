@@ -43,10 +43,6 @@ module.exports = {
               label: 'Sadržaj',
               to: 'docs/uvod/sadrzaj',
             },
-            {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
-            },
           ],
         },
         {

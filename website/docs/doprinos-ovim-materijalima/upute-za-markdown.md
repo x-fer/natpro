@@ -165,6 +165,19 @@ Prekid citata.
 
 ---
 
+## Matematički izrazi
+
+Matematičke izraze upisujemo koristeći HTML. Na ovoj [stranici](https://sites.psu.edu/symbolcodes/codehtml/#math) možete pronaći znakove koji će vam možda zatrebati pri pisanju matematičkih izraza.
+
+Također, za indekse koristite `<sub></sub>`, za potencije `<sup></sup>`:
+
+e<sup>i&pi;</sup> = -1
+
+n<sub>i</sub> = n<sub>i-1</sub> + n<sub>i-2</sub>
+
+
+---
+
 ## Prekidi redaka
 
 Započet ćemo s ovim retkom.

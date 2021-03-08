@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ivvlspirit/natpro.git"
+    "url": "git+https://github.com/vlahovivan/natpro.git"
   },
   "keywords": [
     "cpp",
@@ -19,9 +19,9 @@
   "author": "Ivan Vlahov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ivvlspirit/natpro/issues"
+    "url": "https://github.com/vlahovivan/natpro/issues"
   },
-  "homepage": "https://github.com/ivvlspirit/natpro#readme",
+  "homepage": "https://github.com/vlahovivan/natpro#readme",
   "dependencies": {
     "express": "^4.17.1"
   }

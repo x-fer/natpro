@@ -12,7 +12,7 @@ Nakon svakog natjecanja se objavi _editorial_, tj. rješenje zadataka s objašnj
 
 Ako želite pratiti vlastitu statistiku na Codeforcesu, možete koristiti [ovaj alat](https://recommender.codedrills.io/) koji na temelju oznaka zadataka koje ste riješili i onih koje niste uspjeli riješiti procjenjuje u kojim se kategorijama dobri, a na kojima trebate još raditi te vam na temelju tih podataka predlaže zadatke za vježbu.
 
-Također savjetujemo da se pridružite i našem [Discord serveru](https://discord.gg/62mzTshz) na kojem možete pronaći zanimljive ljude koji se također bave natjecateljskim programiranjem te koji su vam spremni pomoći u slučaju da negdje zapnete.
+Također savjetujemo da se pridružite i našem [Discord serveru](https://discord.gg/K37UZmzdMf) na kojem možete pronaći zanimljive ljude koji se također bave natjecateljskim programiranjem te koji su vam spremni pomoći u slučaju da negdje zapnete.
 
 Osim toga, koliko god možda zvučalo smiješno, bitno je znati dobro _guglati_. Kad god vam nešto nije jasno ili zapnete negdje, bitno je znati postaviti dobar upit. Ovi materijali govore o općenitim konceptima koji su potrebni za rješavanje mnoštva problema, međutim, nekad se zna dogoditi da zapnete u implementaciji nekog specifičnog oblika nekog algoritma te trebate pomoć s njim. Za takve situacije preporučujem da pretražujete stranicu [GeeksForGeeks](https://www.geeksforgeeks.org/) na kojoj možete pronaći specifične implementacije određenih algoritama.
 

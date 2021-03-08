@@ -6,7 +6,7 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'ivvlspirit', // Usually your GitHub org/user name.
+  organizationName: 'vlahovivan', // Usually your GitHub org/user name.
   projectName: 'natpro', // Usually your repo name.
   themeConfig: {
     navbar: {
@@ -35,7 +35,7 @@ module.exports = {
           position: 'left'
         },
         {
-          href: 'https://github.com/ivvlspirit/natpro',
+          href: 'https://github.com/vlahovivan/natpro',
           label: 'GitHub',
           position: 'right',
         },
@@ -45,11 +45,19 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Materijali',
+          title: 'Sadržaj',
           items: [
             {
-              label: 'Sadržaj',
+              label: 'Materijali',
               to: 'docs/uvod/sadrzaj',
+            },
+            {
+              label: 'Blog',
+              to: 'blog',
+            },
+            {
+              label: 'Doprinesite',
+              to: 'docs/doprinos-ovim-materijalima/kako-napisati-clanak',
             },
           ],
         },
@@ -62,7 +70,7 @@ module.exports = {
             },
             {
               label: 'Discord',
-              href: 'https://discord.gg/62mzTshz',
+              href: 'https://discord.gg/K37UZmzdMf',
             },
             {
               label: 'Twitter',
@@ -71,7 +79,7 @@ module.exports = {
           ],
         },
         {
-          title: 'More',
+          title: 'Još stvari',
           items: [
             {
               label: 'Blog',
@@ -79,7 +87,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/ivvlspirit/natpro',
+              href: 'https://github.com/vlahovivan/natpro',
             },
           ],
         },
@@ -95,13 +103,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/ivvlspirit/natpro/tree/main/website',
+            'https://github.com/vlahovivan/natpro/tree/main/website',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/vlahovivan/natpro/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

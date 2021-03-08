@@ -2,6 +2,8 @@
 title: Upute za Markdown
 ---
 
+import LatexRenderer from '../../src/LatexRenderer.js';
+
 Možete pisati članke koristeći [GitHub-flavored Markdown sintaksu](https://github.github.com/gfm/)
 
 
@@ -167,14 +169,21 @@ Prekid citata.
 
 ## Matematički izrazi
 
-Matematičke izraze upisujemo koristeći HTML. Na ovoj [stranici](https://sites.psu.edu/symbolcodes/codehtml/#math) možete pronaći znakove koji će vam možda zatrebati pri pisanju matematičkih izraza.
+Matematičke izraze upisujemo koristeći Latex. Na ovoj [stranici](https://www.overleaf.com/learn/latex/mathematical_expressions) možete pronaći znakove koji će vam možda zatrebati pri pisanju matematičkih izraza.
 
-Također, za indekse koristite `<sub></sub>`, za potencije `<sup></sup>`:
+U Markdownu ćemo koristiti oznaku LatexRenderer s parametrima latexExpression (matematički izraz) te altText (opis izraza):
 
-e<sup>i&pi;</sup> = -1
+Primjer 1: <LatexRenderer latexExpression="F_{n} = F_{n-1} + F_{n-2}" altText="Fibonnacijev niz"/> 
 
-n<sub>i</sub> = n<sub>i-1</sub> + n<sub>i-2</sub>
+Primjer 2: <LatexRenderer latexExpression="\sum_{n=1}^{\infty} 2^{-n} = 1" altText="Konvergirajući niz"/>
 
+Prije korištenja LatexRenderera bitno je omogućiti pozivanje te funkcije naredbom:
+
+```js
+import LatexRenderer from '../../src/LatexRenderer.js';
+```
+
+na početku markdown datoteke.
 
 ---
 

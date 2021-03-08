@@ -2,7 +2,7 @@
 title: Kako napisati članak?
 ---
 
-Želite li objaviti članak u ovim materijalima, trebate napraviti _fork_ GitHub [repozitorija](https://github.com/ivvlspirit/natpro) ovog projekta, napisati članak koristeći [Markdown](upute-za-markdown), te ga predati na pregled.
+Želite li objaviti članak u ovim materijalima, trebate napraviti _fork_ GitHub [repozitorija](https://github.com/vlahovivan/natpro) ovog projekta, napisati članak koristeći [Markdown](upute-za-markdown), te ga predati na pregled.
 
 Da biste napravili _fork_ ovog repozitorija, trebate imati GitHub račun. Odite na stranicu repozitorija, te u gornjem desnom kutu pritisnite na gumb **Fork**.
 

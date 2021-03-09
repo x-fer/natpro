@@ -2,8 +2,6 @@
 title: Upute za Markdown
 ---
 
-import LatexRenderer from '../../src/LatexRenderer.js';
-
 Možete pisati članke koristeći [GitHub-flavored Markdown sintaksu](https://github.github.com/gfm/)
 
 
@@ -171,19 +169,19 @@ Prekid citata.
 
 Matematičke izraze upisujemo koristeći Latex. Na ovoj [stranici](https://www.overleaf.com/learn/latex/mathematical_expressions) možete pronaći znakove koji će vam možda zatrebati pri pisanju matematičkih izraza.
 
-U Markdownu ćemo koristiti oznaku LatexRenderer s parametrima latexExpression (matematički izraz) te altText (opis izraza):
+Da biste započeli matematički izraz u istoj liniji, koristi se znak `$`, pa izraz, pa opet `$`, npr. `$F_{n} = F_{n-1} + F_{n-2}$`, što će prikazati izraz $F_{n} = F_{n-1} + F_{n-2}$. Da biste započeli blok izraz, koristite dva znaka `$` na početku i na kraju bloka, npr.:
 
-Primjer 1: <LatexRenderer latexExpression="F_{n} = F_{n-1} + F_{n-2}" altText="Fibonnacijev niz"/> 
-
-Primjer 2: <LatexRenderer latexExpression="\sum_{n=1}^{\infty} 2^{-n} = 1" altText="Konvergirajući niz"/>
-
-Prije korištenja LatexRenderera bitno je omogućiti pozivanje te funkcije naredbom:
-
-```js
-import LatexRenderer from '../../src/LatexRenderer.js';
+```
+$$
+a^{2} + b^{2} = c^{2}
+$$
 ```
 
-na početku markdown datoteke.
+A prikazat će se:
+
+$$
+a^{2} + b^{2} = c^{2}
+$$
 
 ---
 

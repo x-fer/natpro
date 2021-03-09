@@ -105,6 +105,4 @@ dist
 
 # User added stuff
 .vscode
-*.cpp
-*.exe
-**/test.md
+**/test.*

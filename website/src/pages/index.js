@@ -63,7 +63,7 @@ function Home() {
   return (
     <Layout
       title="Početna"
-      description="Description will go into a meta tag in <head />">
+      description="Materijali za učenje natjecateljkog programiranja">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>

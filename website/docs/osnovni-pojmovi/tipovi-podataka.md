@@ -4,7 +4,7 @@ title: Tipovi podataka
 
 ### int
 
-Cjelobrojni tip podataka `int` zauzima 32 bita memorije, odnosno 4 bajta, te pokriva cijele brojeve od -2<sup>31</sup> do 2<sup>31</sup> - 1, odnosno otprilike od oko -2.147 x 10<sup>9</sup> do oko 2.147 x 10<sup>9</sup>.
+Cjelobrojni tip podataka `int` zauzima $32$ bita memorije, odnosno $4$ bajta, te pokriva cijele brojeve od $-2^{31}$ do $2^{31} - 1$, odnosno otprilike od oko $-2.147 \cdot 10^{9}$ do oko $2.147 \cdot 10^{9}$.
 
 U slučaju da trebate izvršiti neke aritmetičke operacije s velikim brojevima, često se dogodi da prekoračimo granicu tipa `int` te zbog toga rješenja zadataka ispadnu netočna. Na primjer, sljedeći isječak koda daje neočekivano rješenje:
 
@@ -28,11 +28,11 @@ Međutim, dobijemo ovakav ispis:
 50000 -1794967296 -897483648
 ```
 
-jer se u varijablu `b` spremi kriva vrijednost zato što je vrijednost 50000<sup>2</sup> veća od gornje granice tipa `int`, te se vrijednost "prelije" natrag u negativne brojeve.
+jer se u varijablu $b$ spremi kriva vrijednost zato što je vrijednost $50000^{2}$ veća od gornje granice tipa `int`, te se vrijednost "prelije" natrag u negativne brojeve.
 
 ### long long
 
-Da bismo izbjegli pogreške nastale zbog preljeva (eng. _overflow_), koristit ćemo tip `long long` koji zauzima 64 bita memorije, a pokriva cijele brojeve od -2<sup>63</sup> do 2<sup>63</sup> - 1, odnosno od oko -9.223 x 10<sup>18</sup> do oko 9.223 x 10<sup>18</sup>.
+Da bismo izbjegli pogreške nastale zbog preljeva (eng. _overflow_), koristit ćemo tip `long long` koji zauzima 64 bita memorije, a pokriva cijele brojeve od $-2^{63}$ do $2^{63} - 1$, odnosno od oko $-9.223 \cdot 10^{18}$ do oko $9.223 \cdot 10^{18}$.
 
 Zamjenom tipa `int` za tip `long long` u prošlom isječku koda:
 

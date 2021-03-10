@@ -17,7 +17,7 @@ cin >> a >> b;
 cout << a + b;
 ```
 
-Primijetit ćemo da će program, neovisno o vrijednostima varijabli `a` i `b`, uvijek izvršiti jednu operaciju zbrajanja. Takav program nazivamo programom **konstantne** složenosti, te njegovu složenost zapisujemo kao _O(1)_ u Veliko O notaciji. Pogledajmo sad sljedeći primjer:
+Primijetit ćemo da će program, neovisno o vrijednostima varijabli $a$ i $b$, uvijek izvršiti jednu operaciju zbrajanja. Takav program nazivamo programom **konstantne** složenosti, te njegovu složenost zapisujemo kao $O(1)$ u Veliko O notaciji. Pogledajmo sad sljedeći primjer:
 
 ```cpp
 int n;
@@ -28,7 +28,7 @@ for(int i=0; i<n; i++){
 }
 ```
 
-Primjećujemo da broj operacija ispisa u ovom programskom isječku ovisi o vrijednosti varijabli `n` - za `n=1`, operacija ispisa će se izvršiti jednom, za `n=10` će se izvršiti 10 puta, i tako dalje. U ovom slučaju govorimo o **linearnoj** složenosti, te zapisujemo _O(n)_. Pogledajmo još jedan primjer:
+Primjećujemo da broj operacija ispisa u ovom programskom isječku ovisi o vrijednosti varijabli $n$ - za $n=1$, operacija ispisa će se izvršiti jednom, za $n=10$ će se izvršiti $10$ puta, i tako dalje. U ovom slučaju govorimo o **linearnoj** složenosti, te zapisujemo $O(n)$. Pogledajmo još jedan primjer:
 
 ```cpp
 int n;
@@ -41,12 +41,12 @@ for(int i=0; i<n; i++){
 }
 ```
 
-U ovom slučaju će se za `n=1` operacija ispisa izvršiti jedan put, a za `n=10` će se izvršiti 100 puta. Lako možemo zaključiti da će se operacija uvijek izvesti n<sup>2</sup> puta. U tom slučaju govorimo o **kvadratnoj** složenosti, odnosno _O(n<sup>2</sup>)_.
+U ovom slučaju će se za $n=1$ operacija ispisa izvršiti jedan put, a za $n=10$ će se izvršiti $100$ puta. Lako možemo zaključiti da će se operacija uvijek izvesti $n^{2}$ puta. U tom slučaju govorimo o **kvadratnoj** složenosti, odnosno $O(n^{2})$.
 
-Složenost ne mora nužno biti u obliku O(n<sup>x</sup>). Pogledajmo sljedeće primjere:
+Složenost ne mora nužno biti u obliku $O(n^{p})$. Pogledajmo sljedeće primjere:
 
 ```cpp
-// O(log(n)), logaritamska složenost
+// O(log(n)), logaritamska složenost (u bazi 2)
 int n;
 cin >> n;
 
@@ -86,7 +86,7 @@ for(int i=0; i<n; i++){
 }
 ```
 
-Već znamo da je složenost prve faze _O(n)_, međutim, koja je složenost druge faze? U ovom slučaju varijabla `j` u for petlji ne počinje od nule, već od vrijednosti varijable `i`, te možemo izračunati da će se operacija ispisa izvršiti n\*(n+1)/2 puta. Kad raspišemo taj izraz, dobijemo n<sup>2</sup>/2 + n/2. I u ovom slučaju govorimo o **kvadratnoj** složenosti, odnosno _O(n<sup>2</sup>)_, jer je pribrojnik n<sup>2</sup>/2 onaj koji najviše opterećuje brzinu izvođenja programa. Što se tiče konstantnog faktora 1/2, njega ne zapisujemo u Veliko O notaciji. Sada kad znamo broj operacija obje faze, kad ih zbrojimo dobijemo ukupan broj operacija: n<sup>2</sup>/2 + 3\*n/2. I tako zaključujemo da je ukupna složenost ovog programa _O(n<sup>2</sup>)_.
+Već znamo da je složenost prve faze $O(n)$, međutim, koja je složenost druge faze? U ovom slučaju varijabla $j$ u for petlji ne počinje od nule, već od vrijednosti varijable $i$, te možemo izračunati da će se operacija ispisa izvršiti $\frac{n\cdot(n+1)}{2}$ puta. Kad raspišemo taj izraz, dobijemo $\frac{1}{2}n^{2} + \frac{1}{2}n$. I u ovom slučaju govorimo o **kvadratnoj** složenosti, odnosno $O(n^{2})$, jer je pribrojnik $\frac{1}{2}n^{2}$ onaj koji najviše opterećuje brzinu izvođenja programa. Što se tiče konstantnog faktora $\frac{1}{2}$, njega ne zapisujemo u Veliko O notaciji. Sada kad znamo broj operacija obje faze, kad ih zbrojimo dobijemo ukupan broj operacija: $\frac{1}{2}n^{2} + \frac{3}{2}n$. I tako zaključujemo da je ukupna složenost ovog programa $O(n^{2})$.
 
 Nekad složenost programa ne ovisi samo o jednoj varijabli:
 
@@ -101,9 +101,9 @@ for(int i=0; i<n; i++){
 }
 ```
 
-U ovom slučaju će se izvršiti n\*m operacija ispisa, pa je složenost _O(nm)_.
+U ovom slučaju će se izvršiti $nm$ operacija ispisa, pa je složenost $O(nm)$.
 
-Možda ste se tijekom čitanja zapitali, zašto je ovo uopće bitno? Odgovor leži u tome da poznavanjem asimptotske složenosti algoritama možemo jako brzo procijeniti hoće li naše rješenje biti dovoljno dobro da se program izvrši unutar zadanog vremenskog ograničenja. Uzmimo na primjer da evaluator može obaviti 10<sup>9</sup> operacija u jednoj sekundi. U tekstu zadatka piše da varijabla `n` može poprimiti vrijednosti od 1 do 10<sup>5</sup>, a vremensko ograničenje izvođenja programa je 1 sekunda. Tada možemo biti sigurni da _O(n<sup>2</sup>)_ neće biti dovoljno dobro jer možemo računati da će se izvršiti puno veći broj operacija nego što evaluator može izračunati u sekundi. U tablici možemo pogledati koliko bi otprilike trajalo izvođenje za koju složenost.
+Možda ste se tijekom čitanja zapitali, zašto je ovo uopće bitno? Odgovor leži u tome da poznavanjem asimptotske složenosti algoritama možemo jako brzo procijeniti hoće li naše rješenje biti dovoljno dobro da se program izvrši unutar zadanog vremenskog ograničenja. Uzmimo na primjer da evaluator može obaviti $10^{9}$ operacija u jednoj sekundi. U tekstu zadatka piše da varijabla $n$ može poprimiti vrijednosti od $1$ do $10^{5}$, a vremensko ograničenje izvođenja programa je $1$ sekunda. Tada možemo biti sigurni da $O(n^{2})$ neće biti dovoljno dobro jer možemo računati da će se izvršiti puno veći broj operacija nego što evaluator može izračunati u sekundi. U tablici možemo pogledati koliko bi otprilike trajalo izvođenje za koju složenost.
 
 **OVDJE IDE TABLICA**
 

@@ -63,7 +63,7 @@ gdje `tip` označava tip podataka koji želimo spremiti u vector (npr. `int`, `c
 vector<char> vectorZnakova(100); 
 
 // Vector doubleova veličine 314, svi elementi su postavljeni na 3.14159
-vector<double> vectorPijeva(314, 3.14159) 
+vector<double> vectorPijeva(314, 3.14159);
 ```
 
 Dodavanje na kraj vectora izvršavamo naredbom `push_back`, a s kraja možemo ukloniti element naredbom `pop_back`. Elementima možemo pristupiti naredbom `at` ili operatorom pristupa (uglate zagrade, [ ]). Prvi element možemo dohvatiti naredbom `front`, a posljednji element naredbom `back`. Veličinu polja možemo dohvatiti naredbom `size`. Možemo izbrisati sve elemente naredbom `clear`. Sve navedene naredbe osim `clear` su konstantne složenosti, a `clear` je linearne složenosti, ovisno o veličini vectora.

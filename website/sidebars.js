@@ -16,7 +16,6 @@ module.exports = {
     // 'Stabla': [].map(title => 'stabla/' + title),
     // 'Stringovi': [].map(title => 'stringovi/' + title),
     // 'Što dalje': [].map(title => 'sto-dalje/' + title),
-    // 'Doprinos ovim materijalima': ['kako-napisati-clanak', 'kako-napisati-blog', 'upute-za-markdown', 'autori'].map(title => 'doprinos-ovim-materijalima/' + title)
   },
   doprinosSidebar: {
     'Doprinos ovim materijalima': ['kako-napisati-clanak', 'kako-napisati-blog', 'prijava-pogreske', 'upute-za-markdown', 'autori'].map(title => 'doprinos-ovim-materijalima/' + title)

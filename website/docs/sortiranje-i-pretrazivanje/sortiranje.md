@@ -1,27 +1,25 @@
-
 ---
 title: Sortiranje
 ---
 
-# Sortiranje
 Algoritme za sortiranje koristimo kako bismo složili podatke u smisleni poredak prema nekom kriteriju.
 Iako ćemo ovdje prvenstveno govoriti o primjeni sortiranja u natjecateljskom programiranju (sortiranje nad brojevima, stringovima...),
 treba biti svjestan da je primjena puno šira pa je ova vještina potrebna svakome tko se želi ozbiljnije baviti programiranjem. Također,
 sortiranje je ključan preduvjet za mnoge druge korisne algoritme. U ovom ćete članku naučiti nešto o različitim sortovima i njihovoj složenosti.
 Ako vas zanima više, istražite dostupne linkove ili se javite putem foruma 😄.
 
-<div style="text-align:center">
+<div style={{"textAlign":"center"}}>
 	<img src="../../static/img/sortingHat.jpg" width="250"/>
 	<figcaption>Harry Potter i kamen mudraca, Sorting Hat</figcaption>
 </div>
 
-
-## O($n^2$) algoritmi
+## $O(n^2)$ algoritmi
 Najjednostavniji algoritmi sortiraju liste u kvadratnoj složenosti. Jedan od najpoznatijih primjera ovakvog sortiranja je tzv. **bubble sort**. Algoritam se sastoji 
 od $n$ koraka. U svakom koraku prolazimo kroz sve elemente u listi koju sortiramo i uspoređujemo susjedne članove. Ako dva susjedna člana nisu u odgovarajućem poretku 
 (npr. sortiramo uzlazno), algoritam im mijenja mjesta. Tako osiguravamo da će se nakon prvog prolaska kroz niz najveći član nalaziti na točnom mjestu. Nakon maksimalno 
 $n$ koraka svi će članovi biti na svojim mjestima i lista će biti sortirana. Više o bubble sortu pročitajte 
 [ovdje](https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm "Bubble sort").
+
 ```cpp
 for(int i=0; i<n; i++) {
 	for(int j=0; j<n-1; j++) {
@@ -36,15 +34,16 @@ podataka za koje je kvadratna složenost prevelika (npr. za $n=10^5$ kvadratna s
 Sada se postavlja pitanje kako ubrzati ovaj algoritam? Početna ideja mogla bi biti prekinuti izvršavanje u unutarnjoj petlji ako nismo napravili niti jednu zamjenu. To bi ponešto 
 optimiziralo program, ali složenost je u najgorem slučaju i dalje O($n^2$). Može li brže? Nego što!
 
-$^1$ više o time limitu pročitajte [ovdje](link).
+$^1$ više o time limitu pročitajte ovdje.
+TODO: dodaj link
 
 
-## O($n \log(n)$) algoritmi
+## $O(n \log(n))$ algoritmi
 Postoji više algoritama koji rade u ovoj složenosti, ali njihovi detalji nisu toliko bitni za natjecateljsko programiranje pa ćemo ih ovdje samo spomenuti. Više o njima možete pročitati 
 na dostupnim linkovima.
-* **merge sort** - sort koji se bazira na rekurziji, dijeli početnu listu na manje dijelove i sortira svaki zasebno, a potom ih spaja prilikom povratka u rekurziji. Više pročitajte [ovdje](https://www.geeksforgeeks.org/merge-sort/ "Merge sort").
-* **heap sort**  - sort koji radi nad strukturom poznatom kao 'binary heap', sličan selection sortu. Detalji [ovdje](https://www.geeksforgeeks.org/heap-sort/ "Heap sort").
-* **quick sort** - sort koji radi nad strukturom poznatom kao 'binary heap', sličan selection sortu. Detalji [ovdje](https://www.geeksforgeeks.org/quick-sort/ "Quick sort").
++ **merge sort** - sort koji se bazira na rekurziji, dijeli početnu listu na manje dijelove i sortira svaki zasebno, a potom ih spaja prilikom povratka u rekurziji. Više pročitajte [ovdje](https://www.geeksforgeeks.org/merge-sort/ "Merge sort").
++ **heap sort**  - sort koji radi nad strukturom poznatom kao 'binary heap', sličan selection sortu. Detalji [ovdje](https://www.geeksforgeeks.org/heap-sort/ "Heap sort").
++ **quick sort** - sort koji radi nad strukturom poznatom kao 'binary heap', sličan selection sortu. Detalji [ovdje](https://www.geeksforgeeks.org/quick-sort/ "Quick sort").
 
 :::tipsavjet
 Prije nego počnete pisati kod, dobro razmislite o složenosti programa kojeg ste smislili. Pokušajte uvijek tražiti rješenje koje prolazi ograničenja, 
@@ -60,6 +59,7 @@ listu ispunjenu nulama. Potom jednom prolazimo kroz sve članove u listi koju so
 Pogledajmo konkretan primjer. Neka je potrebno sortirati niz brojeva $[2, 44, 23, 25, 88, 44, 23]$. Nakon što provedemo sortiranje na poziciji $i=44$ u pomoćnoj listi piše $2$ 
 zato što se broj $44$ nalazi <ins>dva puta</ins> u nizu koji sortiramo. Po završetku sortiranja prolazimo kroz pomoćnu listu tako da za svaku poziciju i ispisujemo onoliko brojeva 
 kolika je vrijednost na toj poziciji.
+
 ```cpp
 int lista[101]; //na početku nule
 for(int i=0; i<n; i++) {
@@ -96,6 +96,7 @@ sort(s.begin(), s.end()); //addellos
 Kao treći argument funkciji *sort* moguće je zadati operator usporedbe (komparator). On mora biti definiran nad tipom podataka koji sortiramo (npr. nad parovima cijelih brojeva). 
 C++ ima već ugrađeni komparator za ovaj tip pa se po defaultu parovi sortiraju tako da se prvo uspoređuje prvi element iz para, a potom drugi. Što ako želimo drugačiji kriterij? 
 Tu nalazimo primjenu **vanjskih komparatora** (custom comparators). Npr. zamislimo da parove integera želim sortirati prema drugom elementu iz para.
+
 ```cpp
 #include <bits/stdc++.h>
 #define pii pair<int,int>
@@ -119,6 +120,7 @@ int main() {
 ### Reverse funkcija
 Reverse funkcija okreće poredak elemenata u bilo kojem tipu spremnika (lista, vektor...). Okreće elemente kojima su pozicije u intervalu \[first,last>
 i radi u složenosti O($n$).
+
 ```cpp
 vector<int> v; //... dodavanje elemenata u vektor
 

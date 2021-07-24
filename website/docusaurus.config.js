@@ -38,6 +38,11 @@ module.exports = {
           position: 'left'
         },
         {
+          href: 'https://xfer.hr',
+          label: 'X.FER',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/vlahovivan/natpro',
           label: 'GitHub',
           position: 'right',
@@ -85,8 +90,8 @@ module.exports = {
           title: 'Još stvari',
           items: [
             {
-              label: 'Blog',
-              to: 'blog',
+              label: 'X.FER',
+              to: 'https://xfer.hr',
             },
             {
               label: 'GitHub',

@@ -16,7 +16,7 @@ module.exports = {
       title: 'NatPro',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/NatPro-logo.png',
+        src: 'img/XFER-Logo.svg',
       },
       items: [
         {

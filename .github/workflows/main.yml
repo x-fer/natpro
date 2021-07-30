@@ -41,4 +41,5 @@ jobs:
       - name: Build static pages
         run: |
           cd website
+          ls
           docusaurus build

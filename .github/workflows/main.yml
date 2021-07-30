@@ -35,9 +35,15 @@ jobs:
           npm install
           yarn build
           cd ..
+          echo "Prvi"
+          git status
           git config --local user.name "vlahovivan"
           git add *
+          echo "Drugi"
+          git status
           git commit -m "Automatic static site build"
+          echo "Treci"
+          git status
 
       - name: Push to github
         uses: ad-m/github-push-action@master

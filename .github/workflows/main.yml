@@ -32,3 +32,7 @@ jobs:
           cd website
           npm install
           yarn build
+          cd ..
+          git add *
+          git commit "Automatic static site build"
+          git push

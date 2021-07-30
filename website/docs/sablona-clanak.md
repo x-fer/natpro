@@ -2,4 +2,4 @@
 title: Naslov velikim slovom
 ---
 
-Ovdje ide sadržaj
+Ovdje ide sadržaj članka

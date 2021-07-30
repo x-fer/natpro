@@ -7,4 +7,4 @@ author_image_url: URL neke lijepe slike
 tags: [oznake, odvojene, zarezima]
 ---
 
-Ovdje ide sadržaj
+Ovdje ide sadržaj blog objave

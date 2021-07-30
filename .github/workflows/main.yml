@@ -31,4 +31,4 @@ jobs:
           npm install
           cd website
           npm install
-          docusaurus build
+          yarn build

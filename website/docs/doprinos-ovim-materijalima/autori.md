@@ -4,6 +4,7 @@ title: Autori
 
 Autori članaka na ovoj stranici su (abecednim redom):
 - [Ivan Vlahov](https://github.com/vlahovivan)
+- [Karlo Franić](https://github.com/kfranic1)
 - [Maja Milas](https://github.com/javascript-m)
 
 

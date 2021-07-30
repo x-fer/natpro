@@ -40,8 +40,8 @@ jobs:
           git commit -m "Automatic static site build"
           git push
 
-        - name: Push 
-          uses: ad-m/github-push-action@master
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            force: true
+      - name: Push to github
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true

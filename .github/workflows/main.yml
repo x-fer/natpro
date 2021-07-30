@@ -38,7 +38,6 @@ jobs:
           git config --local user.name "vlahovivan"
           git add *
           git commit -m "Automatic static site build"
-          git push
 
       - name: Push to github
         uses: ad-m/github-push-action@master

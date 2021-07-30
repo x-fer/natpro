@@ -25,6 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      # Installs node-modules for express static serve
       - name: Install modules in main directory
         run: npm install
         
@@ -32,9 +33,12 @@ jobs:
       - name: Change directory to website
         run: cd website
         
+      # Installs node-modules for docusaurus project
       - name: Install modules in website directory
         run: npm install
 
       # Runs a set of commands using the runners shell
       - name: Build static pages
-        run: cd website && docusaurus build
+        run: |
+          cd website
+          docusaurus build

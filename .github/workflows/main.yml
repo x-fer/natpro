@@ -30,6 +30,7 @@ jobs:
       # Installs node-modules in website directory
       - name: Install modules and build static site
         run: |
+          echo ${{ secrets.GITHUB_TOKEN }}
           npm install
           cd website
           npm install
@@ -37,11 +38,12 @@ jobs:
           cd ..
           echo "Prvi"
           git status
+          git config --local user.email "ivan.vlahov@gmail.com"
           git config --local user.name "vlahovivan"
-          git add *
+          git add .
           echo "Drugi"
           git status
-          git commit -m "Automatic static site build"
+          git commit -m "Automatic static site build" | exit 0
           echo "Treci"
           git status
 

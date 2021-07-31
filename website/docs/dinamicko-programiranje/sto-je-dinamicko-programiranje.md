@@ -4,13 +4,13 @@ title: Što je dinamičko programiranje?
 
 ### UVOD
 
-Prvo pogledajmo jedan zadatak. Zadana je matrica veličine $N*N$ gdje je $N <= 1000$ te su u polja upisani prirodni brojevi $X_{i,j} < 1e9$. Želimo naći put iz gornjeg lijevog polja do doljenjeg desnog polja, krećući se samo dolje i desno, čija je suma ćelija na putu najveća. Možemo primjetiti da je iz jednog polja moguće otići samo u dva druga polja pa bi netko mogao pomisliti da odlaskom u polje s većim brojem dolazimo do rješenja. Ova ideja neće nam dati točno rješenje, a dokaz ostavljamo čitatelju za vježbu. Sljedeće rješenje koje se prirodno nameće je isprobati sve puteve te uzeti onaj s najvećom vrijednošću. Možemo primjetiti da će put uvijek biti duljine $2 * (N - 1)$ jer sigurno moramo otići $N - 1$ puta desno i $N - 1$ puta dolje. Postoji $2 * (N - 1) \choose (N - 1)$ različitih puteva, dokaz ove tvrdnje također ostavljamo čitatelju za vježbu. Očito će, za $N = 1000$, prolazak svim putevima biti prespor.
+Prvo pogledajmo jedan zadatak. Zadana je matrica veličine $N*N$ gdje je $N <= 1000$ te su u polja upisani prirodni brojevi $X_{i,j} < 1e9$. Želimo naći put iz gornjeg lijevog polja do doljenjeg desnog polja, krećući se samo dolje i desno, čija je suma ćelija na putu najveća. Možemo primjetiti da je iz jednog polja moguće otići samo u dva druga polja pa bi netko mogao pomisliti da odlaskom u polje s većim brojem dolazimo do rješenja. Ova ideja neće nam dati točno rješenje, a dokaz ostavljamo čitatelju za vježbu. Sljedeće rješenje koje se prirodno nameće je isprobati sve puteve te uzeti onaj s najvećom vrijednošću. Možemo primjetiti da će put uvijek biti duljine $2 * (N - 1)$ jer sigurno moramo otići $N - 1$ puta desno i $N - 1$ puta dolje. Postoji $2 * (N - 1) \choose (N - 1)$ različitih puteva, dokaz ove tvrdnje također ostavljamo čitatelju za vježbu. Očito će, za $N = 1000$, prolazak svim putevima biti prespor za uobičajeno vremensko ograničenje od jedne sekunde.
 
 ### Što je dinamika
 
-Primjetimo sljedeće: ako se nalazimo u ćeliji $X, Y$ matrice $M$ onda će maksimalna suma koju možemo dobiti do te ćelije biti $max(rješenje[X - 1, Y], rješenje[X, Y - 1]) + M[X, Y]$ što znači da ako znamo rezultate ćelije iznad i lijevo od trenutne ćelije onda jednostavno možemo izračunati rezultat za trenutno ćeliju. 
+Primjetimo sljedeće: ako se nalazimo u ćeliji $X, Y$ matrice $M$ onda će maksimalna suma koju možemo dobiti do te ćelije biti $max(rješenje[X - 1, Y], rješenje[X, Y - 1]) + M[X, Y]$ što znači da ako znamo rezultate ćelije iznad i lijevo od trenutne ćelije onda jednostavno možemo izračunati rezultat za trenutnu ćeliju. 
 
-Upravo je to ideja dinamičkog programiranja. Dinamičko programiranje karakterizira skup stanja i funkcija(ili funkcije) prijelaza. Uvijek je zadano početno stanje i pomoću prijelaza potrebno je odrediti vrijednost traženog stanja. Specifično za ovaj zadatak, postavimo da nam je stanje optimalna suma u trenutnoj ćeliji, početno stanje je ćelija $(0,0)$ čija je početna vrijednost broj zapisan u toj ćeliji, a stanje čiju vrijednost tražimo je $(N - 1, N - 1)$. Funkcija prijelaza je navedena gore.
+Upravo je to ideja dinamičkog programiranja. Dinamičko programiranje karakterizira skup stanja i jedna(ili više) funkcija prijelaza. Uvijek je zadano početno stanje i pomoću prijelaza potrebno je odrediti vrijednost traženog stanja. Specifično za ovaj zadatak, postavimo da nam je stanje optimalna suma u trenutnoj ćeliji, početno stanje je ćelija $(0,0)$ čija je početna vrijednost broj zapisan u toj ćeliji, a stanje čiju vrijednost tražimo je $(N - 1, N - 1)$. Funkcija prijelaza je navedena gore.
 
 ### Složenost dinamike
 
@@ -85,22 +85,20 @@ Prikazano rješenje jako je blizu ispravnog rješenja, no i dalje postoji jedan 
 Zadatke s dinamičkim programiranjem uglavnom je moguće riješiti rekurzivno i iterativno. Svaki pristup ima svoje prednosti i mane te jedino vježbom možete vidjeti kako vam je lakše i brže rješavati takve zadatke. Kod rekurzivnog rješavanja često je potrebno paziti na to da se funkcija ne zove više puta za isto stanje(nekada to nije moguće samo memoizacijom), no rekurzivni kodovi uglavnom budu kraći i lakše čitljvi. S druge strane kod iterativnog obliaska ponekad nije intuitivno kako obići sva stanja. Odabir načina pisanja stvar je osobne preferencije, a usporedbe radi napisat ćemo i itreativno rješenje zadatka iz Uvoda.
 
 ```cpp
-//najveća moguća dimenzija matrice
 const int MAXN = 1000;
 int n;
 int M[MAXN][MAXN];
-int memo[MAXN][MAXN];
+long long int memo[MAXN][MAXN];
 
 int main(){
     cin >> n;
     for(int i = 0; i < n; i++)
         for(int j = 0; j < n; j++)
             cin >> M[i][j];
-    long long sol = 0;
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
-            if(i == 0 && j == 0) continue;
-            if(i == 0) memo[i][j] = M[i][j] + memo[i][j - 1];
+            if(i == 0 && j == 0) memo[i][j] = M[i][j];
+            else if(i == 0) memo[i][j] = M[i][j] + memo[i][j - 1];
             else if(j == 0) memo[i][j] = M[i][j] + memo[i - 1][j];
             else memo[i][j] = M[i][j] + max(memo[i - 1][j], memo[i][j - 1]);
         }

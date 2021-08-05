@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>NatPro Blog</title>
+        <link>https://materijali.xfer.hr/blog</link>
+        <description>NatPro Blog</description>
+        <lastBuildDate>Tue, 02 Mar 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Dobrodošli]]></title>
+            <link>https://materijali.xfer.hr/blog/2021/03/02/dobrodosli</link>
+            <guid>Dobrodošli</guid>
+            <pubDate>Tue, 02 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Dobrodošli na stranicu NatPro! Da biste započeli s radom, odite na stranicu Materijali gdje možete pronaći mnoštvo članaka o natjecateljskom programiranju te naučiti puno toga, a ako ste već upoznati s konceptima natjecateljskog programiranja, možete ponoviti gradivo!]]></description>
+        </item>
+    </channel>
+</rss>

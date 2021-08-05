@@ -4,12 +4,12 @@ const katex = require('rehype-katex');
 module.exports = {
   title: 'NatPro',
   tagline: 'Materijali za natjecateljsko programiranje',
-  url: 'https://nat-pro.herokuapp.com',
+  url: 'https://materijali.xfer.hr',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'vlahovivan', // Usually your GitHub org/user name.
+  organizationName: 'x-fer', // Usually your GitHub org/user name.
   projectName: 'natpro', // Usually your repo name.
   themeConfig: {
     navbar: {
@@ -43,7 +43,7 @@ module.exports = {
           position: 'right',
         },
         {
-          href: 'https://github.com/vlahovivan/natpro',
+          href: 'https://github.com/x-fer/natpro',
           label: 'GitHub',
           position: 'right',
         },
@@ -95,7 +95,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/vlahovivan/natpro',
+              href: 'https://github.com/x-fer/natpro',
             },
           ],
         },
@@ -120,7 +120,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/vlahovivan/natpro/tree/main/website',
+            'https://github.com/x-fer/natpro/tree/main/website',
           remarkPlugins: [math],
           rehypePlugins: [katex],
           showLastUpdateTime: true,
@@ -130,7 +130,7 @@ module.exports = {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/vlahovivan/natpro/edit/master/website/blog/',
+            'https://github.com/x-fer/natpro/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

@@ -106,3 +106,4 @@ dist
 # User added stuff
 .vscode
 **/test.*
+.docusaurus

@@ -86,7 +86,7 @@ int main(){
     int p = (1<<n)-1;
 
     //iteracija po brojevima koji predstavljaju podskupove
-    for(int i=0; i < p; i++){
+    for(int i=0; i <= p; i++){
         int sum = 0;
         //iteracija po bitovima brojeva
         for (int j=0;j<n;j++){

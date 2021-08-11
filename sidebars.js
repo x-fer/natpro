@@ -17,6 +17,6 @@ module.exports = {
     // 'Što dalje': [].map(title => 'sto-dalje/' + title),
   },
   doprinosSidebar: {
-    'Doprinos ovim materijalima': ['kako-napisati-clanak', 'kako-napisati-blog', 'prijava-pogreske', 'upute-za-markdown', 'autori'].map(title => 'doprinos-ovim-materijalima/' + title)
+    'Doprinos ovim materijalima': ['kako-napisati-clanak', 'prijava-pogreske', 'upute-za-markdown', 'autori'].map(title => 'doprinos-ovim-materijalima/' + title)
   }
 };

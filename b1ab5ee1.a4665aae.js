@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[39],{107:function(o){o.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"dobrodosli","name":"dobrodosli","count":1,"permalink":"/blog/tags/dobrodosli"}')}}]);

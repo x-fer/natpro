@@ -31,5 +31,5 @@ jobs:
           git status
           git config --local user.email "ivan.vlahov@gmail.com"
           git config --local user.name "vlahovivan"
-          set GIT_USER=vlahovivan
+          GIT_USER=vlahovivan
           yarn deploy

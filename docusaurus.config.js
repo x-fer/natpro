@@ -4,7 +4,7 @@ const katex = require('rehype-katex');
 module.exports = {
   title: 'NatPro',
   tagline: 'Materijali za natjecateljsko programiranje',
-  url: 'https://nat-pro.herokuapp.com',
+  url: 'https://materijali.xfer.hr',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -73,16 +73,16 @@ module.exports = {
           title: 'Društvene mreže',
           items: [
             {
-              label: 'YouTube',
-              href: 'https://youtube.com/user/ivanvlahov922',
+              label: 'LinkedIn',
+              href: 'https://linkedin.com/company/xferhr',
             },
             {
-              label: 'Discord',
-              href: 'https://discord.gg/K37UZmzdMf',
+              label: 'Facebook',
+              href: 'https://facebook.com/xferhr',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/IvanV8',
+              label: 'Instagram',
+              href: 'https://instagram.com/xfer_hr',
             },
           ],
         },
@@ -100,7 +100,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Ivan Vlahov. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} X.FER. Built with Docusaurus.`,
     },
   },
   stylesheets: [

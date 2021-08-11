@@ -29,8 +29,13 @@ jobs:
         run: |
           npm install
           git status
+          echo "Debug 1"
           git config --local user.email "ivan.vlahov@gmail.com"
           git config --local user.name "vlahovivan"
+          echo "Debug 2"
           GIT_USER=vlahovivan
+          echo "Debug 3"
           printenv GIT_USER
+          echo "Debug 4"
           yarn deploy
+          echo "Debug 5"

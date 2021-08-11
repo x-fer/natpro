@@ -106,4 +106,20 @@ dist
 # User added stuff
 .vscode
 **/test.*
+build/*
+
+# Docusaurus gitignore
+
+# Dependencies
+/node_modules
+
+# Generated files
 .docusaurus
+.cache-loader
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

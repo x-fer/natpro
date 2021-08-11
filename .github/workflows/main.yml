@@ -27,25 +27,9 @@ jobs:
       # Installs node-modules in website directory
       - name: Install modules and build static site
         run: |
-          echo ${{ secrets.GITHUB_TOKEN }}
           npm install
-          cd website
-          npm install
-          yarn build
-          cd ..
-          echo "Prvi"
           git status
           git config --local user.email "ivan.vlahov@gmail.com"
           git config --local user.name "vlahovivan"
-          git add .
-          echo "Drugi"
-          git status
-          git commit -m "Automatic static site build" | exit 0
-          echo "Treci"
-          git status
-
-      - name: Push to github
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          force: true
+          set GIT_USER=vlahovivan
+          yarn deploy

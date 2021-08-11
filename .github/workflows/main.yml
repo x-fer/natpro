@@ -32,4 +32,5 @@ jobs:
           git config --local user.email "ivan.vlahov@gmail.com"
           git config --local user.name "vlahovivan"
           GIT_USER=vlahovivan
+          printenv GIT_USER
           yarn deploy

@@ -35,7 +35,7 @@ jobs:
           echo "Debug 2"
           GIT_USER=vlahovivan
           echo "Debug 3"
-          printenv GIT_USER
+          echo $GIT_USER
           echo "Debug 4"
           yarn deploy
           echo "Debug 5"

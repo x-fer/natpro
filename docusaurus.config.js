@@ -20,7 +20,7 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/uvod/sadrzaj',
+          to: 'docs/o-materijalima/sadrzaj',
           activeBasePath: 'docs',
           activeBaseRegex: 'docs\/((?!doprinos-ovim-materijalima).)*$',
           label: 'Materijali',
@@ -57,7 +57,7 @@ module.exports = {
           items: [
             {
               label: 'Materijali',
-              to: 'docs/uvod/sadrzaj',
+              to: 'docs/o-materijalima/sadrzaj',
             },
             {
               label: 'Blog',

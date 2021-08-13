@@ -1,13 +1,11 @@
 module.exports = {
   materijaliSidebar: {
-    'Uvod': ['sadrzaj', 'preduvjeti', 'savjeti'].map(title => 'uvod/' + title),
-    'Osnovni pojmovi': ['tipicni-program', 'tipovi-podataka', 'osnovna-matematika'].map(title => 'osnovni-pojmovi/' + title),
-    'O dobrim algoritmima': ['dobar-algoritam', 'asimptotska-slozenost'].map(title => 'o-dobrim-algoritmima/' + title),
-    'Bitne strukture podataka': ['vector', 'set', 'map', 'iteratori', 'ostale-strukture', 'primjeri'].map(title => 'bitne-strukture-podataka/' + title),
-    'Sortiranje i pretraživanje': ['sortiranje', 'binarno-pretrazivanje', 'ternarno-pretrazivanje', 'primjeri'].map(title => 'sortiranje-i-pretrazivanje/' + title),
+    '0. O materijalima': ['sadrzaj', 'preduvjeti', 'savjeti'].map(title => 'o-materijalima/' + title),
+    '1. Osnove natjecateljskog programiranja': ['osnovni-pojmovi', 'o-dobrim-algoritmima', 'bitni-containeri'].map(title => 'osnove-natjecateljskog-programiranja/' + title),
+    '2. Sortiranje i pretraživanje': ['sortiranje', 'binarno-pretrazivanje', 'ternarno-pretrazivanje', 'primjeri'].map(title => 'sortiranje-i-pretrazivanje/' + title),
     '3. Potpuno pretraživanje i pohlepni pristupi': ['uvod', 'meet-in-the-middle', 'pruning', 'zadatci-potpuno'].map(title => 'potpuno-pretrazivanje-i-pohlepni-pristupi/' + title),
-    'Dinamičko programiranje': ['sto-je-dinamicko-programiranje', 'primjeri'].map(title => 'dinamicko-programiranje/' + title),
-    'Upiti nad intervalima': ['upiti-nad-statickim-poljima', 'fenwickovo-stablo', 'segmentno-stablo', 'primjeri'].map(title => 'upiti-nad-intervalima/' + title),
+    '4. Dinamičko programiranje': ['sto-je-dinamicko-programiranje', 'primjeri'].map(title => 'dinamicko-programiranje/' + title),
+    'Upiti nad intervalima ': ['upiti-nad-statickim-poljima', 'fenwickovo-stablo', 'segmentno-stablo', 'primjeri'].map(title => 'upiti-nad-intervalima/' + title),
     // 'Matematika': [].map(title => 'matematika/' + title),
     // 'Vjerojatnost': [].map(title => 'vjerojatnost/' + title),
     // 'Osnove teorije grafova': [].map(title => 'osnove-teorije-grafova/' + title),

@@ -74,7 +74,7 @@ function Home() {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/uvod/sadrzaj')}>
+              to={useBaseUrl('docs/o-materijalima/sadrzaj')}>
               Započnite
             </Link>
           </div>

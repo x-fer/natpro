@@ -1,8 +1,18 @@
 ---
-title: Asimptotska složenost algoritma
+title: O dobrim algoritmima
 ---
 
-o asimptotskoj složenosti, vremenskoj i prostornoj složenosti, usporedbi a.s.a. s vremenom izvođenja, par primjera brute force algoritama koji se mogu rijesiti jednom formulom, nekih koji se mogu ubrzati s n^2 na n*log(n) i slično, kako prepoznati koja se kompleksnost ocekuje iz ogranicenja zadatka
+## Dobar algoritam
+
+Cilj rješavanja zadataka na natjecanjima nije **samo** predati program koji daje točan rezultat, često je bitno i da taj program bude efikasan. Zadaci uglavnom imaju vremenska i memorijska ograničenja izvođenja programa te je bitno znati na vrijeme odrediti pristup kojim ćete rješavati određeni zadatak. Na nekim platformama (npr. Codeforces) je bitno i koliko vam je vremena trebalo da riješite određeni zadatak, te je iz tog razloga bitno i brzo odrediti hoće li neki pristup raditi s određenim testnim primjerima. - **TODO: OVO JE MALO LOŠE, TRIBALO BI POPRAVITI**
+
+Što više zadataka budete rješavali, to će vam lakše biti brzo odrediti efikasan pristup rješavanju zadataka. Svakako preporučamo da tijekom natjecanja koristite papir i olovku da biste mogli skicirati, ručno isprobavati neke testne primjere i provjeravati radi li vaš program na njima. Iako je korištenje olovke i papira poželjno, s vremenom (i s mnoštvom riješenih zadataka!) ćete primijetiti da za lakše zadatke uopće nećete trebati papir i olovku već će rješenja početi dolaziti "sama od sebe".
+
+Osim toga, često ćete se pronaći u situaciji da vaš program radi za sve testne primjere koje mu postavite na ulaz, a u evaluatoru dobivate dojavu o netočnom rješenju na nekom testnom primjeru. U tom slučaju je bitno razmisliti o tome koliko su vaši testni primjeri zapravo dobri. Nekad se zna dogoditi da naš program ne uspije na rubnim testovima (npr. zbog _overflowa_ cjelobrojnih varijabli), ili u nekom dijelu koda pokušamo dohvatiti indeks polja izvan njegovih granica i slično. S obzirom da smo sami smislili algoritam, često našem programu nesvjesno dajemo samo one testove za koje znamo da će program raditi. Bitnije je pokušati smisliti testove za koje program **neće** raditi, jer pomoću njih možete vidjeti što u programu trebate popraviti.
+
+Bitno je spomenuti da, kao i sve, natjecateljsko programiranje zahtijeva veliku količinu rada da bi se postigli odlični rezultati. Na platformi Codeforces možete pronaći [listu zadataka](https://codeforces.com/problemset) u kojoj zadatke možete poredati po težini ($800$ - najlakši zadaci, $3500$ - najteži), po temama (korištenjem _tagova_) ili po broju korisnika koji su riješili taj zadatak. Također možete i odabrati neko natjecanje te virtualno sudjelovati na tom natjecanju, i tako dobiti ideju o tome koliko dobro biste se plasirali da ste zapravo sudjelovali na tom natjecanju.
+
+## Asimptotska složenost algoritma
 
 S obzirom da se neki zadaci mogu riješiti na više različitih načina, dobro bi bilo imati neku notaciju pomoću koje bismo mogli označavati koliko je koji algoritam dobar ili loš. Upravo zato ćemo se upoznati s _Veliko O_ notacijom, pomoću koje na jednostavan način možemo opisati algoritme te brzo odrediti trebamo li koristiti određeni algoritam za određeni zadatak.
 
@@ -105,5 +115,5 @@ U ovom slučaju će se izvršiti $nm$ operacija ispisa, pa je složenost $O(nm)$
 
 Možda ste se tijekom čitanja zapitali, zašto je ovo uopće bitno? Odgovor leži u tome da poznavanjem asimptotske složenosti algoritama možemo jako brzo procijeniti hoće li naše rješenje biti dovoljno dobro da se program izvrši unutar zadanog vremenskog ograničenja. Uzmimo na primjer da evaluator može obaviti $10^{9}$ operacija u jednoj sekundi. U tekstu zadatka piše da varijabla $n$ može poprimiti vrijednosti od $1$ do $10^{5}$, a vremensko ograničenje izvođenja programa je $1$ sekunda. Tada možemo biti sigurni da $O(n^{2})$ neće biti dovoljno dobro jer možemo računati da će se izvršiti puno veći broj operacija nego što evaluator može izračunati u sekundi. U tablici možemo pogledati koliko bi otprilike trajalo izvođenje za koju složenost.
 
-**OVDJE IDE TABLICA**
+**TODO: OVDJE IDE TABLICA**
 

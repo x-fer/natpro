@@ -108,7 +108,7 @@ Ispis će izgledati ovako:
 2 4 6 8 10
 ```
 
-jer dodavanjem u set elemente postavljamo tako da set ostane sortiran uzlazno. Elemente dodajemo naredbom `insert`, brišemo ih naredbom `erase`, a osim toga možemo i provjeriti nalazi li se neki element u setu naredbom `count` - vraća $1$ ako se element nalazi, odnosno $0$ ako se ne nalazi u skupu. Naredba `size` vraća broj elemenata u setu. U članku [Iteratori](iteratori) i članku [Binarno pretraživanje](../sortiranje-i-pretrazivanje/binarno-pretrazivanje) pričat ćemo o još nekim naredbama nad setovima.
+jer dodavanjem u set elemente postavljamo tako da set ostane sortiran uzlazno. Elemente dodajemo naredbom `insert`, brišemo ih naredbom `erase`, a osim toga možemo i provjeriti nalazi li se neki element u setu naredbom `count` - vraća $1$ ako se element nalazi, odnosno $0$ ako se ne nalazi u skupu. Naredba `size` vraća broj elemenata u setu. U dijelu o iteratorima i članku [Binarno pretraživanje](../sortiranje-i-pretrazivanje/binarno-pretrazivanje) pričat ćemo o još nekim naredbama nad setovima.
 
 Pogledajmo sljedeći primjer:
 

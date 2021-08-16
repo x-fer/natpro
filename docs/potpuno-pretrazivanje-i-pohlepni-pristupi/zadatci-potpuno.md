@@ -2,7 +2,7 @@
 title: "Zadatci - potpuno pretraživanje"
 ---
 
-### Zadatak 1: Permutacije
+### Zadatak: Permutacije
 
 Zadan je broj $n$. Ispišite sve permutacije niza $1, 2, ..., n$.
 
@@ -18,5 +18,5 @@ Rekurzivni pristup koristi tehniku koju smo opisali u poglavlju *pruning*:
 
 Tutoriali za sve zadatke dostupni u *Contest materials* s desne strane.
 
-- [Zadatak 2](https://codeforces.com/problemset/problem/940/A)
-- [Zadatak 3](https://codeforces.com/problemset/problem/1042/B)
+- [Points on the line](https://codeforces.com/problemset/problem/940/A)
+- [Vitamins](https://codeforces.com/problemset/problem/1042/B)

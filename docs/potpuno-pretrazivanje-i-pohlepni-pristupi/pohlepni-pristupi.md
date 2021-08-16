@@ -38,7 +38,6 @@ pogledajmo rješenja koja daje ovaj pohlepni pristup za skup $\{1,3,4,5\}$:
 | $X$           |      Postupak   |  Količina novčanica   |
 | ------------- | :-----------:   | -----: |
 | 8             | 5,3 | 2  |
-| 17   |   5,5,5,2     |   4  |
 | 7      |     5,1,1       |    3  |
 
 Pozorni čitatelj primjetit će da slučaj sa $x=7$ možemo razložiti bolje nego što

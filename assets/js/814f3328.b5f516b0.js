@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[2535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Dobrodo\u0161li","permalink":"/blog/2021/03/02/dobrodosli"}]}')}}]);

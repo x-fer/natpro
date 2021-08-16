@@ -28,8 +28,8 @@
 
 .menu__link--active:not(.menu__link--sublist) {
   background: linear-gradient(90deg,#FF5F6D, #FFC371);
-  -webkit-text-fill-color: var(--ra-admonition-color);
-  -apple-text-fill-color: var(--ra-admonition-color);
+  -webkit-text-fill-color: var(--ifm-menu-color);
+  -apple-text-fill-color: var(--ifm-menu-color);
 }
 
 .docusaurus-highlight-code-line {

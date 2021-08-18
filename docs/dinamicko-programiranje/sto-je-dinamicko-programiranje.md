@@ -4,13 +4,17 @@ title: Što je dinamičko programiranje?
 
 ### UVOD
 
-Prvo pogledajmo jedan zadatak. Zadana je matrica veličine $N*N$ gdje je $N <= 1000$ te su u polja upisani prirodni brojevi $X_{i,j} < 1e9$. Želimo naći put iz gornjeg lijevog polja do doljenjeg desnog polja, krećući se samo dolje i desno, čija je suma ćelija na putu najveća. Možemo primjetiti da je iz jednog polja moguće otići samo u dva druga polja pa bi netko mogao pomisliti da odlaskom u polje s većim brojem dolazimo do rješenja. Ova ideja neće nam dati točno rješenje, a dokaz ostavljamo čitatelju za vježbu. Sljedeće rješenje koje se prirodno nameće je isprobati sve puteve te uzeti onaj s najvećom vrijednošću. Možemo primjetiti da će put uvijek biti duljine $2 * (N - 1)$ jer sigurno moramo otići $N - 1$ puta desno i $N - 1$ puta dolje. Postoji $2 * (N - 1) \choose (N - 1)$ različitih puteva, dokaz ove tvrdnje također ostavljamo čitatelju za vježbu. Očito će, za $N = 1000$, prolazak svim putevima biti prespor za uobičajeno vremensko ograničenje od jedne sekunde.
+Prvo pogledajmo jedan zadatak. Zadana je matrica veličine $N*N$ gdje je $N <= 1000$ te su u polja upisani prirodni brojevi $x_{i,j} < 1e9$. Želimo naći put iz gornjeg lijevog polja do doljenjeg desnog polja, krećući se samo dolje i desno, čija je suma ćelija na putu najveća. 
+
+Možemo primjetiti da je iz jednog polja moguće otići samo u dva druga polja pa bi netko mogao pomisliti da odlaskom u polje s većim brojem dolazimo do rješenja. Ova ideja mogla bi se nazvati pohlepnim pristupom, no ona nam neće dati točno rješenje, a dokaz ostavljamo čitatelju za vježbu(HINT: nađite protuprimjer). 
+
+Sljedeće rješenje koje se prirodno nameće je isprobati sve puteve te uzeti onaj s najvećom vrijednošću. Možemo primjetiti da će put uvijek biti duljine $2 * (N - 1)$ jer sigurno moramo otići $N - 1$ puta desno i $N - 1$ puta dolje. Postoji $2 * (N - 1) \choose (N - 1)$ različitih puteva, dokaz ove tvrdnje također ostavljamo čitatelju za vježbu. Očito će, za $N = 1000$, prolazak svim putevima biti prespor za uobičajeno vremensko ograničenje od jedne sekunde.
 
 ### Što je dinamika
 
 Primjetimo sljedeće: ako se nalazimo u ćeliji $X, Y$ matrice $M$ onda će maksimalna suma koju možemo dobiti do te ćelije biti $max(rješenje[X - 1, Y], rješenje[X, Y - 1]) + M[X, Y]$ što znači da ako znamo rezultate ćelije iznad i lijevo od trenutne ćelije onda jednostavno možemo izračunati rezultat za trenutnu ćeliju. 
 
-Upravo je to ideja dinamičkog programiranja. Dinamičko programiranje karakterizira skup stanja i jedna(ili više) funkcija prijelaza. Uvijek je zadano početno stanje i pomoću prijelaza potrebno je odrediti vrijednost traženog stanja. Specifično za ovaj zadatak, postavimo da nam je stanje optimalna suma u trenutnoj ćeliji, početno stanje je ćelija $(0,0)$ čija je početna vrijednost broj zapisan u toj ćeliji, a stanje čiju vrijednost tražimo je $(N - 1, N - 1)$. Funkcija prijelaza je navedena gore.
+Upravo je to ideja dinamičkog programiranja. Dinamičko programiranje karakterizira skup stanja i jedna(ili više) funkcija prijelaza. Uvijek je zadano početno stanje i pomoću prijelaza potrebno je odrediti vrijednost traženog stanja. Specifično za ovaj zadatak, postavimo da nam je stanje optimalna suma u nekoj ćeliji, početno stanje je ćelija $(0,0)$ čija je početna vrijednost broj zapisan u toj ćeliji, a stanje čiju vrijednost tražimo je $(N - 1, N - 1)$. Funkcija prijelaza je navedena gore.
 
 ### Složenost dinamike
 

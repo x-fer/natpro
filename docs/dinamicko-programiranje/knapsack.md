@@ -19,6 +19,7 @@ const int MAXN = 10000;
 int x, n;
 int vrijednost, velicina;
 //bitno je paziti može li ukupna vrijednost biti veća od integera
+//također, ako su stvari tekuće rješenje može biti decimalni broj
 long long int dp[MAXN];
 
 int main(){
@@ -39,6 +40,6 @@ int main(){
 
 ### Analiza složenosti
 
-U slučaju tekućih stvari stvari je potrebno sortirati prema vrijednosti, nakon toga moguće je linearno riješiti zadatak. Pošto je sortiranje složenosti $O(n \log n)$ te je to i složenost rješenja.
+U slučaju tekućih stvari stvari je potrebno sortirati prema vrijednosti, nakon toga moguće je linearno riješiti zadatak. Pošto je sortiranje složenosti $O(n \log n)$ to je i složenost rješenja.
 
 U slučaju čvrstih stvari složenost je $O(n * w)$;

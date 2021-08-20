@@ -2,12 +2,12 @@
 title: Problem razmjene novca
 ---
 
-Riječ je o problemu s kojim smo se susreli u poglavlju o pohlepnim pristupima. Pogledajmo kako bi smo taj problem riješili dinamičkim programiranjem.
+Riječ je o problemu s kojim smo se susreli u poglavlju o pohlepnim pristupima. Pogledajmo kako bismo taj problem riješili dinamičkim programiranjem.
 
 ### Rješenje
 
 Rješenje ovog problema blago se razlikuje u iterativnom i rekurzivnom pristupu. Prvo ćemo problem riješiti iterativno, a zatim rekurzivno.
-Neka je stanje neka količina novca koju smo do sad razmijenili. Iz tog stanja sa jednom novčanicom možemo prijeći u stanja koja su veća upravo za vrijednost neke novčanice koja nam je na raspolaganju. Krenimo od početnog stanja, u ovom zadatku zapravo imamo $k$ početnih stanja jer svaku količinu novca koja je jednaka jednoj od novčanica možemo razmijeniti upravo s tom jednom novčanicom te je vrijednost tih stanja $1$, sva ostala stanja imaju vrijednost $beskonačno$. Neka je trenutno stanje $i$, za svako stanje radimo sljedeće: povećamo $i$ za vrijednost svake novčanice i pogledamo jesmo li popravili rješenje koje smo već imali za tu(novu) vrijednost. Naravno uvijek uzimamo minimum od prethodnog i novog rješenja kako bi smo dobili optimalanu razmjenu.
+Neka je stanje neka količina novca koju smo do sad razmijenili. Stanje $DP[i]$ označava najmanji broj novčanica s kojima možemo razmijeniti količinu novca $i$. Iz tog stanja sa jednom novčanicom možemo prijeći u stanja koja su veća upravo za vrijednost neke novčanice koja nam je na raspolaganju. Krenimo od početnog stanja, u ovom zadatku zapravo imamo $k$ početnih stanja jer svaku količinu novca koja je jednaka jednoj od novčanica možemo razmijeniti upravo s tom jednom novčanicom te je vrijednost tih stanja $1$, sva ostala stanja imaju vrijednost $beskonačno$. Neka je trenutno stanje $i$, za svako stanje radimo sljedeće: povećamo $i$ za vrijednost svake novčanice i pogledamo jesmo li popravili rješenje koje smo već imali za tu(novu) vrijednost. Naravno uvijek uzimamo minimum od prethodnog i novog rješenja kako bi smo dobili optimalanu razmjenu.
 
 ***Ograničenja***
 

@@ -9,7 +9,7 @@ Zadan je niz duljine $N$ čiji su elementi $x_i < 1e5$. Odredi najdulji podniz, 
 
 ### Rješenje
 
-Za ovaj problem postoji jednostavno rješenje. Neka nam je stanje najdulji podniz do trenutnog elementa, a funkcija prijelaza je prolazak po svim prethodnim elementima gdje od svih elemenata koji su manji ili jednaki trenutnom tražimo onaj koji do tada tvori najdulji podniz, odnosno onaj u čijoj je dinamici zapisan najveći broj. Tom broju dodajemo 1 te to postaje vrijednost trenutnog stanja dinamike.
+Za ovaj problem postoji jednostavno rješenje. Neka nam je stanje duljina najduljeg podniza razmatrajući niz do nekog elementa(uključujući taj element), a funkcija prijelaza je prolazak po svim prethodnim elementima gdje od svih elemenata koji su manji ili jednaki trenutnom tražimo onaj koji do tada tvori najdulji podniz, odnosno onaj u čijoj je dinamici zapisan najveći broj. Tom broju dodajemo 1 te to postaje vrijednost trenutnog stanja dinamike.
 
 ```cpp
 int n, sol = 0;
@@ -17,15 +17,15 @@ int niz[100005];
 int dp[100005];
 
 int main(){
-    memset(sol, 1, sizeof sol);
+    memset(dp, 1, sizeof dp);
     cin >> n;
     for(int i = 0; i < n; i++){
         cin >> niz[i];
         for(int j = 0; j < i; j++){
             if(niz[j] <= niz[i]) 
                 dp[i] = max(dp[i], dp[j] + 1);
-            sol = max(sol, dp[i]);
         }
+        sol = max(sol, dp[i]);
     }
     cout << sol;
     return 0;

@@ -138,5 +138,14 @@ module.exports = {
       },
     ],
   ],
-  
+  i18n: {
+    defaultLocale: 'hr',
+    locales: ['hr'],
+    localeConfigs: {
+      hr: {
+        label: 'Hrvatski',
+        direction: 'ltr',
+      }
+    },
+  },
 };

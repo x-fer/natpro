@@ -123,8 +123,8 @@ module.exports = {
             'https://github.com/x-fer/natpro/tree/main/website',
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
+          showLastUpdateTime: false,
+          showLastUpdateAuthor: false,
         },
         blog: {
           showReadingTime: true,

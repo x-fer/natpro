@@ -42,3 +42,15 @@
 /*Images*/
 img[alt=potter] { width: 300px; }
 img[alt=monkey] { height: 200px }
+
+/*Spoiler*/
+.react-spoiler-shown {
+  cursor: pointer;
+  background: rgba(124, 124, 124, 0.4);
+}
+
+.react-spoiler-hidden {
+  background: rgb(124, 124, 124);
+  color: rgb(124, 124, 124);
+  cursor: pointer;
+}

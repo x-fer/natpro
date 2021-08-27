@@ -120,7 +120,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/x-fer/natpro/tree/main/website',
+            'https://github.com/x-fer/natpro/edit/main/',
           remarkPlugins: [math],
           rehypePlugins: [katex],
           showLastUpdateTime: true,
@@ -130,7 +130,7 @@ module.exports = {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/x-fer/natpro/edit/master/website/blog/',
+            'https://github.com/x-fer/natpro/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

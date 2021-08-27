@@ -2,6 +2,8 @@
 title: Upute za Markdown
 ---
 
+import Spoiler from '../../src/react_components/spoiler.js';
+
 Možete pisati članke koristeći [GitHub-flavored Markdown sintaksu](https://github.github.com/gfm/)
 
 
@@ -195,6 +197,39 @@ Ovaj redak je također odvojeni odlomak, ali...
 Ovaj redak je odvojen samo jednim prijelazom u novi red, pa će ostati u _istom odlomku_.
 
 ---
+
+## Skriveni tekst
+
+Želite li napisati tekst koji neće odmah biti vidljiv čitatelju, koristite React komponentu Spoiler: 
+
+```
+<Spoiler text='ovdje upisite tekst'/>
+```
+
+što će se prikazati ovako: <Spoiler text='ovdje upisite tekst'/> - klikom na sivi pravokutnik otkrivate skriveni tekst, ponovnim klikom ga skrivate.
+
+Želite li prikazati veći komad teksta, preporučujemo korištenje HTML oznake *details*:
+
+```
+<details>
+  <summary>
+    Ovo je naslov skrivenog teksta.
+  </summary>
+  <div>
+    A ovo je skriveni tekst.
+  </div>  
+</details>
+```
+
+<details>
+  <summary>
+    Ovo je naslov skrivenog teksta.
+  </summary>
+  <div>
+    A ovo je skriveni dio gdje možete ubaciti puno više teksta. Nastavit ću s tekstom kako bi se na svim ekranima prikazao u barem dva retka. Nažalost, matematički izrazi trenutno ne rade unutar HTML-a, pokušat ćemo to popraviti uskoro.
+  </div>  
+</details>
+
 
 ## Napomene
 

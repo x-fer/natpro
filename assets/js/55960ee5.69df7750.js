@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[4121],{8070:function(e){e.exports=JSON.parse('[{"name":"oznake","permalink":"/docs/tags/oznake","count":1},{"name":"odvojene","permalink":"/docs/tags/odvojene","count":1},{"name":"zarezima","permalink":"/docs/tags/zarezima","count":1}]')}}]);

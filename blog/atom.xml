@@ -13,5 +13,9 @@
         <link href="https://materijali.xfer.hr/blog/2021/03/02/dobrodosli"/>
         <updated>2021-03-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Dobrodošli na stranicu NatPro! Da biste započeli s radom, odite na stranicu Materijali gdje možete pronaći mnoštvo članaka o natjecateljskom programiranju te naučiti puno toga, a ako ste već upoznati s konceptima natjecateljskog programiranja, možete ponoviti gradivo!]]></summary>
+        <author>
+            <name>Ivan Vlahov</name>
+            <uri>https://github.com/vlahovivan</uri>
+        </author>
     </entry>
 </feed>

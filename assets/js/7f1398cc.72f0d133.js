@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[9698],{8496:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/bitno","name":"bitno","count":1,"permalink":"/blog/tags/bitno"}')}}]);

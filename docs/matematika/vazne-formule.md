@@ -17,7 +17,7 @@ int GCD(int a, int b){
 
 **Dokaz točnosti algoritma.** ***TODO: nisam siguran jel ovaj dokaz točan***
 
-Dokaz Euklidovog algoritma nije trivijalan, a možete ga pronaći na ovom <a href = "https://www.youtube.com/watch?v=H_2_nqKAZ5w">linku</a>
+Dokaz Euklidovog algoritma nije trivijalan, a možete ga pronaći na ovom linku
 
 Složenost algoritma je $O(\log min(a, b))$. Kod možete pisati i iterativno, u obliku while petlje, kako bi izbjegli pozivanje rekurzije ako je *time limit* na zadatku strog.
 
@@ -35,9 +35,9 @@ Kada pomnožimo dva broja zapravo napravimo uniju njihovih prostih faktora. U to
 
 ### Potenciranje i brzo potenciranje
 
-Želimo li izračunati $x^n$ možemo koristiti ugrađenu funkciju *double pow(base, exp)*. Nažalost korištenje te funkcije često nije dovoljno jer može prouzročiti bitan problem. Često se u zadatku traži da se ispiše ostatak pri djeljenju rješenja sa $1e9 + 7$. Ako su ulazni parametri veliki moguće je da će doći do overflowa tijekom računanja pa formula $pow(x, n) \% mod$ neće dati točno rješenje.
+Želimo li izračunati $x^n$ možemo koristiti ugrađenu funkciju *double pow(base, exp)*. Nažalost korištenje te funkcije često nije dovoljno jer može prouzročiti bitan problem. Često se u zadatku traži da se ispiše ostatak pri dijeljenju rješenja sa $1e9 + 7$. Ako su ulazni parametri veliki moguće je da će doći do overflowa tijekom računanja pa formula $pow(x, n) \% mod$ neće dati točno rješenje.
 
-Problem je moguće riješiti da napišemo vlastitu funkciju za potenciranje koja podržava računanje s ostatkom pri djeljenju. Ta bi funkcija izgledala ovako.
+Problem je moguće riješiti da napišemo vlastitu funkciju za potenciranje koja podržava računanje s ostatkom pri dijeljenju. Ta bi funkcija izgledala ovako.
 
 ```cpp
 //NAPOMENA: smatramo da su svi brojevi integeri
@@ -50,19 +50,19 @@ int pow_fixed(int base, int power, int mod){
 }
 ```
 
-Složenost ove funkcije je $O(power)$. Tu je funkciju moguće ubrzati ako primjetimo jedno korisno svojstvo potencija, a to je ako je potencija parna, tada broj možemo kvadrirati, a potenciju prepoloviti. $x^{2n} = x^{2^n}$. Sada našu funkciju možemo prilagoditi tako da provjeravamo parnost potencije i primjenimo gornju formulu.
+Složenost ove funkcije je $O(power)$. Tu je funkciju moguće ubrzati ako primijetimo jedno korisno svojstvo potencija, a to je ako je potencija parna, tada broj možemo kvadrirati, a potenciju prepoloviti. $x^{2n} = x^{2^n}$. Sada našu funkciju možemo prilagoditi tako da provjeravamo parnost potencije i primijenimo gornju formulu.
 
 ```cpp
 int brzo_potenciranje(int base, int power, int mod){
     if(power == 0) return 1;
     if(power == 1) return base;
-    // ako je potencija parna primjenimo gornju formulu
+    // ako je potencija parna primijenimo gornju formulu
     if(power % 2 == 0) return brzo_potenciranje(base * base % mod, power / 2, mod);
-    //inače primjenimo običan postupak
-    return brzo_potenciranje((base, power - 1, mod) * base) % mod;
+    //inače primijenimo običan postupak
+    return (brzo_potenciranje(base, power - 1, mod) * base) % mod;
 }
 ```
-Složenost ovog algoritma je $O(\log power)$, no ovaj kod nam i dalje može stvarati neke probleme jer neki brojevi mogu *overflowati*, a i kod sa puno modova nije baš lijep. Kako bi smo izbjegli često *castanje* u *long long* i često pisanje mod koristimo nešto što je praksa u natjecateljskom programiranju, a to su vlastite funkcije za zbrajanje i množenje. To na prvu možda zvuči čudno i nepotrebno, no tako će naš kod izgledati ljepše, a i imati će bolje performanse(kasnije ćemo objasniti zašto).
+Složenost ovog algoritma je $O(\log power)$, no ovaj kod nam i dalje može stvarati neke probleme jer neki brojevi mogu *overflowati*, a i kod s puno modova nije baš lijep. Kako bismo izbjegli često *castanje* u *long long* i često pisanje mod koristimo nešto što je praksa u natjecateljskom programiranju, a to su vlastite funkcije za zbrajanje i množenje. To na prvu možda zvuči čudno i nepotrebno, no tako će naš kod izgledati ljepše, a i imat će bolje performanse(kasnije ćemo objasniti zašto).
 
 ```cpp
 int add(int a, int b, int mod){
@@ -80,10 +80,10 @@ Sada možemo jednostavno prilagoditi funkciju za brzo potenciranje.
 int brzo_potenciranje(int base, int power, int mod){
     if(power == 0) return 1;
     if(power == 1) return base;
-    // ako je potencija parna primjenimo gornju formulu
+    // ako je potencija parna primijenimo gornju formulu
     if(power % 2 == 0) return brzo_potenciranje(mul(base, base, mod), power / 2, mod);
-    //inače primjenimo običan postupak
+    //inače primijenimo običan postupak
     return mul(brzo_potenciranje(base, power - 1, mod), base, mod);
 }
 ```
-Sada kod izgleda nešto ljepše. Ono što nam je važnije od izgleda koda je njegova efikasnost. Funkcija ostatka pri djeljenju, iako je konstante složenosti, ima veiku konstantu, odnosno funkcija je spora. Upravo zato nam je cilj ne koristiti tu funkciju ako nije potrebno. Možete primjetiti da u funkciji *add()* uopće ne koristimo ostatak pri djeljenju, već isti problem rješavamo zbrajanjem i oduzimanjem što su brže funkcije od modanja. U funkciji *mul* to ne radimo jer ćemo u množenju često imati overflow pa bi nam ta provjera dodatno usporila program.
+Sada kod izgleda nešto ljepše. Ono što nam je važnije od izgleda koda je njegova efikasnost. Funkcija ostatka pri dijeljenju, iako je konstante složenosti, ima veliku konstantu, odnosno funkcija je spora. Upravo zato nam je cilj ne koristiti tu funkciju ako nije potrebno. Možete primijetiti da u funkciji *add()* uopće ne koristimo ostatak pri dijeljenju, već isti problem rješavamo zbrajanjem i oduzimanjem što su brže funkcije od modanja. U funkciji *mul* to ne radimo jer ćemo u množenju često imati overflow pa bi nam ta provjera dodatno usporila program.

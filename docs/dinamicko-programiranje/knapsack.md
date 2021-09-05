@@ -68,6 +68,6 @@ int main(){
 
 ### Analiza složenosti
 
-U slučaju tekućih stvari stvari je potrebno sortirati prema omjeru vrijednosti naspram količine, nakon toga moguće je linearno riješiti zadatak. Pošto je sortiranje složenosti $O(n \log n)$ to je i složenost rješenja.
+U slučaju tekućih stvari je potrebno sortirati prema omjeru vrijednosti naspram količine, nakon toga moguće je linearno riješiti zadatak. Pošto je sortiranje složenosti $O(n \log n)$ to je i složenost rješenja.
 
-U slučaju čvrstih stvari složenost oba rješenja je $O(n * w)$, no primjetimo da je u prvom rješenju memorijska složenost $O(n * w)$, dok je u drugom samo $O(w)$;
+U slučaju čvrstih stvari složenost oba rješenja je $O(n * w)$, no primijetimo da je u prvom rješenju memorijska složenost $O(n * w)$, dok je u drugom samo $O(w)$;

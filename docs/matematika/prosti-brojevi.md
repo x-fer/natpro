@@ -48,7 +48,7 @@ int main(){
 }
 ```
 
-Složenost ovog algoritma je $O((\sum_{i=1}^n(n/i))$, što je jednako $O(n * (\sum_{i=1}^n(1/i))$, može se pokazati da je ova suma reda $O(\log n)$, a ukupna složenost ovog algoritma je $O(n (\log n) (\log\log n))$, no to ovdje nećemo dokazivati. Možete primijetiti da je član $\log \log n$ jako mali i za potrebe natjecateljskog programiranje ne prelazi $5$ pa ga je gotovo moguće zanemariti, ipak ako je ograničenje gusto ili je *time limit* malen, treba imati na umu da postoji.
+Složenost ovog algoritma je $O((\sum_{i=1}^n(n/i))$, što je jednako $O(n * (\sum_{i=1}^n(1/i))$, može se pokazati da je ova suma reda $O(\log n)$, a ukupna složenost ovog algoritma je $O(n (\log n))$, no to ovdje nećemo dokazivati, ono što također možete primijetiti je da će se u sumi nalaziti samo prosti brojevi pa se naša složenost smanjuje na $O(n (\log\log n))$. Možete primijetiti da je član $\log \log n$ jako mali i za potrebe natjecateljskog programiranje ne prelazi $5$ pa ga je gotovo moguće zanemariti, ipak ako je ograničenje gusto ili je *time limit* malen, treba imati na umu da postoji.
 
 ### Rastav broja na proste faktore
 

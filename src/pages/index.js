@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 const features = [
   {
     title: 'Za početnike i one naprednije',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    imageUrl: 'img/index/Asking_questions.svg',
     description: (
       <>
         Ovi materijali su koncipirani tako da budu dovoljno jednostavni za 
@@ -21,7 +21,7 @@ const features = [
   },
   {
     title: 'Puno primjera za kvalitetno učenje',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    imageUrl: 'img/index/Startup_Idea.svg',
     description: (
       <>
         Svaka tema popraćena je mnoštvom primjera s održanih natjecanja tako
@@ -31,7 +31,7 @@ const features = [
   },
   {
     title: 'Možete i doprinijeti',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    imageUrl: 'img/index/File_Transfer.svg',
     description: (
       <>
         Ako primijetite da neka tema nedostaje, možete i sami napisati članak o

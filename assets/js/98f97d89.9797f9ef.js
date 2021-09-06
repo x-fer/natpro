@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[5100],{5875:function(e){e.exports=JSON.parse('{"name":"oznake","permalink":"/docs/tags/oznake","docs":[{"id":"sablona-blog","title":"Naslov velikim slovom","description":"Ovdje ide sadr\u017eaj blog objave","permalink":"/docs/sablona-blog"}],"allTagsPath":"/docs/tags"}')}}]);

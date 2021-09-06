@@ -33,8 +33,8 @@ Postavlja se pitanje kako ćemo otkriti ako rješenje ne postoji. Odgovor je vrl
 
 ```cpp
 int n;
-pair jed[MAXN];
-pair cur;
+pair<int, int> jed[MAXN];
+pair<int, int> cur;
 long long int sol;
 
 int LCM(int a, int b){

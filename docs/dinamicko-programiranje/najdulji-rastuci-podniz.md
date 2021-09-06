@@ -42,7 +42,7 @@ Uvedimo novi niz koji će na mjestu $x$ imati zapisan najmanji broj koji može b
 
 ```cpp
 int n, x;
-vector najmanji;
+vector<int> najmanji;
 
 int main(){
     cin >> n;
@@ -71,8 +71,8 @@ Bitno je primijetiti da će brojevi u tom nizu uvijek biti sortirani uzlazno. Ra
 
 ```cpp
 int n, x;
-vector najmanji;
-vector::iterator it;
+vector<int> najmanji;
+vector<int>::iterator it;
 
 int main(){
     cin >> n;

@@ -17,7 +17,7 @@ int GCD(int a, int b){
 
 **Dokaz točnosti algoritma.** ***TODO: nisam siguran jel ovaj dokaz točan***
 
-Dokaz Euklidovog algoritma nije trivijalan, a možete ga pronaći na ovom linku
+Dokaz Euklidovog algoritma nije trivijalan, a možete ga pronaći na ovom <a href = "https://www.youtube.com/watch?v=H_2_nqKAZ5w">linku</a>
 
 Složenost algoritma je $O(\log min(a, b))$. Kod možete pisati i iterativno, u obliku while petlje, kako bi izbjegli pozivanje rekurzije ako je *time limit* na zadatku strog.
 
@@ -37,7 +37,7 @@ Kada pomnožimo dva broja zapravo napravimo uniju njihovih prostih faktora. U to
 
 Želimo li izračunati $x^n$ možemo koristiti ugrađenu funkciju *double pow(base, exp)*. Nažalost korištenje te funkcije često nije dovoljno jer može prouzročiti bitan problem. Često se u zadatku traži da se ispiše ostatak pri dijeljenju rješenja sa $1e9 + 7$. Ako su ulazni parametri veliki moguće je da će doći do overflowa tijekom računanja pa formula $pow(x, n) \% mod$ neće dati točno rješenje.
 
-Problem je moguće riješiti da napišemo vlastitu funkciju za potenciranje koja podržava računanje s ostatkom pri dijeljenju. Ta bi funkcija izgledala ovako.
+Problem je moguće riješiti tako da napišemo vlastitu funkciju za potenciranje koja podržava računanje s ostatkom pri dijeljenju. Ta bi funkcija izgledala ovako.
 
 ```cpp
 //NAPOMENA: smatramo da su svi brojevi integeri

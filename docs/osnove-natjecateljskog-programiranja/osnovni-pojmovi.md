@@ -2,6 +2,12 @@
 title: Osnovni pojmovi
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Ivan Vlahov' githubUsername='vlahovivan'/>
+
 ## Tipični program
 
 ### Šablona

@@ -2,7 +2,17 @@
 title: Preduvjeti
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Ivan Vlahov' githubUsername='vlahovivan'/>
+
+:::tipsavjet
+
 Ako već imate osnovno znanje programskog jezika C++ i imate instaliran neki uređivač teksta, možete preskočiti ovaj članak. 
+
+:::
 
 ### C++
 

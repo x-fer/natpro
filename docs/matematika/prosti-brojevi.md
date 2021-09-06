@@ -31,7 +31,7 @@ Zanimaju nas svi brojevi manji od $n$ koji su prosti. Naravno možemo primijenit
 ```cpp
 const int MAXN = 1e5 + 5;
 bool prosti[MAXN];
-void Eratosten(int n){
+void eratosten(int n){
     //označimo sve višekratnike od 2 kao ne proste
     for(int i = 4; i < n; i += 2)
         prosti[i] = false;
@@ -43,7 +43,7 @@ void Eratosten(int n){
 }
 int main(){
     memset(prosti, true, sizeof prosti);
-    Eratosten(MAXN);
+    eratosten(MAXN);
     //sada u poju prosti imamo označene sve proste brojeve
 }
 ```
@@ -57,7 +57,7 @@ Eratostenovo sito moguće je prilagoditi kako bi pomoću njega mogli saznati ras
 ```cpp
 const int MAXN = 1e5 + 5;
 int prosti[MAXN];
-void Eratosten(int n){
+void eratosten(int n){
     for(int i = 4; i < n; i += 2)
         prosti[i] = 2;
     for(int i = 3; i < n; i += 2){
@@ -75,7 +75,7 @@ void ispisi_rastav(int x){
 }
 int main(){
     memset(prosti, 0, sizeof prosti);
-    Eratosten(MAXN);
+    eratosten(MAXN);
     int n;
     cin >> n;
 	ispisi_rastav(n);

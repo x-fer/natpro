@@ -2,6 +2,12 @@
 title: O dobrim algoritmima
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Ivan Vlahov' githubUsername='vlahovivan'/>
+
 ## Dobar algoritam
 
 Cilj rješavanja zadataka na natjecanjima nije **samo** predati program koji daje točan rezultat, često je bitno i da taj program bude efikasan. Zadaci uglavnom imaju vremenska i memorijska ograničenja izvođenja programa te je bitno znati na vrijeme odrediti pristup kojim ćete rješavati određeni zadatak. Na nekim platformama (npr. Codeforces) je bitno i koliko vam je vremena trebalo da riješite određeni zadatak, te je iz tog razloga bitno i brzo odrediti hoće li neki pristup raditi s određenim testnim primjerima. - **TODO: OVO JE MALO LOŠE, TRIBALO BI POPRAVITI**

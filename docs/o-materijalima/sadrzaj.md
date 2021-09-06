@@ -2,6 +2,12 @@
 title: Sadržaj
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Ivan Vlahov' githubUsername='vlahovivan'/>
+
 ### Za koga su ovi materijali?
 
 Ovi materijali su namijenjeni svima koji žele unaprijediti svoje znanje o programiranju, algoritmima i strukturama podataka, onima koji se žele natjecati na natjecanjima iz programiranja, onima koji žele naučiti neke "trikove" za rješavanje nekih problema, onima koji se žele pripremiti za razgovore za posao te svima drugima kojima se tema natjecateljskog programiranja čini zanimljivom. Također su namijenjeni i onima koji su upoznati s principima natjecateljskog programiranja, a žele ponoviti gradivo.

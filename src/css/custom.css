@@ -1,0 +1,64 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #ff5f6d;
+  --ifm-color-primary-dark: #ff3c4d;
+  --ifm-color-primary-darker: #ff2a3d;
+  --ifm-color-primary-darkest: #f50015;
+  --ifm-color-primary-light: #ff828d;
+  --ifm-color-primary-lighter: #ff949d;
+  --ifm-color-primary-lightest: #ffc8cd;
+  --ifm-code-font-size: 95%;
+}
+ 
+.navbar__link:hover, .navbar__link--active, .menu__link:hover, .menu__link--active, .footer__link-item:hover {
+  background: linear-gradient(90deg,#FF5F6D, #FFC371);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -apple-background-clip: text;
+  -apple-text-fill-color: transparent;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background: linear-gradient(90deg,#FF5F6D, #FFC371);
+  -webkit-text-fill-color: var(--ifm-menu-color);
+  -apple-text-fill-color: var(--ifm-menu-color);
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+/*Images*/
+img[alt=potter] { width: 300px; }
+img[alt=monkey] { height: 200px }
+
+/*Spoiler*/
+.react-spoiler-shown {
+  cursor: pointer;
+  background: rgba(124, 124, 124, 0.4);
+}
+
+.react-spoiler-hidden {
+  background: rgb(124, 124, 124);
+  color: rgb(124, 124, 124);
+  cursor: pointer;
+}
+
+.author {
+  font-weight: 700;
+}
+
+.author + :not(h1, h2, h3, h4, h5, h6) {
+  margin-top: 3%;
+}

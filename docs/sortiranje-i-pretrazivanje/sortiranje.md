@@ -4,9 +4,6 @@ title: Sortiranje
 
 Algoritme za sortiranje koristimo kako bismo složili podatke u smisleni poredak prema nekom kriteriju. Iako ćemo ovdje prvenstveno govoriti o primjeni sortiranja u natjecateljskom programiranju (sortiranje nad brojevima, stringovima...), treba biti svjestan da je primjena puno šira pa je ova vještina potrebna svakome tko se želi ozbiljnije baviti programiranjem. Također, sortiranje je ključan preduvjet za mnoge druge korisne algoritme. U ovom ćete članku naučiti nešto o različitim sortovima i njihovoj složenosti. Ako vas zanima više, istražite dostupne linkove ili se javite putem foruma 😄.
 
-![potter](../../static/img/sorting_hat.jpg ) <br />
-_Harry Potter i kamen mudraca, Sorting Hat_
-
 ## $O(n^2)$ algoritmi
 
 Najjednostavniji algoritmi sortiraju liste u kvadratnoj složenosti. Jedan od najpoznatijih primjera ovakvog sortiranja je tzv. **bubble sort**. Algoritam se sastoji od $n$ koraka. U svakom koraku prolazimo kroz sve elemente u listi koju sortiramo i uspoređujemo susjedne članove. Ako dva susjedna člana nisu u odgovarajućem poretku (npr. sortiramo uzlazno), algoritam im mijenja mjesta. Tako osiguravamo da će se nakon prvog prolaska kroz niz najveći član nalaziti na točnom mjestu. Nakon maksimalno $n$ koraka svi će članovi biti na svojim mjestima i lista će biti sortirana. Više o bubble sortu pročitajte [ovdje](https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm "Bubble sort").

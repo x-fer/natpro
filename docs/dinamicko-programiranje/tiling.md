@@ -36,17 +36,27 @@ Složenost ovog rješenja je $O(n)$ jer svako stanje posjećujemo samo jednom.
 
 Zadana je ploča veličine $2 * n$ koju je potrebno popločiti pločicama dimenzija $2 * 1$. Pločice je moguće rotirati. *Neka polja su blokirana i preko njih nije moguće postaviti pločicu.* Na koliko načina je moguće ostvariti popločavanje? Pošto broj načina može biti jako velik, ispišite rješenje modulo $1e9 + 7$.
 
-Ovaj jedan dodatni uvijet znatno nam otežava rješavanje zadatka jer prethodna formula više ne pomaže.
+Ovaj jedan dodatni uvjet znatno nam otežava rješavanje zadatka jer prethodna formula više ne pomaže.
 
 ### Rješenje
 
 Neka nam je stanje određeno trenutnim stupcem i vrstom bloka u tom stupca, taj stupac još nije riješen, ali neka su svi stupci prije njega riješeni. Postoje 4 vrste bloka:
-<ul>
-    <li>0 - u stupcu nema bloka</li>
-    <li>1 - postoji blok u gornjem retku</li>
-    <li>2 - postoji blok u doljnjem retku</li>
-    <li>3 - postoji blok u oba retka</li>
-</ul>
+
+
+    
+0 - u stupcu nema bloka
+
+    
+1 - postoji blok u gornjem retku
+
+    
+2 - postoji blok u donjem retku
+
+    
+3 - postoji blok u oba retka
+
+
+
 
 Funkciju prijelaza više nije trivijalno odrediti, nego za svaku vrstu bloka moramo odrediti posebnu funkciju prijelaza. Funkcije prijelaza možete pogledati u kodu.
 
@@ -97,13 +107,14 @@ int main(){
 
 ```
 
-### Analza složenosti
+### Analiza složenosti
 
 Dinamika ima $4 * n$ stanja, a složenost prijelaza je $O(1)$, tako da je ukupna složenost dinamike $O(n)$.
 
 ### Još teži problem
 
 Problem možemo dodatno otežati tako da, umjesto ploče, polja koja su blokirana unosimo njihovim koordinatama. Neka je $m < 1e5$ blokiranih polja, tada je moguće dopustiti $n < 1e9$. Rješenje ovog problema nećemo prikazati ovdje te ga ostavljamo čitatelju za vježbu.
+
 <details>
     <summary>HINT</summary>
     <p>

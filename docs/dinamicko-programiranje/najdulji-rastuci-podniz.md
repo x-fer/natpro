@@ -1,9 +1,9 @@
 ---
-title: Najdulij rastući podniz
+title: Najdulji rastući podniz
 ---
 
 ### Problem
-Jedan od klasičnih problema dinamičkog programiranja je određivanje najduljeg rasutećeg podniza zadanog niza.
+Jedan od klasičnih problema dinamičkog programiranja je određivanje najduljeg rastućeg podniza zadanog niza.
 
 Zadan je niz duljine $N$ čiji su elementi $x_i < 1e5$. Odredi najdulji podniz, ne nužno uzastopnih elemenata, za čije elemente vrijedi da je svaki element veći ili jednak od elemenata prije njega.
 
@@ -38,7 +38,7 @@ Postoji $N$ stanja, a za izračun stanja moramo provjeriti sva prijašnja stanja
 
 ### Brže rješenje
 
-Uvedimo novi niz koji će na mjestu $x$ imati zapisan najmanji broj koji može biti na kraju podniza duljine $x$. Zašto nam je taj niz koristan? Upravo njegova duljina odgovara na naš problem. Sada sa postavlja pitanje možemo li taj niz stvoriti nešto brže kako bi nam rješenje stalo u vremensko ograničenje. 
+Uvedimo novi niz koji će na mjestu $x$ imati zapisan najmanji broj koji može biti na kraju podniza duljine $x$. Zašto nam je taj niz koristan? Upravo njegova duljina odgovara na naš problem. Sada se postavlja pitanje možemo li taj niz stvoriti nešto brže kako bi nam rješenje stalo u vremensko ograničenje. 
 
 ```cpp
 int n, x;
@@ -67,7 +67,7 @@ int main(){
 Pogledajmo složenost ovog rješenja. Vidimo da za svaki uneseni broj prolazimo kroz cijeli podniz kako bi ga popravili. Što ako nam je ulazni niz već sortiran ulazno? Tada će polje $najmanji$ stalno rasti i to nam je najgori slučaj koji i dalje daje kvadratnu složenost. Možemo li kako riješiti taj problem?
 
 
-Bitno je primjetiti da će brojevi u tom nizu uvijek biti sortirani uzlazno. Razmislite zašto. Također možemo primjetiti da ćemo popravak podniza napraviti samo jednom u prolasku kroz cijeli podniz. Promjena jednog elementa u sortiranom nizu navodi nas na binarnu pretragu. Binranom pretragom možemo naći mjesto na kojem trebamo napraviti promjenu i time ne moramo prolaziti kroz čitav podniz. Složenost tog rješenja bit će $O(rješenje \log rješenje)$, odnosno u najgorem slučaju $O(n \log n)$.
+Bitno je primijetiti da će brojevi u tom nizu uvijek biti sortirani uzlazno. Razmislite zašto. Također možemo primijetiti da ćemo popravak podniza napraviti samo jednom u prolasku kroz cijeli podniz. Promjena jednog elementa u sortiranom nizu navodi nas na binarnu pretragu. Binarnom pretragom možemo naći mjesto na kojem trebamo napraviti promjenu i time ne moramo prolaziti kroz čitav podniz. Složenost tog rješenja bit će $O(rješenje \log rješenje)$, odnosno u najgorem slučaju $O(n \log n)$.
 
 ```cpp
 int n, x;
@@ -92,4 +92,4 @@ Ovaj zadatak savršen je primjer zadatka dinamičkog programiranja. Jako kratak 
 
 ### Najdulji padajući podniz
 
-Na prvi pogled potrebno je promjeniti dinamiku i u vektor spremati najveće brojeve, no stvari se mogu zakomplicirati jer je vektor sada silazno sortiran pa više ne smijemo koristiti $upper\_bound()$ nego bi smo trebali kodirati vlastitu binarnu pretragu. Na svu sreću problem možemo riješiti vrlo jednostavno tako da spremimo ulazni niz u neko polje i zatim primjenimo funkciju $reverse()$ na to polje. Tada problem postaje traženje najduljeg **rastućeg** podniza.
+Na prvi pogled potrebno je promijeniti dinamiku i u vektor spremati najveće brojeve, no stvari se mogu zakomplicirati jer je vektor sada silazno sortiran pa više ne smijemo koristiti $upper\_bound()$ nego bismo trebali kodirati vlastitu binarnu pretragu. Na svu sreću problem možemo riješiti vrlo jednostavno tako da spremimo ulazni niz u neko polje i zatim primijenimo funkciju $reverse()$ na to polje. Tada problem postaje traženje najduljeg **rastućeg** podniza.

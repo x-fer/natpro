@@ -7,7 +7,7 @@ Riječ je o problemu s kojim smo se susreli u poglavlju o pohlepnim pristupima. 
 ### Rješenje
 
 Rješenje ovog problema blago se razlikuje u iterativnom i rekurzivnom pristupu. Prvo ćemo problem riješiti iterativno, a zatim rekurzivno.
-Neka je stanje neka količina novca koju smo do sad razmijenili. Stanje $DP[i]$ označava najmanji broj novčanica s kojima možemo razmijeniti količinu novca $i$. Iz tog stanja sa jednom novčanicom možemo prijeći u stanja koja su veća upravo za vrijednost neke novčanice koja nam je na raspolaganju. Krenimo od početnog stanja, u ovom zadatku zapravo imamo $k$ početnih stanja jer svaku količinu novca koja je jednaka jednoj od novčanica možemo razmijeniti upravo s tom jednom novčanicom te je vrijednost tih stanja $1$, sva ostala stanja imaju vrijednost $beskonačno$. Neka je trenutno stanje $i$, za svako stanje radimo sljedeće: povećamo $i$ za vrijednost svake novčanice i pogledamo jesmo li popravili rješenje koje smo već imali za tu(novu) vrijednost. Naravno uvijek uzimamo minimum od prethodnog i novog rješenja kako bi smo dobili optimalanu razmjenu.
+Neka je stanje neka količina novca koju smo do sad razmijenili. Stanje $DP[i]$ označava najmanji broj novčanica s kojima možemo razmijeniti količinu novca $i$. Iz tog stanja s jednom novčanicom možemo prijeći u stanja koja su veća upravo za vrijednost neke novčanice koja nam je na raspolaganju. Krenimo od početnog stanja, u ovom zadatku zapravo imamo $k$ početnih stanja jer svaku količinu novca koja je jednaka jednoj od novčanica možemo razmijeniti upravo s tom jednom novčanicom te je vrijednost tih stanja $1$, sva ostala stanja imaju vrijednost $beskonačno$. Neka je trenutno stanje $i$, za svako stanje radimo sljedeće: povećamo $i$ za vrijednost svake novčanice i pogledamo jesmo li popravili rješenje koje smo već imali za tu(novu) vrijednost. Naravno uvijek uzimamo minimum od prethodnog i novog rješenja kako bismo dobili optimalnu razmjenu.
 
 ***Ograničenja***
 
@@ -89,10 +89,10 @@ Ovom dinamikom možemo provjeriti bi li nam pohlepni algoritam objašnjen u pred
 :::cautionoprez
 Ova dinamika dat će odgovor na pitanje: Može li se pohlepnim pristupom dobiti točno rješenje za razmjenu bilo koje količine novca ako su nam na raspolaganju zadane novčanice.
 
-Pošto zadatci uglavnom imaju testne primjere sa raznim skupovima novčanica, nije nužno da ako pohlepno rješenje radi za neki skup novčanica da radi i za ostale skupove.
+Pošto zadatci uglavnom imaju testne primjere s raznim skupovima novčanica, nije nužno da ako pohlepno rješenje radi za neki skup novčanica da radi i za ostale skupove.
 :::
 
-Pogledajmo malu promjenu u ograničenjima u zadaku. Neka vrijedi $x < 1e9$. Možemo primjetiti da u tom slučaju gore navedeno rješenje nije točno. Ne možemo napraviti polje veličine $1e9$, a i kad bi smo imali dovoljno memorije i dalje bi rješenje bilo presporo. Tu nam je korisno znati pohlepni pristup. Primjetimo da, ako je najveća novčanica veličine $1e4$ tada je očito da ćemo sve iznad $2e4$ razmjenjivati upravo s tom novčanicom. Ako vam nije jasno zašto je to tako ponovno pročitajte pogljavlje *Pohlepni pristupi*. 
+Pogledajmo malu promjenu u ograničenjima u zadatku. Neka vrijedi $x < 1e9$. Možemo primijetiti da u tom slučaju gore navedeno rješenje nije točno. Ne možemo napraviti polje veličine $1e9$, a i kad bismo imali dovoljno memorije i dalje bi rješenje bilo presporo. Tu nam je korisno znati pohlepni pristup. Primijetimo da, ako je najveća novčanica veličine $1e4$ tada je očito da ćemo sve iznad $2e4$ razmjenjivati upravo s tom novčanicom. Ako vam nije jasno zašto je to tako ponovno pročitajte poglavlje *Pohlepni pristupi*. 
 
 Rješenje se tada svodi na primjenu redukcije na početni $x$ dok ne bude u intervalu $[max(a_i), 2 * max(a_i)>$. Tu redukciju moguće je napraviti u složenosti $O(1)$ jednostavnom matematikom.
 Analizirajmo složenost rješenja u tom slučaju. Tada ćemo dinamiku provoditi na maksimalno $2 * max(a_i)$. Što nam složenost svodi na $O(2 * max(a_i) * k)$. Sad imamo dva slična rješenja čija se složenost skalira s različitim faktorima, u jednom rješenju taj je faktor $x$, a u drugom $max(a_i)$. Pa možemo koristiti ono rješenje koje ima manji faktor kako bi dobili brži kod.

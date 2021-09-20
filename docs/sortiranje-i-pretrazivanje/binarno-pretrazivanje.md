@@ -79,7 +79,7 @@ Zamislimo problem u kojem tražimo odgovarajuću veličinu kvadratnog kaveza za 
 
 Pokušajmo sada upotrijebiti znanje binarne pretrage. Važno je primijetiti da sve veličine kaveza do neke <ins>granične veličine</ins> **ne** ispunjavaju uvjet zadovoljstva, a sve veličine nakon te ga ispunjavaju. Naš je zadatak pronaći upravo tu graničnu veličinu. Postavimo lijevu granicu pretrage na $1$, a desnu na neki veliki broj koji sigurno ispunjava uvjet zadatka. Pri svakom koraku pretrage provjeravamo jesmo li ispunili uvjet zadatka. Ako jesmo, pomičemo desnu granicu (želimo još manju veličinu), a ako nismo, pomičemo lijevu granicu.
 
-![monkey](../../static/img/sretni_majmun.jpg ) <br />
+![happy monkey](../../static/img/sortiranje_happy_monkey.jpg ) <br />
 Uistinu zadovoljan majmun.
 
 ### Maksimum funkcije

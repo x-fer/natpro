@@ -10,7 +10,7 @@ import Spoiler from '../../src/react_components/spoiler.js';
 
 ## Što su containeri
 
-TODO: ukratko objasni
+U ovom poglavlju ukratko ćemo objasniti kako funkcioniraju i što su *containeri*. *Container* je objekt u koji možemo spremiti više drugih objekata, te koristeći članske funkcije na određeni način manipulirati tim podacima, iterirati kroz njih, raditi određene upite i slično kako bismo riješili neki zadatak. U C++-u su *containeri* implementirani kao *class template*, što znači da u njih možemo pohraniti bilo koju vrstu objekata. Kao što ćemo vidjeti u nastavku, različiti *containeri* se različito ponašaju, pa počnimo od jednostavnijih.
 
 ## Vector
 
@@ -162,7 +162,6 @@ Ispis će ovaj put biti drugačiji:
 1 1 1 2 2 2 3 3 3
 ```
 
-UNORDERED SET, DI SE KORISTE, CUSTOM COMPARATOR
 
 ## Map
 
@@ -291,10 +290,68 @@ cout << *it << "\n"; // ispisuje 3
 
 U poglavlju o sortiranju i pretraživanju ćemo pričati više o praktičnim primjenama iteratora.
 
+## Pair
+
+Želimo li u jedan objekt spremiti dva podatka (npr. ime i godine neke osobe), koristimo strukturu pair. Definiramo je na jedan od sljedećih načina:
+
+```cpp
+pair<string, int> ivan = {"Ivan", 21};
+pair<string, int> luka = make_pair("Luka", 24);
+```
+
+Podacima pristupamo koristeći članove `first` i `second`:
+
+```cpp
+cout << ivan.first << " " << ivan.second << "\n";
+cout << luka.first << " " << luka.second << "\n";
+```
+
+Ispis:
+
+```
+Ivan 21
+Luka 24
+```
+
+Više o strukturi pair možete pronaći [ovdje](https://www.cplusplus.com/reference/utility/pair/pair/).
+
+## Tuple
+
+Želimo li spremiti više podataka (npr. ime, godine i prosjek ocjena), možemo koristiti tuple:
+
+```
+tuple<string, int, double> ivana = {"Ivana", 22, 4.8};
+tuple<string, int, double> lucija = make_tuple("Lucija", 23, 3.95); 
+```
+
+Članovima pristupamo koristeći funkciju `get<>`:
+
+```    
+cout << get<0>(ivana) << " " << get<1>(ivana) << " " << get<2>(ivana) << "\n";
+cout << get<0>(lucija) << " " << get<1>(lucija) << " " << get<2>(lucija) << "\n";
+```
+
+Ispis:
+
+```
+Ivana 22 4.8
+Lucija 23 3.95
+```
+
+Više o strukturi tuple možete pronaći [ovdje](https://www.cplusplus.com/reference/tuple/tuple/).
+
 ## Ostali containeri
 
-TODO: pair, tuple, queue, deque, priority_queue, stack, forward_list, list, union
+Osim navedenih, na sljedećim linkovima možete pronaći i dokumentaciju ostalih *containera* koji bi vam mogli zatrebati tijekom rješavanja zadataka:
 
-## Primjeri
-
-nezz
+- [queue](https://www.cplusplus.com/reference/queue/queue/)
+- [deque](https://www.cplusplus.com/reference/deque/deque/)
+- [priority_queue](https://www.cplusplus.com/reference/queue/priority_queue/)
+- [stack](https://www.cplusplus.com/reference/stack/stack/)
+- [forward_list](https://www.cplusplus.com/reference/forward_list/forward_list/)
+- [list](https://www.cplusplus.com/reference/list/list/)
+- [unordered_set](https://www.cplusplus.com/reference/unordered_set/unordered_set/)
+- [unordered_multiset](https://www.cplusplus.com/reference/unordered_set/unordered_multiset/)
+- [unordered_map](https://www.cplusplus.com/reference/unordered_map/unordered_map/)
+- [multimap](https://www.cplusplus.com/reference/map/multimap/)
+- [unordered_multimap](https://www.cplusplus.com/reference/unordered_map/unordered_multimap/)

@@ -1,6 +1,10 @@
 ---
-title: "Zadatci - potpuno pretraživanje"
+title: "Zadatci 1"
 ---
+
+import Author from '../../src/react_components/author.js';
+
+<Author authorName='Petar Mihalj' githubUsername='PetarMihalj'/>
 
 ### Zadatak: Permutacije
 

@@ -2,6 +2,10 @@
 title: Meet in the middle
 ---
 
+import Author from '../../src/react_components/author.js';
+
+<Author authorName='Petar Mihalj' githubUsername='PetarMihalj'/>
+
 **Meet in the middle** (*MITM*) skup je tehnika kojima prostor pretraživanje krenemo pretraživati
 s obe strane. Na primjer, traženje najkraćeg puta može istodobno krenuti od odredišta i cilja.
 

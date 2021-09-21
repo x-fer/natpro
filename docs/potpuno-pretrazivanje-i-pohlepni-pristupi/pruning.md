@@ -2,6 +2,10 @@
 title: Pruning
 ---
 
+import Author from '../../src/react_components/author.js';
+
+<Author authorName='Petar Mihalj' githubUsername='PetarMihalj'/>
+
 **Pruning** je tehnika ranijeg odbacivanja pokušaja koji sigurno neće
 rezultirati rješenjem, a termin se koristi primarno kod rekurzivnih istraživanja.
 

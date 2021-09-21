@@ -2,6 +2,10 @@
 title: "Potpuno pretraživanje"
 ---
 
+import Author from '../../src/react_components/author.js';
+
+<Author authorName='Petar Mihalj' githubUsername='PetarMihalj'/>
+
 **Potpuno pretraživanje** (*complete search*, *brute force*) skup je metoda kojima prolazimo cijelim prostorom rješenja.
 Na primjer, ako se traži najbolji raspored, mi razmatramo **svaki** i među njima biramo najbolji.
 

@@ -14,7 +14,7 @@ Ovi materijali su namijenjeni svima koji žele unaprijediti svoje znanje o progr
 
 ### Tko je napravio ove materijale?
 
-Ivan Vlahov, student treće godine Fakulteta Elektrotehnike i Računarstva na Sveučilištu u Zagrebu, kojem je u srednjoj školi nedostajalo kvalitetnih materijala za pripremu za natjecanja iz informatike.
+Ivan Vlahov, student na Fakultetu Elektrotehnike i Računarstva, napravio je stranicu, dok su za sadržaj na stranici odgovorni odlični [autori članaka](../doprinos-ovim-materijalima/autori).
 
 ### Što očekivati od ovih materijala?
 

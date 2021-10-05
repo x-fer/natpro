@@ -3,8 +3,9 @@ title: Autori
 ---
 
 Autori članaka na ovoj stranici su (abecednim redom):
-- [Adrian Braković](https://github.com/Brajk19)
+- [Adrian Brajković](https://github.com/Brajk19)
 - [Karlo Franić](https://github.com/kfranic1)
+- [Anamarija Kozina](https://github.com/AnamarijaKozina)
 - [Petar Mihalj](https://github.com/PetarMihalj)
 - [Maja Milas](https://github.com/javascript-m)
 - [Ivan Vlahov](https://github.com/vlahovivan)

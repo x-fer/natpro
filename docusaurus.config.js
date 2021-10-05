@@ -91,16 +91,20 @@ module.exports = {
           items: [
             {
               label: 'X.FER',
-              to: 'https://xfer.hr',
+              href: 'https://xfer.hr',
             },
             {
               label: 'GitHub',
               href: 'https://github.com/x-fer/natpro',
             },
+            {
+              label: 'Discord',
+              href: 'https://discord.gg/E7ad4UGbrG',
+            },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} X.FER. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} X.FER`,
     },
   },
   stylesheets: [

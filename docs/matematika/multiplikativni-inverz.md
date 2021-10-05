@@ -19,7 +19,9 @@ int phi(int n) {
     int rez = n;
     for (int i = 2; i * i <= n; ++i) {
         /* Provjeravamo je li n djeljiv s i. Ako jest, onda je i prost broj iz njegovog rastava. */
-        /* Kako znamo da je i prost? Počinjemo s prostim brojem 2. Za trenutni i, u while petlji ispod ćemo 'ukloniti' sva javljanja faktora i iz n, pa svaki sljedeći i koji dijeli (promijenjeni) n neće biti višekratnik trenutnog i. Tako svaki trenutni i nije višekratnik brojeva 2..i-1, pa je prost. */
+        /* Kako znamo da je i prost? Počinjemo s prostim brojem 2. Za trenutni i, u while petlji ispod */
+        /* ćemo 'ukloniti' sva javljanja faktora i iz n, pa svaki sljedeći i koji dijeli (promijenjeni) n */
+        /* neće biti višekratnik trenutnog i. Tako svaki trenutni i nije višekratnik brojeva 2..i-1, pa je prost. */
         if (n % i == 0) {
             while (n % i == 0)
                 n /= i;
@@ -28,7 +30,8 @@ int phi(int n) {
         }
     }
     /* Ako je n>1, onda postoji prost faktor od n veći od sqrt(n). */
-    /* Takav može biti samo jedan. Dokaz: pretp. da postoje dva prosta faktora a,b>sqrt(n). Tada i a*b dijeli n, pa je a*b<=n. Ali, sqrt(n)*sqrt(n)<a*b<=n pa slijedi n<n (kontradikcija). */
+    /* Takav može biti samo jedan. Dokaz: pretp. da postoje dva prosta faktora a,b>sqrt(n). */
+    /* Tada i a*b dijeli n, pa je a*b<=n. Ali, sqrt(n)*sqrt(n)<a*b<=n pa slijedi n<n (kontradikcija). */
     /* Taj preostali prosti faktor upravo je trenutni n, pa promijenimo rez kao gore. */
     if (n > 1)
         rez -= rez / n;

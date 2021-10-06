@@ -54,7 +54,7 @@ void convex_hull(vector<tocka>& tocke) {
         /* ako je trenutna tocka B, ili je iznad pravca AB */
         if (i == tocke.size() - 1 || cw(A, tocke[i], B)) {
             /* !cw umjesto ccw: uključujemo i slučaj kuta od 180° (ako je u nekom 'vrhu' kut od 180°, ta je točka element stranice, a ne vrh) */
-            /* dok u ljusci postoje bar 2 točke, i vrijedi da trenutna točka ne skrece clockwise */
+            /* dok u ljusci postoje bar 2 točke, i vrijedi da trenutna točka ne skreće clockwise */
             while (gore.size() >= 2 && !cw(gore[gore.size()-2], gore[gore.size()-1], tocke[i]))
                 gore.pop_back();
             gore.push_back(tocke[i]);

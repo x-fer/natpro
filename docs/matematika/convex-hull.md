@@ -70,11 +70,11 @@ void convex_hull(vector<tocka>& tocke) {
     tocke.clear();
     for (int i = 0; i < gore.size(); i++)
         tocke.push_back(gore[i]);
-    for (int i = dolje.size() - 2; i > 0; i--) /* ne prepisujemo krajnje točke iz 'dolje' jer su A i B vec prepisane iz 'gore' */
+    for (int i = dolje.size() - 2; i > 0; i--) /* ne prepisujemo krajnje točke iz 'dolje' jer su A i B već prepisane iz 'gore' */
         tocke.push_back(dolje[i]);
 }
 ```
 
-U dijelu konstrukcije ljuske nakon sortiranja, svaka se točka može u operacijama javiti samo dvaput. Na primjer, promotrimo skup $S_1$. Točkama prolazimo slijeva nadesno, pa na pojedinu točku prvi put nailazimo kada ju dodajemo u ljusku, a algoritam nastavlja dalje. Na istu točku se možemo vratiti samo kada utvrdimo da sa sljedećom zatvara kut u obrnutom smjeru od kazaljke na satu, a operacija u kojoj sudjeluje u tom slučaju je njeno uklanjanje, pa se ne može pojaviti opet. Slično vrijedi i za $S_2$, dakle, _for_ petlja ima složenost $O(n)$.
+U dijelu konstrukcije ljuske nakon sortiranja, svaka se točka može u operacijama javiti samo dvaput. Na primjer, promotrimo skup $S_1$. Točkama prolazimo slijeva nadesno, pa na pojedinu točku prvi put nailazimo kada ju dodajemo u ljusku, a algoritam nastavlja dalje. Na istu točku se možemo vratiti samo kada utvrdimo da sa sljedećom zatvara kut u obrnutom smjeru od kazaljke na satu, a operacija u kojoj sudjeluje u tom slučaju je njeno uklanjanje, pa se ne može pojaviti opet. Slično vrijedi i za $S_2$, dakle, _for_ petlja ima složenost $O(N)$.
 
-Funkcija _sort_, s druge strane, ima složenost $O(n\log(n))$ i dominira ukupnim vremenom izvršavanja. Složenost cijelog algoritma zato je jednaka $O(n\log(n))$.
+Funkcija _sort_, s druge strane, ima složenost $O(N \log(N))$ i dominira ukupnim vremenom izvršavanja. Složenost cijelog algoritma zato je jednaka $O(N \log(N))$.

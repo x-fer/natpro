@@ -89,12 +89,12 @@ tip_podatka pseudoskalarni(tocka a, tocka b) {
 
 #### Orijentacija kuta
 
-Bitna primjena ovog produkta je u računanju orijentacije kuta između dvaju vektora. Može se pokazati da, ako kut između $\overrightarrow{a}$ i $\overrightarrow{b}$ opisujemo u smjeru kazaljke na satu (_clockwise_), njihov pseudoskalarni produkt bit će pozitivan, a inače (u _counterclockwise_ smjeru) negativan. Kut može biti zadan i točkama; ako su dane tri točke koje određuju kut ($P_1$ na jednom kraku, $P_2$ na sjecištu, $P_3$ na drugom), orijentaciju kuta možemo provjeriti sljedećim funkcijama:
+Bitna primjena ovog produkta je u računanju orijentacije kuta između dvaju vektora. Može se pokazati da, ako kut između $\overrightarrow{a}$ i $\overrightarrow{b}$ opisujemo u smjeru kazaljke na satu (_clockwise_), njihov pseudoskalarni produkt bit će pozitivan, a inače (u _counterclockwise_ smjeru) negativan. Kut može biti zadan i točkama; ako su dane tri točke koje određuju kut ($P_1$ na jednom kraku, sjecište $P_2$, $P_3$ na drugom), orijentaciju kuta možemo provjeriti sljedećim funkcijama:
 ```cpp
 bool clockwise(tocka p1, tocka p2, tocka p3) {
-    return cross(p2 - p1, p3 - p2) < 0;
+    return pseudoskalarni(p2 - p1, p3 - p2) < 0;
 }
 bool counterclockwise(tocka p1, tocka p2, tocka p3) {
-    return cross(p2 - p1, p3 - p2) > 0;
+    return pseudoskalarni(p2 - p1, p3 - p2) > 0;
 }
 ```

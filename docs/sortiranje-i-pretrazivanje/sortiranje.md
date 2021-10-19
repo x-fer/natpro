@@ -2,6 +2,12 @@
 title: Sortiranje
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Maja Milas' githubUsername='javascript-m'/>
+
 Algoritme za sortiranje koristimo kako bismo složili podatke u smisleni poredak prema nekom kriteriju. Iako ćemo ovdje prvenstveno govoriti o primjeni sortiranja u natjecateljskom programiranju (sortiranje nad brojevima, stringovima...), treba biti svjestan da je primjena puno šira pa je ova vještina potrebna svakome tko se želi ozbiljnije baviti programiranjem. Također, sortiranje je ključan preduvjet za mnoge druge korisne algoritme. U ovom ćete članku naučiti nešto o različitim sortovima i njihovoj složenosti. Ako vas zanima više, istražite dostupne linkove ili se javite putem foruma 😄.
 
 ## $O(n^2)$ algoritmi

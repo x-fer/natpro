@@ -22,6 +22,6 @@ Možete očekivati sadržaj koji obuhvaća gradivo natjecanja iz informatike za 
 
 ### Što ne očekivati od ovih materijala?
 
-Nemojte očekivati da ćete **samo** čitanjem ovih materijala postati vrsni programer. Ovi materijali objašnjavaju koncepte natjecateljskog programiranja koje možete u potpunosti naučiti jedino rješavanjem zadataka koje uključuju te koncepte. Samo učenjem algoritama napamet nećete puno postići, zato savjetujemo da isprobate riješiti zadatke koje ćete moći pronaći na krajevima nekih članaka.
+Nemojte očekivati da ćete **samo** čitanjem ovih materijala postati vrsni natjecatelj. Ovi materijali objašnjavaju koncepte natjecateljskog programiranja koje možete u potpunosti naučiti jedino rješavanjem zadataka koje uključuju te koncepte. Samo učenjem algoritama napamet nećete puno postići, zato savjetujemo da isprobate riješiti zadatke koje ćete moći pronaći na krajevima nekih članaka.
 
 

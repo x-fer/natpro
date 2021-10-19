@@ -2,6 +2,12 @@
 title: Važne formule
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Karlo Franić' githubUsername='kfranic1'/>
+
 ### Najveći zajednički djelitelj
 
 Odredimo najveći zajednički djelitelj(dalje u tekstu **GCD** od eng. Greatest Common Divisor) od $a$ i $b$. Možemo krenuti od $min(a, b)$ prema $1$ tražeći prvi broj s kojim su oba djeljiva. Složenost ovog postupka je $O(min(a, b))$, odnosno složenost je linearna. 

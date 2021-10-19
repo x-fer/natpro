@@ -2,13 +2,19 @@
 title: Convex hull
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Anamarija Kozina' githubUsername='AnamarijaKozina'/>
+
 ### Problem
 
 Zadano je $N$ točaka u ravnini. Treba pronaći njihovu "konveksnu ljusku", engl. _convex hull_, tj. najmanji konveksni poligon koji obuhvaća sve točke.
 
 Poligon je konveksan ako za svake dvije točke koje sadržava, sadržava i dužinu koja ih povezuje. Možemo ga karakterizirati i kao poligon kojem su svi kutovi manji od 180°. Traženje najmanjeg takvog povlači da  će mu vrhovi biti neke od zadanih točaka, pa je problem upravo određivanje o kojim točkama se radi. Ako zamislimo da oko cijelog skupa rastegnemo gumicu i pustimo je da se stisne, njezin krajnji oblik ocrtavat  će "ljusku" koju tražimo:
 
-![analogija s gumicom](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/ConvexHull.svg/330px-ConvexHull.svg.png)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/ConvexHull.svg/330px-ConvexHull.svg.png" style={{background: 'white'}}/>
 
 ### Rješenje
 

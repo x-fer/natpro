@@ -2,6 +2,12 @@
 title: Popločavanje
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Karlo Franić' githubUsername='kfranic1'/>
+
 ### Problem
 
 Zadana je ploča veličine $2 * n$ koju je potrebno popločiti pločicama dimenzija $2 * 1$. Pločice je moguće rotirati. Na koliko načina je moguće ostvariti popločavanje? Pošto broj načina može biti jako velik, ispišite rješenje modulo 1e9 + 7.

@@ -3,7 +3,8 @@ title: Najbliži par točaka
 ---
 
 ### Problem
-<img src="https://thealgoristsblob.blob.core.windows.net/thealgoristsimages/235597E5-D92A-46CF-84F6-CE4C016036D9.jpeg" width=240px>
+
+<img src="https://thealgoristsblob.blob.core.windows.net/thealgoristsimages/235597E5-D92A-46CF-84F6-CE4C016036D9.jpeg" width="240"/>
 
 Zadano je $N$ točaka u ravnini. Treba pronaći udaljenost najbližeg para među njima.
 

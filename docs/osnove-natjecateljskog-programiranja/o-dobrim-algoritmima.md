@@ -22,7 +22,9 @@ Bitno je spomenuti da, kao i sve, natjecateljsko programiranje zahtijeva veliku 
 
 S obzirom da se neki zadaci mogu riješiti na više različitih načina, dobro bi bilo imati neku notaciju pomoću koje bismo mogli označavati koliko je koji algoritam dobar ili loš. Upravo zato ćemo se upoznati s _Veliko O_ notacijom, pomoću koje na jednostavan način možemo opisati algoritme te brzo odrediti trebamo li koristiti određeni algoritam za određeni zadatak.
 
-Pomoću Veliko O notacije možemo odrediti način na koji brzina izvođenja programa ovisi o jednoj ili više varijabli. 
+Pomoću Veliko O notacije možemo odrediti način na koji broj operacija u programu ovisi o jednoj ili više varijabli. 
+
+
 
 Uzmimo na primjer sljedeći isječak koda:
 

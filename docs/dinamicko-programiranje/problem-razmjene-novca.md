@@ -2,6 +2,12 @@
 title: Problem razmjene novca
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Karlo Franić' githubUsername='kfranic1'/>
+
 Riječ je o problemu s kojim smo se susreli u poglavlju o pohlepnim pristupima. Pogledajmo kako bismo taj problem riješili dinamičkim programiranjem.
 
 ### Rješenje

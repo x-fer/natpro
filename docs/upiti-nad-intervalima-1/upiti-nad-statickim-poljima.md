@@ -2,6 +2,12 @@
 title: Upiti nad statičkim poljima
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Adrijan Brajković' githubUsername='Brajk19'/>
+
 ### Uvod  
 Započet ćemo s jednim jednostavnim zadatkom/primjerom:  
 Zadan je niz cijelih brojeva $[2, 5, 3, 0, -3, 1, 4]$ i potrebno je naći sumu niza nad nekim intervalom. Na primjer, neka je početak intervala na indeksu 2, a kraj intervala na indeksu 5. Rješenje je $3 + 0 +(-3) + 1 = 1$.  

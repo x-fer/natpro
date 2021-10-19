@@ -2,6 +2,12 @@
 title: Najdulji rastući podniz
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Karlo Franić' githubUsername='kfranic1'/>
+
 ### Problem
 Jedan od klasičnih problema dinamičkog programiranja je određivanje najduljeg rastućeg podniza zadanog niza.
 

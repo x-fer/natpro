@@ -2,6 +2,12 @@
 title: Binarno pretraživanje
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Maja Milas' githubUsername='javascript-m'/>
+
 Zamislimo sljedeću situaciju. Dana je lista od $n$ brojeva koji su **sortirani** i zadatak nas pita nalazi li se u toj listi broj $x$? Prva ideja mogla bi biti prolazak po svim elementima liste pri čemu bismo svaki put radili usporedbu s brojem $x$ dok ga eventualno ne pronađemo. To nam daje algoritam složenosti $O(n)$. Postoji li brži način? Pomaže li nam ikako činjenica da je dobiveni niz brojeva sortiran? Tu na snagu stupa **binarno pretraživanje**.
 
 Vjerovali ili ne, s binarnim pretraživanjem već ste se više puta susreli u svakodnevnom životu (npr. traženje riječi u rječniku ili točne stranice u knjizi). Sigurno ste i barem jednom u životu igrali igru u kojoj osoba zamisli broj u nekom intervalu (npr. $1-100$), a vi morate pogoditi koji je broj zamislila. Prilikom svakog pokušaja osoba vam kaže je li broj koji je ona zamislila veći, manji ili jednak broju koji ste predložili. Kada biste ovu igru igrali optimalno, prvo biste pokušali sa $50$. Osoba će vam reći je li njezin broj veći ili manji i vi ste tako problem pogađanja jednog od $100$ brojeva prepolovili na samo $50$ mogućih rješenja. Ako je npr. osoba rekla da je njezin broj veći, lako je zaključiti da je idući optimalan korak pretpostaviti broj $75$ čime je problem ponovo prepolovljen. Budući da se <ins>složenost problema prilikom svakog koraka prepolavlja</ins>, ukupna će složenost odgovarati **$O(log_2(n))$** (što je za velike $n$-ove punopuno manje od linearne).

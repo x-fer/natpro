@@ -2,6 +2,12 @@
 title: Multiplikativni inverz
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Anamarija Kozina' githubUsername='AnamarijaKozina'/>
+
 **Modularni multiplikativni inverz** cijelog broja $a$ modulo $m$ je cijeli broj $a^{-1}$ koji zadovoljava kongruenciju $a \cdot a^{-1} \equiv 1 \ (\textrm{mod}\ m)$.
 
 Na primjer, $6^{-1} \equiv 3 \ (\textrm{mod}\ 17)$, jer je $6 \cdot 3 \equiv 1 \ (\textrm{mod}\ 17)$. Primijetimo da je inverz različit za različite $m$, i da ne postoji uvijek (pokušajte ga pronaći za $a=2$, $m=4$), a može se pokazati da postoji ako i samo ako su $a$ i $m$ relativno prosti. Multiplikativni inverzi korisni su u modularnom dijeljenju - dijeljenje brojem $a$ modulo $m$ odgovarat će množenju s $a^{-1}$, kao i u običnoj aritmetici.

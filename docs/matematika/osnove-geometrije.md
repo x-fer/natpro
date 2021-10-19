@@ -2,6 +2,12 @@
 title: Osnove geometrije
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Anamarija Kozina' githubUsername='AnamarijaKozina'/>
+
 ### Implementacija točke
 
 Točku u 2D možemo implementirati kao strukturu koja pamti koordinate, tako da _tip_podatka_ zamijenimo odgovarajućim tipom, najčešće _int_, _long long_ ili _double_. Svaki isječak koda koji slijedi možemo prilagoditi i za 3D slučaj.

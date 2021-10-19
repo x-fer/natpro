@@ -2,6 +2,12 @@
 title: Što je dinamika?
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Karlo Franić' githubUsername='kfranic1'/>
+
 ### Uvod
 
 Prvo pogledajmo jedan zadatak. Zadana je matrica veličine $N*N$ gdje je $N <= 1000$ te su u polja upisani prirodni brojevi $x_{i,j} < 1e9$. Želimo naći put iz gornjeg lijevog polja do donjeg desnog polja, krećući se samo dolje i desno, čija je suma ćelija na putu najveća. 

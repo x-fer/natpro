@@ -20,7 +20,7 @@ Ako želite pratiti vlastitu statistiku na Codeforcesu, možete koristiti [ovaj 
 
 Također savjetujemo da se pridružite i našem [Discord serveru](https://discord.gg/E7ad4UGbrG) na kojem možete pronaći zanimljive ljude koji se također bave natjecateljskim programiranjem te koji su vam spremni pomoći u slučaju da negdje zapnete.
 
-Osim toga, koliko god možda zvučalo smiješno, bitno je znati dobro _guglati_. Kad god vam nešto nije jasno ili zapnete negdje, bitno je znati postaviti dobar upit. Ovi materijali govore o općenitim konceptima koji su potrebni za rješavanje mnoštva problema, međutim, nekad se zna dogoditi da zapnete u implementaciji nekog specifičnog oblika nekog algoritma te trebate pomoć s njim. Za takve situacije preporučujem da pretražujete stranicu [GeeksForGeeks](https://www.geeksforgeeks.org/) na kojoj možete pronaći specifične implementacije određenih algoritama.
+Osim toga, koliko god možda zvučalo smiješno, bitno je znati dobro _guglati_. Kad god vam nešto nije jasno ili zapnete negdje, bitno je znati postaviti dobar upit. [Ovaj YouTube video](https://www.youtube.com/watch?v=cEBkvm0-rg0) jako dobro objašnjava neke naprednije metode _guglanja_. Ovi materijali govore o općenitim konceptima koji su potrebni za rješavanje mnoštva problema, međutim, nekad se zna dogoditi da zapnete u implementaciji nekog specifičnog oblika nekog algoritma te trebate pomoć s njim. Za takve situacije preporučujem da pretražujete stranicu [GeeksForGeeks](https://www.geeksforgeeks.org/) na kojoj možete pronaći specifične implementacije određenih algoritama.
 
 Sretno s učenjem!
 

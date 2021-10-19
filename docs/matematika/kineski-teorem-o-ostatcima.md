@@ -2,6 +2,12 @@
 title: Kineski teorem o ostatcima
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Karlo Franić' githubUsername='kfranic1'/>
+
 ### Problem
 
 Zadano je $N$ jednadžbi oblika $x \equiv a_i(\textrm{mod}\ b_i)$. Značenje ove jednadžbe je da $x$ ima ostatak $a_i$ pri dijeljenju s $b_i$. Nađi najmanji $x$ koji zadovoljava sve jednadžbe, ako takav broj ne postoji ispiši $-1$.

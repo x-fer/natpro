@@ -2,6 +2,12 @@
 title: Ternarno pretraživanje
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Maja Milas' githubUsername='javascript-m'/>
+
 ## O algoritmu
 
 Kao što smo vidjeli u prethodnom članku, binarno pretraživanje pri svakom koraku dijeli niz koji pretražujemo na **dva** podniza te pomoću uvjeta određuje u kojem podnizu nastavljamo pretragu. Što se dogodi ako podniz podijelimo na **tri** dijela?

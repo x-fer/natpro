@@ -2,6 +2,12 @@
 title: Knapsack
 ---
 
+import Author from '../../src/react_components/author.js';
+
+import Spoiler from '../../src/react_components/spoiler.js';
+
+<Author authorName='Karlo Franić' githubUsername='kfranic1'/>
+
 ### Problem
 
 Ruksak kapaciteta $x$ moramo napuniti sa stvarima kojih ima $n$, a od kojih svaka zauzima određeni kapacitet i ima određenu vrijednost. Naravno cilj nam je maksimizirati ukupnu vrijednost stvari u ruksaku. U zadatku bitnu razliku čini jesu li stvari tekuće(možemo odabrati proizvoljnu količinu svake stvari) ili čvrste(moramo uzeti cijelu stvar).

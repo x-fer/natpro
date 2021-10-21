@@ -8,7 +8,7 @@ import Spoiler from '../../src/react_components/spoiler.js';
 
 <Author authorName='Maja Milas' githubUsername='javascript-m'/>
 
-Algoritme za sortiranje koristimo kako bismo složili podatke u smisleni poredak prema nekom kriteriju. Iako ćemo ovdje prvenstveno govoriti o primjeni sortiranja u natjecateljskom programiranju (sortiranje nad brojevima, stringovima...), treba biti svjestan da je primjena puno šira pa je ova vještina potrebna svakome tko se želi ozbiljnije baviti programiranjem. Također, sortiranje je ključan preduvjet za mnoge druge korisne algoritme. U ovom ćete članku naučiti nešto o različitim sortovima i njihovoj složenosti. Ako vas zanima više, istražite dostupne linkove ili se javite putem foruma 😄.
+Algoritme za sortiranje koristimo kako bismo složili podatke u smisleni poredak prema nekom kriteriju. Iako ćemo ovdje prvenstveno govoriti o primjeni sortiranja u natjecateljskom programiranju (sortiranje nad brojevima, stringovima...), treba biti svjestan da je primjena puno šira pa je ova vještina potrebna svakome tko se želi ozbiljnije baviti programiranjem. Također, sortirasnje je ključan preduvjet za mnoge druge korisne algoritme. U ovom ćete članku naučiti nešto o različitim sortovima i njihovoj složenosti. Ako vas zanima više, istražite dostupne linkove ili se javite putem foruma 😄.
 
 ## $O(n^2)$ algoritmi
 
@@ -30,19 +30,21 @@ $^1$ više o time limitu pročitajte ovdje.
 TODO: dodaj link
 
 ## $O(n \log(n))$ algoritmi
-Postoji više algoritama koji rade u ovoj složenosti, ali njihovi detalji nisu toliko bitni za natjecateljsko programiranje pa ćemo ih ovdje samo spomenuti. Više o njima možete pročitati 
+
+Postoji više algoritama koji rade u ovoj složenosti, ali njihovi detalji nisu toliko bitni za natjecateljsko programiranje pa ćemo ih ovdje samo spomenuti. Više o njima možete pročitati
 na dostupnim linkovima.
-+ **merge sort** - sort koji se bazira na rekurziji, dijeli početnu listu na manje dijelove i sortira svaki zasebno, a potom ih spaja prilikom povratka u rekurziji. Više pročitajte [ovdje](https://www.geeksforgeeks.org/merge-sort/ "Merge sort").
-+ **heap sort**  - sort koji radi nad strukturom poznatom kao 'binary heap', sličan selection sortu. Detalji [ovdje](https://www.geeksforgeeks.org/heap-sort/ "Heap sort").
-+ **quick sort** - izabire referentni element (pivot), a ostale raspodjeljuje u odnosu na njega. Postoji više različitih varijanti quick sorta, a razlikuju se u načinu izbora referentnog elementa. Detalji [ovdje](https://www.geeksforgeeks.org/quick-sort/ "Quick sort").
+
+-   **merge sort** - sort koji se bazira na rekurziji, dijeli početnu listu na manje dijelove i sortira svaki zasebno, a potom ih spaja prilikom povratka u rekurziji. Više pročitajte [ovdje](https://www.geeksforgeeks.org/merge-sort/ "Merge sort").
+-   **heap sort** - sort koji radi nad strukturom poznatom kao 'binary heap', sličan selection sortu. Detalji [ovdje](https://www.geeksforgeeks.org/heap-sort/ "Heap sort").
+-   **quick sort** - izabire referentni element (pivot), a ostale raspodjeljuje u odnosu na njega. Postoji više različitih varijanti quick sorta, a razlikuju se u načinu izbora referentnog elementa. Detalji [ovdje](https://www.geeksforgeeks.org/quick-sort/ "Quick sort").
 
 :::tipsavjet
 Prije nego počnete pisati kod, dobro razmislite o složenosti programa kojeg ste smislili. Pokušajte uvijek tražiti rješenje koje prolazi ograničenja, a zahtijeva minimalno vrijeme pisanja.
 :::
 
-
 ## Može li još brže?
-Nažalost, može se pokazati da za algoritme koji uspoređuju elemente niza nije moguće postići manju složenost od $O(n \log(n))$. Ipak, postoje algoritmi koji rade brže, ali pritom **ne uspoređuju članove niza**. Primjer je **counting sort** koji radi u linearnoj složenosti. Ovaj se algoritam temelji na tome da unaprijed imamo neku informaciju o članovima liste koju sortiramo. Npr. možemo zamisliti da je potrebno sortirati $10^6$ brojeva, ali su svi ti brojevi u intervalu $[0,100]$. Counting sort  napravi praznu pomoćnu listu ispunjenu nulama. Potom jednom prolazimo kroz sve članove u listi koju sortiramo te na $i$-toj poziciji u pomoćnoj listi pratimo koliko se puta pojavio broj iznosa $i$. Pogledajmo konkretan primjer. Neka je potrebno sortirati niz brojeva $[2, 44, 23, 25, 88, 44, 23]$. Nakon što provedemo sortiranje na poziciji $i=44$ u pomoćnoj listi piše $2$ zato što se broj $44$ nalazi <ins>dva puta</ins> u nizu koji sortiramo. Po završetku sortiranja prolazimo kroz pomoćnu listu tako da za svaku poziciju i ispisujemo onoliko brojeva kolika je vrijednost na toj poziciji.
+
+Nažalost, može se pokazati da za algoritme koji uspoređuju elemente niza nije moguće postići manju složenost od $O(n \log(n))$. Ipak, postoje algoritmi koji rade brže, ali pritom **ne uspoređuju članove niza**. Primjer je **counting sort** koji radi u linearnoj složenosti. Ovaj se algoritam temelji na tome da unaprijed imamo neku informaciju o članovima liste koju sortiramo. Npr. možemo zamisliti da je potrebno sortirati $10^6$ brojeva, ali su svi ti brojevi u intervalu $[0,100]$. Counting sort napravi praznu pomoćnu listu ispunjenu nulama. Potom jednom prolazimo kroz sve članove u listi koju sortiramo te na $i$-toj poziciji u pomoćnoj listi pratimo koliko se puta pojavio broj iznosa $i$. Pogledajmo konkretan primjer. Neka je potrebno sortirati niz brojeva $[2, 44, 23, 25, 88, 44, 23]$. Nakon što provedemo sortiranje na poziciji $i=44$ u pomoćnoj listi piše $2$ zato što se broj $44$ nalazi <ins>dva puta</ins> u nizu koji sortiramo. Po završetku sortiranja prolazimo kroz pomoćnu listu tako da za svaku poziciju i ispisujemo onoliko brojeva kolika je vrijednost na toj poziciji.
 
 ```cpp
 int lista[101]; //na početku nule
@@ -60,8 +62,8 @@ for(int i=0; i<=100; i++) {
 
 Prednost ovog algoritma je već spomenuta iznimno mala vremenska složenost. Najveća mana je potrebna memorija (ovakvo bi se sortiranje moglo provesti za brojeve koji su otprilike do $10^5$, a u zadacima često imamo i puno veće brojeve).
 
-
 ## Ugrađeni sort (C++)
+
 Iako postoje razni algoritmi za sortiranje, u natjecateljskom programiranju je najčešće cilj uštediti što više vremena na implementaciji kako bi ga ostalo dovoljno za mozganje. Iz tog se razloga u praksi gotovo uvijek koriste već <ins>gotove implementacije sorta</ins>. Pogledajmo primjer sortiranja nekoliko tipova spremnika u CPP-u:
 
 ```cpp
@@ -77,8 +79,9 @@ sort(s.begin(), s.end()); //addellos
 ```
 
 ### Komparator
-Kao treći argument funkciji *sort* moguće je zadati operator usporedbe (komparator). On mora biti definiran nad tipom podataka koji sortiramo (npr. nad parovima cijelih brojeva). 
-C++ ima već ugrađeni komparator za ovaj tip pa se po defaultu parovi sortiraju tako da se prvo uspoređuje prvi element iz para, a potom drugi. Što ako želimo drugačiji kriterij? 
+
+Kao treći argument funkciji _sort_ moguće je zadati operator usporedbe (komparator). On mora biti definiran nad tipom podataka koji sortiramo (npr. nad parovima cijelih brojeva).
+C++ ima već ugrađeni komparator za ovaj tip pa se po defaultu parovi sortiraju tako da se prvo uspoređuje prvi element iz para, a potom drugi. Što ako želimo drugačiji kriterij?
 Tu nalazimo primjenu **vanjskih komparatora** (custom comparators). Npr. zamislimo da parove integera želim sortirati prema drugom elementu iz para.
 
 ```cpp
@@ -95,13 +98,14 @@ bool comp(pii a, pii b) {
 
 int main() {
     vector<pair<int,int>> v; //... dodavanje parova u vektor
-    
+
     sort(v.begin(), v.end(),comp);
     return 0;
 }
 ```
 
 ### Reverse funkcija
+
 Reverse funkcija okreće poredak elemenata u bilo kojem tipu spremnika (lista, vektor...). Okreće elemente kojima su pozicije u intervalu \[first,last>
 i radi u složenosti $O(n)$.
 

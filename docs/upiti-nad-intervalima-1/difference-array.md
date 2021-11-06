@@ -1,5 +1,5 @@
 ---
-title: Upiti nad promjenjivim poljima - difference array  
+title: Difference array
 ---
 
 
@@ -10,7 +10,7 @@ U prošlom poglavlju smo imali statičke nizove i nad njima obavljali upite. Zak
 &nbsp;  
 
 ## Niz razlika (difference array)  
-Niz razlika omogućuje promjenu podniza u O(1), bez potrebe da iteriramo po cijelom podnizu i svakom elementu zbrajamo/oduzimamo zadani broj. Nedostatak ove strukture podataka je u tom što je složenost upita za vrijednost nekog elementa O(n) što će biti demonstrirano ubrzo. Vrijednost svakog elementa niza razlika predstavlja razliku između uzastopnih elemenata originalnog niza.
+Niz razlika omogućuje promjenu podniza u $O(1)$, bez potrebe da iteriramo po cijelom podnizu i svakom elementu zbrajamo/oduzimamo zadani broj. Nedostatak ove strukture podataka je u tom što je složenost upita za vrijednost nekog elementa $O(n)$ što će biti demonstrirano ubrzo. Vrijednost svakog elementa niza razlika predstavlja razliku između uzastopnih elemenata originalnog niza.
 
 ### Primjer  
 Prvo ćemo na jednostavnijem primjeru pokazati kako se izvršavaju promjene nad intervalima u nizu.  
@@ -35,7 +35,7 @@ S obzirom na to da naš interval nije od 1 do 5, posljednja dva člana moramo ne
 Niz razlika: $[0, 4, 0, 0, -4, 0]$  
 Mi smo ovime svim članovima niza od indeksa 4 do kraja oduzeli broj 4, tako da je vrijednost našeg niza sada $[0, 4, 4, 4, 4-4, 4-4]$ -> $[0, 4, 4, 4, 0, 0]$ što je željeni izgled nakon ovog upita.
 
-Promjenu cijelog intervala smo napravili s dvije operacije u O(1).  
+Promjenu cijelog intervala smo napravili s dvije operacije u $O(1)$.  
 
 $$
 differenceArray[a] = differenceArray[a] + x  
@@ -101,10 +101,14 @@ i sada gradimo naš niz razlika $[0, 0, 0, 0]$:
 4. $[3, 5, -2, -8]$  
 
 Jednostavnom iteracijom kroz niz i zbrajanjem možemo se uvjeriti da je ovo uistinu točan niz razlika.  
-Drugi način kreiranja niza razlike od početnog niza je korištenjem sljedeće formule:  
+Drugi način kreiranja niza razlike od početnog niza je korištenjem sljedeće formule (obrati pažnju na slučaj kad je i = 0):  
 $$
-differenceArray[i] = array[i] - array[i-1]
+differenceArray[i] = array[i] - array[i-1]  
 $$  
+
+$$
+differenceArray[0] = array[0]
+$$
 
 &nbsp;  
 &nbsp;  
@@ -190,14 +194,14 @@ vector <int> getOriginalArray(vector <int> &diffArr) {
 ```
 
 ## Zaključak  
-Difference array vrlo efikasno u O(1) dodaje neku vrijednost cijelom intervalu niza, a kao što smo rekli i što vidimo iz $getValue$ funkcije, dohvat elemenata se odvija u O(n), što je presporo ako imamo puno takvih upita.  
+Difference array vrlo efikasno u $O(1)$ dodaje neku vrijednost cijelom intervalu niza, a kao što smo rekli i što vidimo iz $getValue$ funkcije, dohvat elemenata se odvija u $O(n)$, što je presporo ako imamo puno takvih upita.  
 
 
 U savršenom scenariju gdje se sve promjene nad nizom odvijaju prije upita složenost je O(n + m + q), gdje je:  
-$n$ - broj zahtjeva za promjenom nekog niza, $n$ puta odradimo update u O(1)  
-$m$ - veličina niza; u O(m) izračunamo originalni niz  
-$q$ - broj upita, $q$ upita za vrijednost nekog člana u O(1) koristeći izračunati originalni niz  
+$n$ - broj zahtjeva za promjenom nekog niza, $n$ puta odradimo update u $O(1)$  
+$m$ - veličina niza; u $O(m)$ izračunamo originalni niz  
+$q$ - broj upita, $q$ upita za vrijednost nekog člana u $O(1)$ koristeći izračunati originalni niz  
 
-Što ako se u upitima traži suma intervala umjesto vrijednosti pojedinog elementa? Tada jednostavno možemo kreirati [sumu prefiksa](https://materijali.xfer.hr/docs/upiti-nad-intervalima-1/upiti-nad-statickim-poljima#suma-prefiksa) nad nizom i te sume intervala isto računati u O(1)  
+Što ako se u upitima traži suma intervala umjesto vrijednosti pojedinog elementa? Tada jednostavno možemo kreirati [sumu prefiksa](https://materijali.xfer.hr/docs/upiti-nad-intervalima-1/upiti-nad-statickim-poljima#suma-prefiksa) nad nizom i te sume intervala isto računati u $O(1)$  
 
 Za kompliciranije situacije postoje bolja rješenja koja će se obrađivati u sljedećim poglavljima.

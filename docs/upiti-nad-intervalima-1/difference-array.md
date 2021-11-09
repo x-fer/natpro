@@ -2,14 +2,17 @@
 title: Difference array
 ---
 
+import Author from '../../src/react_components/author.js';
 
-## Uvod  
+<Author authorName='Adrian Brajković' githubUsername='Brajk19'/>
+
+### Uvod  
 U prošlom poglavlju smo imali statičke nizove i nad njima obavljali upite. Zakomplicirat ćemo stvari tako što niz više neće biti statički, nego u ulazu možemo dobivati zahtjeve da promijenimo neki element niza ili pak podniz. Za tu svrhu postoji više različitih struktura podataka, a kao početak ćemo se upoznati s jednom jednostavnijom, nizom razlika.  
 
 &nbsp;  
 &nbsp;  
 
-## Niz razlika (difference array)  
+### Niz razlika (difference array)  
 Niz razlika omogućuje promjenu podniza u $O(1)$, bez potrebe da iteriramo po cijelom podnizu i svakom elementu zbrajamo/oduzimamo zadani broj. Nedostatak ove strukture podataka je u tom što je složenost upita za vrijednost nekog elementa $O(n)$ što će biti demonstrirano ubrzo. Vrijednost svakog elementa niza razlika predstavlja razliku između uzastopnih elemenata originalnog niza.
 
 ### Primjer  
@@ -72,7 +75,7 @@ Ponovimo isti postupak i dobijemo konačni izgled niza razlika: $[2, 4, 0, 3, -4
 &nbsp;  
 &nbsp;  
 
-### Dohvaćanje vrijednosti  
+#### Dohvaćanje vrijednosti  
 Kako sada iz razlike niza izračunati vrijednost konačnog niza $array$? Jednostavnom iteracijom kroz niz razlika pamtimo dosadašnju sumu koje predstavlja vrijednost trenutnog člana:  
 
 $array[0]$ = 2 = **2**  
@@ -85,7 +88,7 @@ $array[5]$ = 2 + 4 + 0 + 3 - 4 - 2 = **3**
 &nbsp;  
 &nbsp;  
 
-### Što ako početni niz nisu samo nule?  
+#### Što ako početni niz nisu samo nule?  
 Što ako nam je početni niz bio ovo: $[3, 8, 6, -2]$? U tom slučaju početni niz razlika nije niz nula kao u prethodnom primjeru.  
 Možemo zamisliti to kao četiri upita za promjenu intervala(ili u ovom slučaju jednog elementa):  
 1. $0, 0, 3$  
@@ -113,7 +116,7 @@ $$
 &nbsp;  
 &nbsp;  
 
-## Programski kodovi  
+### Programski kodovi  
 ```cpp  
 /*
 	a - početni indeks intervala
@@ -193,7 +196,7 @@ vector <int> getOriginalArray(vector <int> &diffArr) {
 }
 ```
 
-## Zaključak  
+### Zaključak  
 Difference array vrlo efikasno u $O(1)$ dodaje neku vrijednost cijelom intervalu niza, a kao što smo rekli i što vidimo iz $getValue$ funkcije, dohvat elemenata se odvija u $O(n)$, što je presporo ako imamo puno takvih upita.  
 
 

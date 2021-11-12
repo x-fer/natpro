@@ -9,7 +9,7 @@ Prije nego što objasnimo strukturu, upoznajmo se sa sljedećom operacijom.
 ### Izoliranje posljednjeg postavljenog bita
 Kao što naslov kaže, potrebno je iz nekog broja uzeti posljednji postavljeni bit, dakle bit čija je vrijednost 1.  
 Npr, imamo broj 14. Ako ga prikažemo u bazi 2, on izgleda ovako: 0000 1110  
-Ako izoliramo posljedni postavljeni bit, dobijemo 2 (0000 0010), a to se postiže bitovnom operacijom $AND(\&)$ s dvojnim komplementom broja. Brzo rješenje je sljedeće:  
+Ako izoliramo posljednji postavljeni bit, dobijemo 2 (0000 0010), a to se postiže bitovnom operacijom $AND(\&)$ s dvojnim komplementom broja. Brzo rješenje je sljedeće:  
 
 $$  
 n\&(-n)
@@ -18,7 +18,7 @@ $$
 Ova operacija je vrlo bitna za Fenwickovo stablo.
 
 ### Struktura  
-Svaki indeks $i$ u fenwickovom stablu predstavlja sumu intervala $[i - 2^{\smash{j - 1}} + 1, i]$, gdje $j$ predstavlja posljednji postavljeni bit u indeksu $i$. Koristit ćemo 1-indeksiranje kod nizova.
+Svaki indeks $i$ u Fenwickovom stablu predstavlja sumu intervala $[i - 2^{\smash{j - 1}} + 1, i]$, gdje $j$ predstavlja posljednji postavljeni bit u indeksu $i$. Koristit ćemo 1-indeksiranje kod nizova.
 
 Primjer:  
 Neka je $L = i - 2^{\smash{j - 1}} + 1$ početak intervala, a $R = i$ kraj intervala.  
@@ -34,14 +34,14 @@ Neka je $L = i - 2^{\smash{j - 1}} + 1$ početak intervala, a $R = i$ kraj inter
 | 7      | 0111               | 1             | $7 - 2^{\smash{0}} + 1$ |$[7, 7]$ |
 | 8      | 1000               | 4             | $8 - 2^{\smash{3}} + 1$ |$[1, 8]$ |  
 
-Kako sad iz ovoga izračunati sumu prefika niza?  
+Kako sad iz ovoga izračunati sumu prefiksa niza?  
 Uzet ćemo indeks 7 kao primjer. On predstavlja sumu intervala $[7, 7]$. Ako od njega oduzmemo posljednji postavljeni bit (1), dobijemo indeks 6, tj. interval $[5, 6]$. Od broja 6 oduzmemo njemu posljednji postavljeni bit (2). Dobijemo indeks 4 ili interval $[1, 4]$.  
 Imamo sljedeće intervale: $[1, 4]$, $[5, 6]$, $[7, 7]$. Njihovom unijom dobijemo interval $[1, 7]$ što predstavlja sumu prefiksa niza za indeks 7.  
 
 Ilustracija:  
 ![Fenwick tree - primjer](/img/fenwick-tree.png)  
 
-Programski kod za računanje sume prefiksa koristeći fenwickovo stablo:  
+Programski kod za računanje sume prefiksa koristeći Fenwickovo stablo:    
 ```cpp
 // suma intervala [1, index]
 int prefixSum(int index, vector <int> &fenwickTree) {
@@ -60,9 +60,9 @@ int prefixSum(int index, vector <int> &fenwickTree) {
 ### Promjena vrijednosti elementa niza  
 Dodavanje nekog broja $x$ elementu originalnog niza se vrši na sličan način kao i računanje sume prefiksa, samo ovaj put se kreće od manjeg indeksa prema većima. Kao primjer ćemo uzeti broj na indeksu 3, a cilj nam je promijeniti vrijednost za $x$ svim elementima Fenwickovog stabla koji prestavljaju sumu u kojoj se nalazi element na indeksu 3. Idemo obrnutim smjerom nego prije.  
 
-Prvo ažuriramo fenwickovo stablo na indeksu 3: $fenwickTree[3] += x$  
-Zatim indeksu dodajemo posljedni postavljeni bit (1) i dobijemo 4.  
-Mijenjamo vrijednost fenwickovog stabla na ideksu 4: $fenwickTree[4] += x$  
+Prvo ažuriramo Fenwickovo stablo na indeksu 3: $fenwickTree[3] += x$  
+Zatim indeksu dodajemo posljednji postavljeni bit (1) i dobijemo 4.  
+Mijenjamo vrijednost Fenwickovog stabla na indeksu 4: $fenwickTree[4] += x$  
 Novi index: 8   
 $fenwickTree[8] += x$  
 ...  
@@ -89,7 +89,7 @@ U ovoj implementaciji $fenwickTree.size()$ ne označava pravu veličinu niza.
 Ona je zapravo za 1 manja zbog nultog indeksa kojeg tu ne koristimo.
 :::  
 
-Koristeću ovu funkciju možemo iz bilo kojeg niza izgraditi Fenwickovo stablo:  
+Koristeći ovu funkciju možemo iz bilo kojeg niza izgraditi Fenwickovo stablo:  
 ```cpp
 /*
 	vraća Fenwickovo stablo za dani niz arr.
@@ -106,7 +106,7 @@ vector <int> getFenwick(vector <int> arr) {
 }
 ```  
 
-Sada efikasno možemo odgovoriti na upite o sumi nekog podniza of $l$ do $r$ na isti način kao kod niza [sumi prefiksa](https://materijali.xfer.hr/docs/upiti-nad-intervalima-1/upiti-nad-statickim-poljima#suma-prefiksa):
+Sada efikasno možemo odgovoriti na upite o sumi nekog podniza of $l$ do $r$ na isti način kao kod niza [suma prefiksa](https://materijali.xfer.hr/docs/upiti-nad-intervalima-1/upiti-nad-statickim-poljima#suma-prefiksa):
 $$
 rangeSum(l, r) = prefixSum(r) - prefixSum(l - 1)
 $$  
@@ -118,7 +118,7 @@ Ovime smo pokrili promjene nad jednim elementom i upite nad intervalima. Pogleda
 
 ### Range update, point query  
 Kako bi ovo postigli, potrebno je podsjetiti se [difference arraya](https://materijali.xfer.hr/docs/upiti-nad-intervalima-1/difference-array).  
-Kako bi intervalu $[l, r]$ promijenili vrijednost za $x$, potrebno je elementu na indeksu $l$ dodati $x$, a onom na indeksu $r$ oduzeti.    
+Kako bi intervalu $[l, r]$ promijenili vrijednost za $x$, potrebno je elementu na indeksu $l$ dodati $x$, a onom na indeksu $r + 1$ oduzeti.    
 
 Dohvaćanje vrijednosti je također isto kao kod niza razlika, potrebno je napraviti sumu prefiksa. Prednost je u tome što se dohvaćanje elementa koristeći Fenwickovo stablo obavlja u $O(log(n))$.  
 

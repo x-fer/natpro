@@ -171,7 +171,7 @@ vector <int> initializeDiffArray(vector <int> &arr) {
 
 ```cpp
 /*
-	izračunava vrijednost originalnog niz koristeći niz razlika
+	izračunava vrijednost elementa originalnog niza na poziciji index koristeći niz razlika
 */
 int getValue(int index, vector <int> &diffArr) {
     //funkcija se nalazi u headeru <numeric>

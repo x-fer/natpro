@@ -44,7 +44,7 @@ $$
 differenceArray[a] = differenceArray[a] + x  
 $$
 $$
-differenceArray[b + 1] = differenceArray[a] - x  
+differenceArray[b + 1] = differenceArray[b + 1] - x  
 $$  
 
 :::caution Oprez  

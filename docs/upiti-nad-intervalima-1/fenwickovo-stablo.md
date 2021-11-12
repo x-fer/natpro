@@ -106,7 +106,7 @@ vector <int> getFenwick(vector <int> arr) {
 }
 ```  
 
-Sada efikasno možemo odgovoriti na upite o sumi nekog podniza of $l$ do $r$ na isti način kao kod niza [suma prefiksa](https://materijali.xfer.hr/docs/upiti-nad-intervalima-1/upiti-nad-statickim-poljima#suma-prefiksa):
+Sada efikasno možemo odgovoriti na upite o sumi nekog podniza od $l$ do $r$ na isti način kao kod niza [suma prefiksa](https://materijali.xfer.hr/docs/upiti-nad-intervalima-1/upiti-nad-statickim-poljima#suma-prefiksa):
 $$
 rangeSum(l, r) = prefixSum(r) - prefixSum(l - 1)
 $$  

@@ -119,7 +119,7 @@ vector < vector<int> > createSparseTable(vector <int> arr) {
 	vector <int> row(K + 1);
 	vector < vector<int> > sparseTable(N, row);
 
-	for(int i = 0; i < arr.size(); i++) { // j = 0
+	for(int i = 0; i < N; i++) { // j = 0
 		sparseTable[i][0] = arr[i]; 	  //intervali duljine 2^0 = 1
 	}
 

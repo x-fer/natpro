@@ -44,7 +44,7 @@ $$
 differenceArray[a] = differenceArray[a] + x  
 $$
 $$
-differenceArray[b + 1] = differenceArray[a] - x  
+differenceArray[b + 1] = differenceArray[b + 1] - x  
 $$  
 
 :::caution Oprez  
@@ -171,7 +171,7 @@ vector <int> initializeDiffArray(vector <int> &arr) {
 
 ```cpp
 /*
-	izračunava vrijednost originalnog niz koristeći niz razlika
+	izračunava vrijednost elementa originalnog niza na poziciji index koristeći niz razlika
 */
 int getValue(int index, vector <int> &diffArr) {
     //funkcija se nalazi u headeru <numeric>
@@ -200,7 +200,7 @@ vector <int> getOriginalArray(vector <int> &diffArr) {
 Difference array vrlo efikasno u $O(1)$ dodaje neku vrijednost cijelom intervalu niza, a kao što smo rekli i što vidimo iz $getValue$ funkcije, dohvat elemenata se odvija u $O(n)$, što je presporo ako imamo puno takvih upita.  
 
 
-U savršenom scenariju gdje se sve promjene nad nizom odvijaju prije upita složenost je O(n + m + q), gdje je:  
+U savršenom scenariju gdje se sve promjene nad nizom odvijaju prije upita složenost je $O(n + m + q)$, gdje je:  
 $n$ - broj zahtjeva za promjenom nekog niza, $n$ puta odradimo update u $O(1)$  
 $m$ - veličina niza; u $O(m)$ izračunamo originalni niz  
 $q$ - broj upita, $q$ upita za vrijednost nekog člana u $O(1)$ koristeći izračunati originalni niz  

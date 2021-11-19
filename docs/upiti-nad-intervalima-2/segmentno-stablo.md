@@ -107,7 +107,7 @@ int query(int cvor, int lo, int hi, int l, int r) {
 
 ```cpp
 int query2(int cvor, int lo, int hi, int l, int r) {
-    if (lo >= r || hi <= l) return 0;
+    if (lo > r || hi < l) return 0;
     if (lo >= l && hi <= r) return t[cvor];
     int mid = (lo + hi) / 2;
     return  query(cvor * 2,     lo, mid, l, r) +

@@ -106,6 +106,19 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} X.FER`,
     },
+    colorMode: {
+      defaultMode: 'dark',
+      respectPrefersColorScheme: false,
+    },
+    // announcementBar: {
+    //   id: 'contribute_bar',
+    //   content: 'Lorem Ipsum',
+    //   backgroundColor: '#ffffff',
+    //   textColor: '#000000',
+    // },
+    prism: {
+      defaultLanguage: 'cpp',
+    }
   },
   stylesheets: [
     {

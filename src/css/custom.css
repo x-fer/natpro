@@ -17,17 +17,32 @@
   --ifm-code-font-size: 95%;
 }
  
-.navbar__link:hover, .navbar__link--active, .menu__link:hover, .menu__link--active, .footer__link-item:hover {
-  background: linear-gradient(90deg,#FF5F6D, #FFC371);
-  background-clip: text;
+.navbar__link--active, .navbar__link:hover {
+    /* background: linear-gradient(90deg,#FF5F6D, #FFC371); */
+    color: var(--ifm-color-primary);
+    /* background: var(--ifm-color-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -apple-background-clip: text;
+    -apple-text-fill-color: transparent; */
+}
+
+.menu__list-item-collapsible:hover, .menu__link:hover, .menu__link--active, .footer__link-item:hover {
+  /* background: linear-gradient(90deg,#FF5F6D, #FFC371); */
+  background: #FF5F6D;
+  color: var(--ifm-menu-color);
+  /* background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -apple-background-clip: text;
-  -apple-text-fill-color: transparent;
+  -apple-text-fill-color: transparent; */
 }
 
 .menu__link--active:not(.menu__link--sublist) {
-  background: linear-gradient(90deg,#FF5F6D, #FFC371);
+  /* background: linear-gradient(90deg,#FF5F6D, #FFC371); */
+  background: #FF5F6D;
+  /* background-color: #FFC371; */
   -webkit-text-fill-color: var(--ifm-menu-color);
   -apple-text-fill-color: var(--ifm-menu-color);
 }

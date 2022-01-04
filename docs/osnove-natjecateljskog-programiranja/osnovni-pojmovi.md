@@ -28,7 +28,7 @@ int main(){
 
 U prvom retku uključujemo biblioteku u kojoj se nalazi velik broj struktura podataka i funkcija koje će nam sigurno trebati tijekom rješavanja zadataka. Iako u jednom zadatku sigurno nećemo koristiti većinu mogućnosti ove biblioteke, bolje je uključiti sve odjednom nego trošiti vrijeme na razmišljanje o tome koju bismo specifičnu biblioteku trebali uključiti.
 
-U drugom retku postavljamo prostor imena `std` kao zadani prostor imena. Ta naredba nam također olakšava pisanje koda jer bismo inače morali pisati `std::` ispred puno drugih izraza (npr. `std::cin`, `std::cout`, `std::string`). 
+U drugom retku postavljamo prostor imena `std` kao zadani prostor imena. Ta naredba nam također olakšava pisanje koda jer bismo inače morali pisati `std::` ispred puno drugih izraza (npr. `std::cin`, `std::cout`, `std::string`).
 
 Zatim slijedi funkcija `main` u koju upisujemo svoje rješenje određenog zadatka.
 
@@ -202,8 +202,7 @@ Ispis:
 3.14159274
 ```
 
-
-### double 
+### double
 
 Želimo li koristiti brojeve s pomičnim zarezom dvostruke preciznosti, koristimo tip `double`. Uzmemo li prošli isječak i promijenimo tip, dobit ćemo drugačiji ispis.
 
@@ -284,6 +283,7 @@ system(s.c_str());
 
 U ovom primjeru naredba `system` izvršava naredbu u naredbenom retku.
 
+<!--
 ## Osnovna matematika
 
-TODO: o osnovnim stvarima iz matematike, logike i teorije skupova koje treba znati za rjesavanje zadataka
+TODO: o osnovnim stvarima iz matematike, logike i teorije skupova koje treba znati za rjesavanje zadataka -->

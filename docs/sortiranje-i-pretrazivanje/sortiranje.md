@@ -27,16 +27,17 @@ for(int i=0; i<n; i++) {
 Prednost bubble sorta i sličnih algoritama je što su jako kratki za kodiranje i lako se razumiju. Ipak, u natjecateljskom programiranju češće ćete sretati veće količine podataka za koje je kvadratna složenost prevelika (npr. za $n=10^5$ kvadratna složenost daje vrijeme izvršavanja od oko $100$ sekundi što ne prolazi time limit$^1$. Sada se postavlja pitanje kako ubrzati ovaj algoritam? Početna ideja mogla bi biti prekinuti izvršavanje u unutarnjoj petlji ako nismo napravili niti jednu zamjenu. To bi ponešto optimiziralo program, ali složenost je u najgorem slučaju i dalje $O(n^2)$. Može li brže? Nego što!
 
 $^1$ više o time limitu pročitajte ovdje.
-TODO: dodaj link
+
+<!-- TODO: dodaj link -->
 
 ## $O(n \log(n))$ algoritmi
 
 Postoji više algoritama koji rade u ovoj složenosti, ali njihovi detalji nisu toliko bitni za natjecateljsko programiranje pa ćemo ih ovdje samo spomenuti. Više o njima možete pročitati
 na dostupnim linkovima.
 
--   **merge sort** - sort koji se bazira na rekurziji, dijeli početnu listu na manje dijelove i sortira svaki zasebno, a potom ih spaja prilikom povratka u rekurziji. Više pročitajte [ovdje](https://www.geeksforgeeks.org/merge-sort/ "Merge sort").
--   **heap sort** - sort koji radi nad strukturom poznatom kao 'binary heap', sličan selection sortu. Detalji [ovdje](https://www.geeksforgeeks.org/heap-sort/ "Heap sort").
--   **quick sort** - izabire referentni element (pivot), a ostale raspodjeljuje u odnosu na njega. Postoji više različitih varijanti quick sorta, a razlikuju se u načinu izbora referentnog elementa. Detalji [ovdje](https://www.geeksforgeeks.org/quick-sort/ "Quick sort").
+- **merge sort** - sort koji se bazira na rekurziji, dijeli početnu listu na manje dijelove i sortira svaki zasebno, a potom ih spaja prilikom povratka u rekurziji. Više pročitajte [ovdje](https://www.geeksforgeeks.org/merge-sort/ "Merge sort").
+- **heap sort** - sort koji radi nad strukturom poznatom kao 'binary heap', sličan selection sortu. Detalji [ovdje](https://www.geeksforgeeks.org/heap-sort/ "Heap sort").
+- **quick sort** - izabire referentni element (pivot), a ostale raspodjeljuje u odnosu na njega. Postoji više različitih varijanti quick sorta, a razlikuju se u načinu izbora referentnog elementa. Detalji [ovdje](https://www.geeksforgeeks.org/quick-sort/ "Quick sort").
 
 :::tipsavjet
 Prije nego počnete pisati kod, dobro razmislite o složenosti programa kojeg ste smislili. Pokušajte uvijek tražiti rješenje koje prolazi ograničenja, a zahtijeva minimalno vrijeme pisanja.

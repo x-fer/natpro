@@ -24,7 +24,7 @@ Primijetimo da ne moramo prolaziti sve brojeve nego samo one koji odgovaraju prv
 
 Dodajmo treću jednadžbu: $x \equiv 0(\textrm{mod}\ 8)$.
 
-Sada moramo prolaziti brojeve koji zadovoljavaju obje prve jednadžbe te ih uspoređivati s novom jednadžbom. Primijetimo da sve te brojeve možemo zapisati pomoću nove jednadžbe. U ovom slučaju ta jednadžba je $30x + 28$. Do te jednadžbe možemo doći dodavanjem $a_1$ ili $a_2$ početnom broju tražeći sljedeću vrijednost koja zadovoljava obje jednadžbe, no taj postupak može biti spor. Primijetimo da će faktor uz $x$ dijeliti i $a_1$ i $a_2$, a pošto bi htjeli najmanji takav broj dovoljno je naći $LCM(a_1, a_2)$. Sada smo problem ponovno sveli na samo dvije jednadžbe, a taj smo problem riješili gore pa ćemo primijeniti isti postupak.
+Sada moramo prolaziti brojeve koji zadovoljavaju obje prve jednadžbe te ih uspoređivati s novom jednadžbom. Primijetimo da sve te brojeve možemo zapisati pomoću nove jednadžbe. U ovom slučaju ta jednadžba je $30x + 28$. Do te jednadžbe možemo doći dodavanjem $a_1$ ili $a_2$ početnom broju tražeći sljedeću vrijednost koja zadovoljava obje jednadžbe, no taj postupak može biti spor. Primijetimo da će faktor uz $x$ dijeliti i $b_1$ i $b_2$, a pošto bi htjeli najmanji takav broj dovoljno je naći $LCM(b_1, b_2)$. Sada smo problem ponovno sveli na samo dvije jednadžbe, a taj smo problem riješili gore pa ćemo primijeniti isti postupak.
 
 1. $x \equiv 28(\textrm{mod}\ 30)$
 2. $x \equiv 0(\textrm{mod}\ 8)$
@@ -52,13 +52,20 @@ int main(){
     for(int i = 0; i < n; i++) cin >> jed[i].first >> jed[i].second;
     cur = jed[0];
     for(int i = 1; i < n; i++){
+        for(int i = 1; i < n; i++){
+    	bool flag = true;
         for(int k = 0; k < jed[i].second; k++){
             if((k * cur.second + cur.first) % jed[i].second == jed[i].first){
                 cur.first = k * cur.second + cur.first;
                 cur.second = LCM(jed[i].second, cur.second);
+                flag = false;
                 break;
             }
         }
+        if(flag){
+        	cout << -1;
+        	return 0;
+        } 
     }
     cout << cur.first;
 }

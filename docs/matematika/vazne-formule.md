@@ -58,7 +58,7 @@ int pow_fixed(int base, int power, int mod){
 }
 ```
 
-Složenost ove funkcije je $O(power)$. Tu je funkciju moguće ubrzati ako primijetimo jedno korisno svojstvo potencija, a to je ako je potencija parna, tada broj možemo kvadrirati, a potenciju prepoloviti. $x^{2n} = x^{2^n}$. Sada našu funkciju možemo prilagoditi tako da provjeravamo parnost potencije i primijenimo gornju formulu.
+Složenost ove funkcije je $O(power)$. Tu je funkciju moguće ubrzati ako primijetimo jedno korisno svojstvo potencija, a to je ako je potencija parna, tada broj možemo kvadrirati, a potenciju prepoloviti. $x^{2n} = x^{2^{n/2}}$. Sada našu funkciju možemo prilagoditi tako da provjeravamo parnost potencije i primijenimo gornju formulu.
 
 ```cpp
 int brzo_potenciranje(int base, int power, int mod){

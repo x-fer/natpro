@@ -61,4 +61,11 @@ int multiplikativni_inverz(int a, int m){
 
 Ako je vrijednost _phi(m)_ unaprijed poznata, npr. kada je $m$ prost i vrijednost funkcije $m-1$, složenost ove metode određena je funkcijom _brzo_potenciranje_ i iznosi $O(\log{m})$. U nekim slučajevima, poput računa modulo $1e9 + 7$, ovaj pristup može biti dovoljno dobar.
 
-Ako se radi o računu modulo $m$ gdje je $m$ složen broj, a vrijednost Eulerove funkcije _phi(m)_ nije unaprijed poznata, potrebno je računati i nju što može biti vremenski zahtjevno. Bolji pristup koristio bi prošireni Euklidov algoritam, ili računao inverze za niz brojeva odjednom. Ti algoritmi traže dodatno poznavanje teorije brojeva pa su izvan opsega ovog poglavlja, ali same formule i implementacija nisu teški. Više o njima možete saznati <a href="https://cp-algorithms.com/algebra/module-inverse.html">ovdje</a>.
+Ako se radi o računu modulo $m$ gdje je $m$ složen broj, a vrijednost Eulerove funkcije _phi(m)_ nije unaprijed poznata, potrebno je računati i nju što može biti vremenski zahtjevno. Bolji pristup koristio bi prošireni Euklidov algoritam, ili računao inverze za niz brojeva odjednom kao ispod. Razumijevanje tih algoritama traži dodatno poznavanje teorije brojeva, ali same formule i implementacija nisu teški. Više o njima možete saznati <a href="https://cp-algorithms.com/algebra/module-inverse.html">ovdje</a>.
+
+```cpp
+/* računanje inverza svih brojeva u intervalu [1, m-1] */
+inv[1] = 1;
+for(int i = 2; i < m; ++i)
+    inv[i] = m - (m/i) * inv[m%i] % m;
+```

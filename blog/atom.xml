@@ -18,5 +18,8 @@
             <name>Ivan Vlahov</name>
             <uri>https://github.com/vlahovivan</uri>
         </author>
+        <category label="dobrodosli" term="dobrodosli"/>
+        <category label="natpro" term="natpro"/>
+        <category label="bitno" term="bitno"/>
     </entry>
 </feed>

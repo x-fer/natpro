@@ -47,6 +47,10 @@ module.exports = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
       ],
     },
     footer: {
@@ -157,11 +161,16 @@ module.exports = {
   ],
   i18n: {
     defaultLocale: 'hr',
-    locales: ['hr'],
+    locales: ['hr', 'en'],
     localeConfigs: {
       hr: {
         label: 'Hrvatski',
         direction: 'ltr',
+      },
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en',
       }
     },
   },

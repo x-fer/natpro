@@ -1,10 +1,10 @@
 ---
-title: Savjeti
+title: Tips
 ---
 
-import Author from '../../src/react_components/author.js';
+import Author from '../../../../../src/react_components/author.js';
 
-import Spoiler from '../../src/react_components/spoiler.js';
+import Spoiler from '../../../../../src/react_components/spoiler.js';
 
 <Author authorName='Ivan Vlahov' githubUsername='vlahovivan'/>
 

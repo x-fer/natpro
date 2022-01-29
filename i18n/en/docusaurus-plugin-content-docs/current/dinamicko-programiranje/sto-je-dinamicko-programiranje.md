@@ -1,5 +1,5 @@
 ---
-title: Što je dinamika?
+title: What is dynamic programming?
 ---
 
 Not translated yet!

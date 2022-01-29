@@ -1,5 +1,5 @@
 ---
-title: Problem razmjene novca
+title: The money exchange problem
 ---
 
 Not translated yet!

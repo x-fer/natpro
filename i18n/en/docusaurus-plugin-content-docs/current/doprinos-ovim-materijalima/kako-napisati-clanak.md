@@ -1,5 +1,5 @@
 ---
-title: "Pisanje članka"
+title: "Writing an article"
 ---
 
 Not translated yet!

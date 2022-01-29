@@ -1,5 +1,5 @@
 ---
-title: Autori
+title: Authors
 ---
 
 Not translated yet!

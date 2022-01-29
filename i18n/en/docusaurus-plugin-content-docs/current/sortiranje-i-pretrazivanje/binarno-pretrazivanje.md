@@ -1,5 +1,5 @@
 ---
-title: Binarno pretraživanje
+title: Binary search
 ---
 
 Not translated yet!

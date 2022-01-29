@@ -1,5 +1,5 @@
 ---
-title: Zapisi grafova
+title: Graph representations
 ---
 
 Not translated yet!

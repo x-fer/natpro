@@ -1,5 +1,5 @@
 ---
-title: "Pohlepni pristupi" 
+title: "Greedy approaches" 
 ---
 
 Not translated yet!

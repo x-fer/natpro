@@ -1,5 +1,5 @@
 ---
-title: Multiplikativni inverz
+title: Multiplicative inverse
 ---
 
 Not translated yet!

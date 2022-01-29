@@ -1,5 +1,5 @@
 ---
-title: Kosarajuev algoritam
+title: Kosaraju's algorithm
 ---
 
 Not translated yet!

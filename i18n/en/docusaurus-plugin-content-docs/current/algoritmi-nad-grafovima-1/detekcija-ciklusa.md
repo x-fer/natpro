@@ -1,5 +1,5 @@
 ---
-title: Detekcija ciklusa
+title: Cycle detection
 ---
 
 Not translated yet!

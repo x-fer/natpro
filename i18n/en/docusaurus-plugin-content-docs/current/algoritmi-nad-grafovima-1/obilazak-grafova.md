@@ -1,5 +1,5 @@
 ---
-title: Obilazak grafova
+title: Graph traversal
 ---
 
 Not translated yet!

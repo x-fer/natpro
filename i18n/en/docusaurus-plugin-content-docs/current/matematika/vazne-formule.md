@@ -1,5 +1,5 @@
 ---
-title: Važne formule
+title: Important formulas
 ---
 
 Not translated yet!

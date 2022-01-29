@@ -1,5 +1,5 @@
 ---
-title: Segmentno stablo
+title: Segment tree
 ---
 
 Not translated yet!

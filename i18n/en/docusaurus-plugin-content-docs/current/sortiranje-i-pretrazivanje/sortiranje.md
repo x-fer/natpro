@@ -1,5 +1,5 @@
 ---
-title: Sortiranje
+title: Sorting
 ---
 
 Not translated yet!

@@ -1,5 +1,5 @@
 ---
-title: Offline algoritmi
+title: Offline algorithms
 ---
 
 Not translated yet!

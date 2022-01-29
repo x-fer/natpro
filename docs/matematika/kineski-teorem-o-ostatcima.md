@@ -2,9 +2,9 @@
 title: Kineski teorem o ostatcima
 ---
 
-import Author from '../../src/react_components/author.js';
+import Author from '@site/src/react_components/author.js';
 
-import Spoiler from '../../src/react_components/spoiler.js';
+import Spoiler from '@site/src/react_components/spoiler.js';
 
 <Author authorName='Karlo Franić' githubUsername='kfranic1'/>
 

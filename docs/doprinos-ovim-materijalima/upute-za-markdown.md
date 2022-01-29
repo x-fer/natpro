@@ -2,7 +2,7 @@
 title: Upute za Markdown
 ---
 
-import Spoiler from '../../src/react_components/spoiler.js';
+import Spoiler from '@site/src/react_components/spoiler.js';
 
 Možete pisati članke koristeći [GitHub-flavored Markdown sintaksu](https://github.github.com/gfm/)
 

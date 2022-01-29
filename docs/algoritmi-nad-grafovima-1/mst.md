@@ -1,11 +1,11 @@
 ---
-title: Naslov velikim slovom
+title: MST
 ---
 
 import Author from '@site/src/react_components/author.js';
 
 import Spoiler from '@site/src/react_components/spoiler.js';
 
-<Author authorName='Ime Prezime' githubUsername='x-fer'/>
+<Author authorName='Ivan Vlahov' githubUsername='vlahovivan'/>
 
-Ovdje ide sadržaj članka
+U izradi

@@ -1,5 +1,5 @@
 ---
-title: Upiti nad statičkim poljima
+title: Queries over static fields
 ---
 
 Not translated yet!

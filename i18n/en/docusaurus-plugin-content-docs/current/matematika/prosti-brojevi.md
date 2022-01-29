@@ -1,5 +1,5 @@
 ---
-title: Prosti brojevi
+title: Prime numbers
 ---
 
 Not translated yet!

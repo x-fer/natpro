@@ -1,5 +1,5 @@
 ---
-title: Kineski teorem o ostatcima
+title: Chinese remainder theorem
 ---
 
 Not translated yet!

@@ -1,5 +1,5 @@
 ---
-title: Osnove geometrije
+title: Fundamentals of geometry
 ---
 
 Not translated yet!

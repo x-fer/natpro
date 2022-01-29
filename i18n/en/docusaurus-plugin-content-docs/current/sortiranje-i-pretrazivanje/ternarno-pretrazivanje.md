@@ -1,5 +1,5 @@
 ---
-title: Ternarno pretraživanje
+title: Ternary search
 ---
 
 Not translated yet!

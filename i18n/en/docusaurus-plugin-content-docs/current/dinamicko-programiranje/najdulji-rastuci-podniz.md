@@ -1,5 +1,5 @@
 ---
-title: Najdulji rastući podniz
+title: The longest increasing subsequence
 ---
 
 Not translated yet!

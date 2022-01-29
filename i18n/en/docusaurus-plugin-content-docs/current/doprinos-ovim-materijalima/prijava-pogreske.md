@@ -1,5 +1,5 @@
 ---
-title: Prijava pogreške
+title: Report a bug
 ---
 
 Not translated yet!

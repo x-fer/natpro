@@ -1,5 +1,5 @@
 ---
-title: Union-find struktura
+title: Union-find structure
 ---
 
 Not translated yet!

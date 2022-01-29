@@ -1,5 +1,5 @@
 ---
-title: Topološko sortiranje
+title: Topological sorting
 ---
 
 Not translated yet!

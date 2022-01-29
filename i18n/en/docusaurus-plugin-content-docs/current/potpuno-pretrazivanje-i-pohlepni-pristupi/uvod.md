@@ -1,5 +1,5 @@
 ---
-title: "Potpuno pretraživanje"
+title: "Introduction to full search"
 ---
 
 Not translated yet!

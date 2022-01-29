@@ -1,5 +1,5 @@
 ---
-title: Najkraći putovi
+title: The shortest paths
 ---
 
 Not translated yet!

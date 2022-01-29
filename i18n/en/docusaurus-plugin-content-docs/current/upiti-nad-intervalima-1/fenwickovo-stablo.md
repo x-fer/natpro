@@ -1,5 +1,5 @@
 ---
-title: Fenwickovo stablo
+title: Fenwick tree
 ---
 
 Not translated yet!

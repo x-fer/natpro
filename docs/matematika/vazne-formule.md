@@ -77,7 +77,7 @@ Složenost ovog algoritma je $O(\log power)$, no ovaj kod nam i dalje može stva
 int add(int a, int b, int mod){
     int ret = a + b;
     if(ret >= mod) return ret - mod;
-    if(ret < mod) return ret + mod;
+    if(ret < 0) return ret + mod;
     return ret;
 }
 int mul(long long int a, long long int b, int mod){

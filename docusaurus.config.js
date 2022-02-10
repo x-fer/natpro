@@ -164,4 +164,5 @@ module.exports = {
       },
     },
   },
+  staticDirectories: ["static"],
 };

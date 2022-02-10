@@ -40,10 +40,12 @@ module.exports = {
       (title) => "upiti-nad-intervalima-2/" + title
     ),
     "7. Algoritmi nad grafovima 1": [
+      "uvod-u-grafove",
       "zapisi-grafova",
-      "obilazak-grafova",
+      "pretrazivanje-grafova",
       "najkraci-putovi",
       "union-find-struktura",
+      "mst",
       "detekcija-ciklusa",
     ].map((title) => "algoritmi-nad-grafovima-1/" + title),
     "8. Algoritmi nad grafovima 2": [

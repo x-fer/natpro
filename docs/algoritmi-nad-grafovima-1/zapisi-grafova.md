@@ -15,7 +15,10 @@ Grafovi se u memoriji mogu prikazati na više načina, a različiti algoritmi č
 Lista susjedstva (eng. *adjacency list*) je metoda zapisa grafova u kojoj za svaki čvor pamtimo sve njegove susjede. U C++-u se ovaj zapis može realizirati korištenjem vektora vektora:
 
 ```
-// recimo da je n broj vrhova
+// n je broj vrhova
+
+int n = 3;
+
 // vrhovi se numeriraju od 0 do n-1
 // stvaramo vector s n vectora cijelih brojeva
 

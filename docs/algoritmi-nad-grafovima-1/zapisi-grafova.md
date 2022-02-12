@@ -35,7 +35,7 @@ Lista susjedstva iz gornjeg primjera predstavlja graf na slici:
 
 ![Graf iz prvog primjera liste susjedstva](/img/algoritmi-nad-grafovima-1/adjList1.png)
 
-U slučaju da se radi o težinskom grafu, listu susjedstva ćemo zapisati kao vektor vektora parova vrh-težina. Ako se o usmjerenom grafu, onda vrh $j$ dodajemo u listu susjedstva vrha $i$ samo ako postoji brid od vrha $i$ do vrha $j$.
+U slučaju da se radi o težinskom grafu, listu susjedstva ćemo zapisati kao vektor vektora parova vrh-težina. Ako se radi o usmjerenom grafu, onda vrh $j$ dodajemo u listu susjedstva vrha $i$ samo ako postoji brid od vrha $i$ do vrha $j$.
 
 ```
 // DW kao Directed i Weighted

@@ -46,7 +46,6 @@ module.exports = {
       "najkraci-putovi",
       "union-find-struktura",
       "mst",
-      "detekcija-ciklusa",
     ].map((title) => "algoritmi-nad-grafovima-1/" + title),
     "8. Algoritmi nad grafovima 2": [
       "topolosko-sortiranje",

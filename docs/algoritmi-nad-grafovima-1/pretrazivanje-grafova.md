@@ -18,7 +18,7 @@ Pretraživanje u dubinu, *depth first search*, ili ukratko DFS, metoda je obilas
 
 Uzmimo na primjer graf sa slike. Recimo da za sljedeći čvor u obilasku biramo prvo onaj neposjećeni čvor s najmanjim indeksom, te da je početni čvor onaj s indeksom 1. Označimo njega kao posjećenog, te iz njega prelazimo na neposjećeni susjedni čvor s najmanjim indeksom, u ovom slučaju čvor 4. Ponavljamo postupak za čvor 4: označavamo ga kao posjećenog, njegovi neposjećeni susjedi su 2 i 5 - prelazimo na čvor 2. Označimo čvor 2 kao posjećenog, prelazimo na čvor 3. Označimo čvor 3 kao posjećenog. Iz čvora 3 nemamo više gdje ići, pa se vraćamo u čvor iz kojeg smo došli, a to je čvor 2. Opet tražimo neposjećenog susjeda čvora 2 s najmanjim indeksom - sad je to čvor 6. Prelazimo na njega, označimo ga kao posjećenog i vraćamo se opet na 2 jer nemamo kamo drugdje iz 6. Sad ni 2 više nema neposjećenih susjeda, pa se vraćamo u 4. Iz 4 idemo u 5, iz 5 se vraćamo u 4, te iz 4 natrag u 1, gdje pretraživanje završava.
 
-Kad bismo prilikom prvog ulaska u svaki vrh ispisali njegov indeks, dobili bismo sljedeći ispis:
+Kad bismo prilikom prvog ulaska u svaki čvor ispisali njegov indeks, dobili bismo sljedeći ispis:
 
 ```
 1 4 2 3 6 5
@@ -31,7 +31,7 @@ DFS se može implementirati na više načina. Najčešći i jednostavan način i
 // ili, ako ne zelite, proslijediti 
 // referencu na graf funkciji dfs
 // MAXN je neka konstanta, npr. najveci
-// moguci broj vrhova iz teksta zadatka
+// moguci broj cvorova iz teksta zadatka
 vector<vector<int>> graph(MAXN);
 
 // isto vrijedi i za polje posjecenih cvorova
@@ -43,7 +43,7 @@ vector<bool> visited(MAXN, false);
 void dfs(int node) {
     visited[node] = true;
 
-    // radi nesto s cvorom, npr. ispis vrha
+    // radi nesto s cvorom, npr. ispis indeksa
     cout << "Usao u cvor " << node << "\n";
 
     for(auto &it : graph[node]) {
@@ -84,7 +84,110 @@ Ne postoji razlika u implementaciji ako se radi o usmjerenom grafu.
 
 #### Bitna svojstva i varijacije DFS-a
 
-U izradi
+Ako su nakon DFS-a svi čvorovi neusmjerenog grafa označeni kao posjećeni, graf je povezan. Također koristeći DFS možemo pronaći broj komponenti nepovezanog grafa tako što iteriramo kroz sve čvorove i pozivamo DFS za one koji dosad nisu posjećeni. Broj poziva DFS-a je ujedno i broj komponenti.
+
+```
+int components = 0;
+
+for(int i=1; i<=n; i++) {
+    if(!visited[i]) {
+        components++;
+        dfs(i);
+    }
+}
+```
+
+Također, ako prilikom DFS-a nijednom ne naiđemo na posjećen čvor (osim onoga iz kojeg smo došli u trenutni čvor), možemo zaključiti da je graf stablo jer u stablima vrijedi da između dva čvora postoji točno jedan put.
+
+```
+bool graphIsATree = true;
+
+void checkIfGraphIsATree(int node, int pred) {
+    visited[node] = true;
+
+    for(auto &it : graph[node]) {
+        if(it == pred) continue;
+
+        if(visited[it]) {
+            graphIsATree = false;
+            return;
+        }else{
+            checkIfGraphIsATree(it, node);
+        }
+    }
+}
+```
+
+Ako smo sigurni da je graf stablo (npr. iz teksta zadatka), polje visited nam ni ne treba:
+
+```
+// izvan maina
+
+void dfsOnTree(int node, int pred) {
+    // radi nesto s cvorom
+
+    for(auto &it : graph[node]) {
+        if(it == pred) continue;
+
+        dfs(it, node);
+    }
+}
+
+// u mainu
+
+// ne mora nuzno prvi argument biti 1,
+// moze biti koji god cvor hocete
+dfsOnTree(1, -1);
+```
+
+Ako naiđemo na već posjećeni čvor, a koji nije onaj čvor iz kojeg smo došli u trenutni čvor, možemo zaključiti da su trenutni čvor i taj već posjećeni čvor dio istog ciklusa. Ako pri pozivu DFS-a zapamtimo na kojoj smo dubini rekurzije, možemo jako jednostavno izračunati duljinu ciklusa na koji smo naišli.
+
+Pomoću jedne varijacije DFS-a možemo i obići sve moguće jednostavne putove u grafu - nakon što obradimo cvor i pozovemo DFS za njegove neposjećene susjede, vratimo taj čvor nazad u neposjećeno stanje i nastavimo obrađivati prošli čvor. Ako pozovemo takav DFS za sve čvorove u grafu, obići ćemo sve moguće jednostavne putove u grafu.
+
+```
+// mozemo ovo koristiti za pracenje trenutnog puta
+vector<int> currentPath;
+
+void tryAllPaths(int node) {
+    visited[node] = true;
+    currentPath.push_back(node);
+
+    for(auto &it : graph[node]) {
+        if(!visited[it]) {
+            tryAllPaths(it);
+        }
+    }
+
+    for(auto &it : currentPath) {
+        cout << it << " ";
+    }
+    cout << "\n";
+
+    currentPath.pop_back();
+    visited[node] = false;
+}
+```
+
+Pozovemo li ovu funkciju za primjer sa slike:
+
+![Primjer grafa za koji tražimo sve puteve](/img/algoritmi-nad-grafovima-1/pretrazivanje1.png)
+
+```
+tryAllPaths(1);
+```
+
+Dobit ćemo sljedeći ispis:
+
+```
+1 4 2 3 
+1 4 2 6 
+1 4 2 
+1 4 5 
+1 4 
+1
+```
+
+U ovom primjeru nalazimo samo jednostavne putove koji počinju u čvoru 1, a jednostavnom iteracijom po svim čvorovima možemo pronaći sve moguće jednostavne putove iz svih čvorova.
 
 ### Breadth First Search
 
@@ -96,7 +199,7 @@ Započnemo li pretraživanje u širinu na grafu sa slike u čvoru 1, i ako opet 
 
 ![Graf sa slojevima obojanim u različite boje](/img/algoritmi-nad-grafovima-1/pretrazivanje3.png)
 
-Kad bismo prilikom posjeta čvora ispisali njegov vrh, dobili bismo ovakav ispis:
+Kad bismo prilikom posjeta čvora ispisali njegov indeks, dobili bismo ovakav ispis:
 
 ```
 1 3 5 6 4 2 7
@@ -127,7 +230,7 @@ while(!q.empty()) {
     if(visited[node]) continue;
     visited[node] = true;
 
-    // radi nesto s cvorom, npr. ispis vrha
+    // radi nesto s cvorom, npr. ispis indeksa
     cout << "Usao u cvor " << node << "\n";
 
     for(auto &it : graph[node]) {
@@ -151,10 +254,14 @@ Usao u cvor 7
 ```
 
 :::noteprimijetite
-Za razliku od DFS-a, u BFS-u moramo raditi provjeru je li neki vrh posjećen i za taj sami vrh i za njegove susjede. Razlog je činjenica da dva različita čvora koja su dio istog sloja mogu dodati istog susjeda u red dva puta, pa se moramo pobrinuti da se čvor ne obradi opet drugi put kad se nađe na početku reda.
+Za razliku od DFS-a, u BFS-u moramo raditi provjeru je li neki cvor posjećen i za taj sami cvor i za njegove susjede. Razlog je činjenica da dva različita čvora koja su dio istog sloja mogu dodati istog susjeda u red dva puta, pa se moramo pobrinuti da se čvor ne obradi opet drugi put kad se nađe na početku reda.
 :::
 
 
 #### Bitna svojstva i varijacije BFS-a
 
-U izradi
+Jedno zanimljivo svojstvo BFS-a jest da pomoću njega možemo provjeriti je li graf bipartitan ili ne. Ideja jest da početni čvor obojimo u jednu boju (npr. crvenu), postavimo ga u red i ponavljamo sljedeće korake: skinemo čvor s početka reda, provjerimo jesu li njegovi susjedi obojani - ako postoji ijedan susjed koji je obojan u istu boju kao i trenutni čvor, graf nije bipartitan. U suprotnom, bojamo sve neobojane susjede u obrnutu boju od one trenutnog čvora (plavu ako je crven, crvenu ako je plav), dodajemo ih u red i nastavljamo dok se red ne isprazni.
+
+![Primjer bipartitnog grafa](/img/algoritmi-nad-grafovima-1/pretrazivanje4.png)
+
+Drugo zanimljivo, a često i jako korisno svojstvo BFS-a jest da se pomoću njega u netežinskim grafovima može pronaći duljina najkraćeg puta između nekog početnog čvora i svih ostalih čvorova grafa. Ideja je vrlo jednostavna - do čvorova u prvom sloju BFS-a sigurno ne postoji kraći put - oni su za 1 brid udaljeni od početnog čvora. Duljina najkraćeg puta do čvorova u drugom sloju je sigurno 2, jer su za 1 udaljeni od čvorova iz prvog sloja, a da je manja, već bismo ih obradili u prvom sloju. Slično vrijedi i za čvorove idućih slojeva.

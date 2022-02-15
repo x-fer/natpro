@@ -10,7 +10,7 @@ import Spoiler from '@site/src/react_components/spoiler.js';
 
 ## Dobar algoritam
 
-Cilj rješavanja zadataka na natjecanjima nije **samo** predati program koji daje točan rezultat, često je bitno i da taj program bude efikasan. Zadaci uglavnom imaju vremenska i memorijska ograničenja izvođenja programa te je bitno znati na vrijeme odrediti pristup kojim ćete rješavati određeni zadatak. Na nekim platformama (npr. Codeforces) je bitno i koliko vam je vremena trebalo da riješite određeni zadatak, te je iz tog razloga važno i brzo odrediti hoće li neki pristup raditi dovoljno brzo s postavljenim ograničenjima ulaznih podataka.
+Cilj rješavanja zadataka na natjecanjima nije **samo** predati program koji daje točan rezultat, bitno je i da taj program bude efikasan. Zadaci uglavnom imaju vremenska i memorijska ograničenja izvođenja programa te je bitno znati na vrijeme odrediti pristup kojim ćete rješavati određeni zadatak. Na nekim platformama (npr. Codeforces) je bitno i koliko vam je vremena trebalo da riješite određeni zadatak, te je iz tog razloga važno na vrijeme odrediti hoće li neki pristup raditi dovoljno brzo s postavljenim ograničenjima ulaznih podataka.
 
 Što više zadataka budete rješavali, to će vam lakše biti brzo odrediti efikasan pristup rješavanju zadataka. Svakako preporučamo da tijekom natjecanja koristite papir i olovku da biste mogli skicirati, ručno isprobavati neke testne primjere i provjeravati radi li vaš program na njima. Iako je korištenje olovke i papira poželjno, s vremenom (i s mnoštvom riješenih zadataka!) ćete primijetiti da za lakše zadatke uopće nećete trebati papir i olovku već će rješenja početi dolaziti "sama od sebe".
 
@@ -22,9 +22,7 @@ Bitno je spomenuti da, kao i sve, natjecateljsko programiranje zahtijeva veliku 
 
 S obzirom da se neki zadaci mogu riješiti na više različitih načina, dobro bi bilo imati neku notaciju pomoću koje bismo mogli označavati koliko je koji algoritam dobar ili loš. Upravo zato ćemo se upoznati s _Veliko O_ notacijom, pomoću koje na jednostavan način možemo opisati algoritme te brzo odrediti trebamo li koristiti određeni algoritam za određeni zadatak.
 
-Pomoću Veliko O notacije možemo odrediti način na koji broj operacija u programu ovisi o jednoj ili više varijabli. 
-
-
+Pomoću *Veliko O* notacije možemo odrediti način na koji broj operacija u programu ovisi o jednoj ili više varijabli. 
 
 Uzmimo na primjer sljedeći isječak koda:
 
@@ -46,7 +44,7 @@ for(int i=0; i<n; i++){
 }
 ```
 
-Primjećujemo da broj operacija ispisa u ovom programskom isječku ovisi o vrijednosti varijabli $n$ - za $n=1$, operacija ispisa će se izvršiti jednom, za $n=10$ će se izvršiti $10$ puta, i tako dalje. U ovom slučaju govorimo o **linearnoj** složenosti, te zapisujemo $O(n)$. Pogledajmo još jedan primjer:
+Primjećujemo da broj operacija ispisa u ovom programskom isječku linearno ovisi o vrijednosti varijable $n$ - za $n=1$, operacija ispisa će se izvršiti jednom, za $n=10$ će se izvršiti $10$ puta - ako $n$ povećamo $x$ puta, broj operacija će se povećati $x$ puta. U ovom slučaju govorimo o **linearnoj** složenosti, te zapisujemo $O(n)$. Pogledajmo još jedan primjer:
 
 ```cpp
 int n;
@@ -59,7 +57,7 @@ for(int i=0; i<n; i++){
 }
 ```
 
-U ovom slučaju će se za $n=1$ operacija ispisa izvršiti jedan put, a za $n=10$ će se izvršiti $100$ puta. Lako možemo zaključiti da će se operacija uvijek izvesti $n^{2}$ puta. U tom slučaju govorimo o **kvadratnoj** složenosti, odnosno $O(n^{2})$.
+U ovom slučaju će se za $n=1$ operacija ispisa izvršiti jedan put, a za $n=10$ će se izvršiti $100$ puta. Lako možemo zaključiti da će se operacija uvijek izvesti $n^{2}$ puta, odnosno da broj operacija ovisi o kvadratu vrijednosti varijable $n$. U tom slučaju govorimo o **kvadratnoj** složenosti, odnosno $O(n^{2})$.
 
 Složenost ne mora nužno biti u obliku $O(n^{p})$. Pogledajmo sljedeće primjere:
 
@@ -85,7 +83,7 @@ for(int i=0; i*i < n; i++){
 }
 ```
 
-Naravno, nisu svi programi ovako jednostavni. Programi se uglavnom sastoje od nekakvih faza, gdje svaka faza ima svoju složenost. Ukupan broj operacija je naravno suma broja operacija u svakoj od faza. Međutim, u Veliko O notaciji zapisujemo samo složenost one faze koja najviše opterećuje brzinu izvođenja programa.
+Naravno, nisu svi programi ovako jednostavni. Programi se uglavnom sastoje od nekakvih faza, gdje svaka faza ima svoju složenost. Ukupan broj operacija je naravno suma broja operacija u svakoj od faza. Međutim, u Veliko O notaciji zapisujemo samo složenost one faze koja najviše opterećuje brzinu izvođenja programa, zato što s povećanjem vrijednosti varijable, ostale faze gube na značaju u odnosu na onu koja najviše opterećuje brzinu.
 
 ```cpp
 int n;
@@ -104,7 +102,7 @@ for(int i=0; i<n; i++){
 }
 ```
 
-Već znamo da je složenost prve faze $O(n)$, međutim, koja je složenost druge faze? U ovom slučaju varijabla $j$ u for petlji ne počinje od nule, već od vrijednosti varijable $i$, te možemo izračunati da će se operacija ispisa izvršiti $\frac{n\cdot(n+1)}{2}$ puta. Kad raspišemo taj izraz, dobijemo $\frac{1}{2}n^{2} + \frac{1}{2}n$. I u ovom slučaju govorimo o **kvadratnoj** složenosti, odnosno $O(n^{2})$, jer je pribrojnik $\frac{1}{2}n^{2}$ onaj koji najviše opterećuje brzinu izvođenja programa. Što se tiče konstantnog faktora $\frac{1}{2}$, njega ne zapisujemo u Veliko O notaciji. Sada kad znamo broj operacija obje faze, kad ih zbrojimo dobijemo ukupan broj operacija: $\frac{1}{2}n^{2} + \frac{3}{2}n$. I tako zaključujemo da je ukupna složenost ovog programa $O(n^{2})$.
+Već znamo da je složenost prve faze $O(n)$, međutim, koja je složenost druge faze? U ovom slučaju varijabla $j$ u for petlji ne počinje od nule, već od vrijednosti varijable $i$, te možemo izračunati da će se operacija ispisa izvršiti $\frac{n\cdot(n+1)}{2}$ puta. Kad raspišemo taj izraz, dobijemo $\frac{1}{2}n^{2} + \frac{1}{2}n$. I u ovom slučaju govorimo o **kvadratnoj** složenosti, odnosno $O(n^{2})$, jer je pribrojnik $\frac{1}{2}n^{2}$ onaj koji najviše opterećuje brzinu izvođenja programa. Što se tiče konstantnog faktora $\frac{1}{2}$, njega ne zapisujemo u Veliko O notaciji jer se broj operacija i dalje mijenja proporcionalno kvadratu varijable $n$, neovisno o vrijednosti konstantnog faktora. Sada kad znamo broj operacija obje faze, kad ih zbrojimo dobijemo ukupan broj operacija: $\frac{1}{2}n^{2} + \frac{3}{2}n$. I tako zaključujemo da je ukupna složenost ovog programa $O(n^{2})$.
 
 Nekad složenost programa ne ovisi samo o jednoj varijabli:
 
@@ -123,3 +121,36 @@ U ovom slučaju će se izvršiti $nm$ operacija ispisa, pa je složenost $O(nm)$
 
 Možda ste se tijekom čitanja zapitali, zašto je ovo uopće bitno? Odgovor leži u tome da poznavanjem asimptotske složenosti algoritama možemo jako brzo procijeniti hoće li naše rješenje biti dovoljno dobro da se program izvrši unutar zadanog vremenskog ograničenja. Uzmimo na primjer da evaluator može obaviti $10^{9}$ operacija u jednoj sekundi. U tekstu zadatka piše da varijabla $n$ može poprimiti vrijednosti od $1$ do $10^{5}$, a vremensko ograničenje izvođenja programa je $1$ sekunda. Tada možemo biti sigurni da $O(n^{2})$ neće biti dovoljno dobro jer možemo računati da će se izvršiti puno veći broj operacija nego što evaluator može izračunati u sekundi.
 
+### Često viđene složenosti
+
+U sljedećoj listi ukratko su objašnjene složenosti s kojima ćete se često susretati, poredane od asimptotski najbolje do najlošije.
+
+- $O(1)$ - konstantna složenost, broj operacija ne ovisi ni o jednoj varijabli
+- $O(\log n)$ - logaritamska složenost (u bazi $2$), broj operacija ovisi o tome koliko puta možemo $n$ podijeliti s $2$ 
+- $O(\sqrt{n})$ - korijen iz $n$ složenost
+- $O(n)$ - linearna složenost, broj operacija raste proporcionalno s $n$
+- $O(n \log n)$ - često viđena složenost kad algoritam koristi sortiranje, više o tome u poglavlju o [sortiranju](../sortiranje-i-pretrazivanje/sortiranje.md)
+- $O(n^2)$ - kvadratna složenost, često viđena kad program koristi ugniježdene petlje (kao u primjerima)
+- $O(n^3)$ - kubna složenost
+- $O(2^n)$ - eksponencijalna složenost, često viđena kad program iterira kroz sve podskupove ulaznih podataka
+- $O(n!)$ - faktorijelna složenost, često viđena kad program iterira kroz sve permutacije ulaznih podataka
+
+### Zaključci o složenosti iz teksta zadatka
+
+Često samo na temelju ograničenja iz teksta zadatka možemo zaključiti kakve algoritme smijemo, a kakve ne smijemo koristiti. Npr. ako u tekstu zadatka piše da je $n$ cijeli broj iz intervala $[1, 10^5]$, očito ne možemo koristiti algoritam složenosti $O(n!)$ jer već za $n=15$, $n!$ postane toliko velik da bi nam trebalo previše vremena za iterirati kroz sve permutacije te veličine. U sljedećoj tablici opisano je koje su najlošije složenosti koje možete koristiti za zadane vrijednosti neke varijable $n$.
+
+| Veličine varijable $n$ | Najlošija složenost koja prolazi |
+|------------------------|----------------------------------|
+| $n \le 10$             | $O(n!)$                          |
+| $n \le 20$             | $O(2^n)$                         |
+| $n \le 500$            | $O(n^3)$                         |
+| $n \le 5000$           | $O(n^2)$                         |
+| $n \le 10^6$           | $O(n \log n)$ ili $O(n)$         |
+| $n$ je ogroman         | $O(1)$ ili $O(\log n)$           |
+
+
+:::importantbitno
+
+Asimptotska složenost govori nam puno o tome kako se vrijeme izvođenja **mijenja** ovisno o nekoj varijabli, ali ne govori nam puno o samom vremenu izvođenja za neki $n$. Ona služi kao procjena, te nije nemoguće da se za male vrijednosti varijable $n$, neki algoritam složenosti $O(n^2)$ izvodi brže nego neki algoritam $O(n)$ s velikim konstantnim faktorom u broju operacija.
+
+:::

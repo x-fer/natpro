@@ -38,7 +38,7 @@ for(int i = 0; i < brojParnih; i++){
 }
 ```
 
-Međutim, očito je da naš program neće raditi ako upišemo više od $$1000$$ parnih brojeva. Osim toga, ako upišemo puno manje od $$1000$$ parnih brojeva, ostavit ćemo dobar dio rezervirane memorije neiskorištenom. Ovo su samo od nekih problema koje _container_ vector može riješiti.
+Međutim, očito je da naš program neće raditi ako upišemo više od $$1000$$ parnih brojeva. Osim toga, ako upišemo puno manje od $$1000$$ parnih brojeva, ostavit ćemo dobar dio rezervirane memorije neiskorištenom. Ovo su samo neki od problema koje _container_ vector može riješiti.
 
 Vector je dinamičko polje, odnosno polje varijabilne duljine, kojem možemo dodavati elemente na kraj te skidati elemente s kraja u $$O(1)$$ vremenu (u većini slučajeva). Pomoću vectora rješenje gore navedenog zadatka bi izgledalo ovako:
 

@@ -71,7 +71,7 @@ int brzo_potenciranje(int base, int power, int mod){
 }
 ```
 
-Složenost ovog algoritma je $O(\log power)$, no ovaj kod nam i dalje može stvarati neke probleme jer neki brojevi mogu _overflowati_, a i kod s puno modova nije baš lijep. Kako bismo izbjegli često _castanje_ u _long long_ i često pisanje mod koristimo nešto što je praksa u natjecateljskom programiranju, a to su vlastite funkcije za zbrajanje i množenje. To na prvu možda zvuči čudno i nepotrebno, no tako će naš kod izgledati ljepše, a i imat će bolje performanse(kasnije ćemo objasniti zašto).
+Složenost ovog algoritma je $O(\log power)$, no ovaj kod nam i dalje može stvarati neke probleme jer neki brojevi mogu _overflowati_, a i kod s puno modova nije baš lijep. Kako bismo izbjegli često _castanje_ u _long long_ i često pisanje mod koristimo nešto što je praksa u natjecateljskom programiranju, a to su vlastite funkcije za zbrajanje i množenje. To na prvu možda zvuči čudno i nepotrebno, no tako će naš kod izgledati ljepše, a i imat će bolje performanse (kasnije ćemo objasniti zašto).
 
 ```cpp
 int add(int a, int b, int mod){

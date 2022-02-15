@@ -311,4 +311,6 @@ U ovom primjeru naredba `system` izvršava naredbu u naredbenom retku.
 <!--
 ## Osnovna matematika
 
-TODO: o osnovnim stvarima iz matematike, logike i teorije skupova koje treba znati za rjesavanje zadataka -->
+TODO: o osnovnim stvarima iz matematike, logike i teorije skupova koje treba znati za rjesavanje zadataka 
+      logaritmi u bazi 2 osim ako drugacije navedemo
+-->

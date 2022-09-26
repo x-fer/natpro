@@ -2,9 +2,9 @@
 title: Sortiranje
 ---
 
-import Author from '../../src/react_components/author.js';
+import Author from '@site/src/react_components/author.js';
 
-import Spoiler from '../../src/react_components/spoiler.js';
+import Spoiler from '@site/src/react_components/spoiler.js';
 
 <Author authorName='Maja Milas' githubUsername='javascript-m'/>
 
@@ -27,7 +27,8 @@ for(int i=0; i<n; i++) {
 Prednost bubble sorta i sličnih algoritama je što su jako kratki za kodiranje i lako se razumiju. Ipak, u natjecateljskom programiranju češće ćete sretati veće količine podataka za koje je kvadratna složenost prevelika (npr. za $n=10^5$ kvadratna složenost daje vrijeme izvršavanja od oko $100$ sekundi što ne prolazi time limit$^1$. Sada se postavlja pitanje kako ubrzati ovaj algoritam? Početna ideja mogla bi biti prekinuti izvršavanje u unutarnjoj petlji ako nismo napravili niti jednu zamjenu. To bi ponešto optimiziralo program, ali složenost je u najgorem slučaju i dalje $O(n^2)$. Može li brže? Nego što!
 
 $^1$ više o time limitu pročitajte ovdje.
-TODO: dodaj link
+
+<!-- TODO: dodaj link -->
 
 ## $O(n \log(n))$ algoritmi
 

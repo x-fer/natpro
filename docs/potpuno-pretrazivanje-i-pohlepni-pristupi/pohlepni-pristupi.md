@@ -2,7 +2,7 @@
 title: "Pohlepni pristupi" 
 ---
 
-import Author from '../../src/react_components/author.js';
+import Author from '@site/src/react_components/author.js';
 
 <Author authorName='Petar Mihalj' githubUsername='PetarMihalj'/>
 

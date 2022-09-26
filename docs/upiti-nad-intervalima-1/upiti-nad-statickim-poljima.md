@@ -2,11 +2,11 @@
 title: Upiti nad statičkim poljima
 ---
 
-import Author from '../../src/react_components/author.js';
+import Author from '@site/src/react_components/author.js';
 
-import Spoiler from '../../src/react_components/spoiler.js';
+import Spoiler from '@site/src/react_components/spoiler.js';
 
-<Author authorName='Adrijan Brajković' githubUsername='Brajk19'/>
+<Author authorName='Adrian Brajković' githubUsername='Brajk19'/>
 
 ### Uvod  
 Započet ćemo s jednim jednostavnim zadatkom/primjerom:  

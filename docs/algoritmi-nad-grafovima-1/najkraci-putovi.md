@@ -5,6 +5,7 @@ title: Najkraći putovi
 <!--TODO
     * alt slike
     * gif za Bellman-Ford
+    * pravopis
 -->
 
 import Author from '@site/src/react_components/author.js';

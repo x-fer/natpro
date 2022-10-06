@@ -10,7 +10,7 @@ import Spoiler from '@site/src/react_components/spoiler.js';
 
 ## Što su grafovi?
 
-Graf je struktura podataka sastavljena od vrhova (čvorova, _eng. node_) i bridova (_eng. edge_). Vrhovi opisuju podatke, a bridovi veze između njih. Graf na slici 1 ima $5$ vrhova i $6$ bridova.
+Graf je struktura podataka sastavljena od **vrhova** (čvorova, _eng. node_) i **bridova** (_eng. edge_). Vrhovi opisuju podatke, a bridovi veze između njih. Graf na slici 1 ima $5$ vrhova i $6$ bridova (i izgleda kao Toblerone).
 
 <img src="/img/algoritmi-nad-grafovima-1/graph1.png" alt="graph1" width="350"/>
 
@@ -34,7 +34,9 @@ Graf u kojem postoji put između _svaka_ dva vrha je **povezan**. Na gornjim je 
 
 ### Stablo
 
-**Stablo (3A)** je povezan graf koji se sastoji od $n$ vhova i $n-1$ bridova i nema cikluse. Postoji _jedinstven_ put između bilo koja dva vrha stabla. Vrhovi koji imaju samo jednog susjeda zovu se **listovi stabla** (_eng. leaf_). Kada prikazujemo stabla često biramo jedan vrh kojeg nazovemo **korijenom** (_eng. root_) od kojeg krećemo crtati stablo. Kažemo da su njegovi prvi susjedi njegova _djeca_, a on je njihov _roditelj_. Preostali susjedi njegove djece su njihova djeca i tako dalje.
+**Stablo (3A)** je povezan graf koji se sastoji od $n$ vrhova i $n-1$ bridova te nema cikluse. Postoji _jedinstven_ put između bilo koja dva vrha stabla. Vrhovi koji imaju samo jednog susjeda zovu se **listovi stabla** (_eng. leaf_).
+
+Kada prikazujemo stabla često biramo jedan vrh kojeg nazovemo **korijenom** (_eng. root_) od kojeg krećemo crtati stablo. Kažemo da su njegovi prvi susjedi njegova _djeca_, a on je njihov _roditelj_. Preostali susjedi njegove djece su njihova djeca i tako dalje.
 
 <img src="/img/algoritmi-nad-grafovima-1/terminologija2.png" alt="stablo" width="600"/>
 
@@ -48,22 +50,22 @@ Graf u kojem postoji put između _svaka_ dva vrha je **povezan**. Na gornjim je 
 
 ### Susjedi
 
-Za dva vrha kažemo da su **susjedni** (_eng. neighbours or adjacent_) ako između njih postoji brid. **Stupanj** (_eng. degree_) nekog vrha je broj njegovih susjeda. Nnpr. na grafu 4B vrh 2 ima susjede 0 i 3 pa je njegov stupanj 2.
+Za dva vrha kažemo da su **susjedni** (_eng. neighbours ili adjacent_) ako između njih postoji brid. **Stupanj** (_eng. degree_) nekog vrha je broj njegovih susjeda. Na grafu 4B vrh 2 ima susjede 0 i 3 pa je njegov stupanj 2.
 
-Graf je **regularan** (_eng. regular_) ako su svi vrhovi istog konstantnog stupnja $d$, a **potpun** (_eng. complete_) ako je stupanj svakog čvora $n-1$ (gdje je $n$ broj vrhova). U potpunom grafu postoji brid između svaka dva vrha.
+Graf je **regularan** (_eng. regular_) ako su svi vrhovi istog konstantnog stupnja $d$, a **potpun** (_eng. complete_) ako je stupanj svakog vrha $n-1$ (gdje je $n$ ukupan broj vrhova). U potpunom grafu postoji brid između svaka dva vrha.
 
 Vrhovi usmjerenog grafa imaju ulazni i izlazni stupanj. **Ulazni stupanj** (_eng. indegree_) vrha je broj bridova koji završavaju u tom vrhu, a **izlazni stupanj** (_eng. outdegree_) je broj bridova koji počinju u tom vrhu.
 
 ### Bojanje grafova
 
-Pri bojenju grafa (_eng. colouring_) svakom je vrhu dodijeljena boja tako da ne postoje dva susjedna vrha iste boje. Graf je $k$-obojiv ako ga možemo obojiti koristeći $k$ boja, a specijalno ako je $k=2$ kažemo da je graf **bipartitni (5)** (_eng. bipartite graph_). **Kromatski broj** grafa je najmanji $k$ za koji je graf $k$-obojiv.
+Pri bojanju grafa (_eng. colouring_) svakom je vrhu dodijeljena boja tako da ne postoje dva susjedna vrha iste boje. Graf je $k$-obojiv ako ga možemo obojiti koristeći $k$ boja, a specijalno ako je $k=2$ kažemo da je graf **bipartitni (5)** (_eng. bipartite graph_). **Kromatski broj** grafa je najmanji $k$ za koji je graf $k$-obojiv.
 
 <img src="/img/algoritmi-nad-grafovima-1/terminologija4.png" alt="bipartitni_graf" width="350"/>
 
 ## Zašto učiti grafove?
 
-Puno se problema u programiranju može prikazati pomoću grafova. Tipičan primjer takvog problema je mreža cesta i gradova. Ceste prikazujemo kao bridove, a gradove kao vrhove. Sada se možemo pitati postoji li put između neka dva grada ili, ako znamo da postoji više puteva, kolika je duljina najkraćeg puta? Koji gradovi čine povezanu cjelinu unutar koje postoji put između svih gradova? Ulice unutar gradova možemo prikazati kao usmjereni težinski graf gdje je težina duljina ulice, a smjer određuje je li dvosmjerna ili jednosmjerna.
+Puno se problema u programiranju može prikazati pomoću grafova. Tipičan primjer takvog problema je mreža cesta i gradova. Ceste prikazujemo kao bridove, a gradove kao vrhove. Sada se možemo pitati postoji li put između neka dva grada ili, ako znamo da postoji više puteva, kolika je duljina najkraćeg puta? Koji gradovi čine povezanu cjelinu unutar koje postoji put između svih gradova? Ulice unutar gradova možemo prikazati kao usmjereni težinski graf gdje je težina brida duljina ulice, a smjer određuje je li ulica dvosmjerna ili jednosmjerna.
 
 Ipak, nisu svi problemi s grafovima tako očiti. Ponekad ćemo grafom prikazivati odnose zaposlenika u nekoj tvrtki ili obiteljsko stablo. Više-manje svi problemi koji se mogu riješiti dinamičkim programiranjem mogu se gledati kao problemi s grafovima.
 
-Sve u svemu, ne želite preskočiti grafove! 😄
+U svakom slučaju, ne želite preskočiti grafove! 😄

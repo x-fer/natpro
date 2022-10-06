@@ -28,7 +28,7 @@ Sada iteriramo po bridovima. Za svaki brid između $a$ i $b$ težine $w$ provjer
 
 <img src="/img/algoritmi-nad-grafovima-1/bf2.png" alt="bf2" width="900"/>
 
-Na slici vidimo (višemanje) redoslijed prolaska kroz bridove te kako se polje `distance` mijenja kada dodamo novi brid. U ovom smo primjeru bridove birali takvim redoslijedom da nakon samo jednog prolaska kroz sve imamo dobro napisane najkraće puteve. U praksi će redoslijed bridova biti nasumičan pa ćemo morati više puta ponoviti cijeli postupak dok ne dobijemo točne udaljenosti. Zato ćemo u kodu prolazak po bridovima ponavljati $n-1$ puta (n je broj vrhova u grafu) jer svaki najkraći put može sadržavati maksimalno $n-1$ brid pa će to uvijek biti dovoljno.
+Na slici vidimo (više-manje) redoslijed prolaska kroz bridove te kako se polje `distance` mijenja kada dodamo novi brid. U ovom smo primjeru bridove birali takvim redoslijedom da nakon samo jednog prolaska kroz sve imamo dobro napisane najkraće puteve. U praksi će redoslijed bridova biti nasumičan pa ćemo morati više puta ponoviti cijeli postupak dok ne dobijemo točne udaljenosti. Zato ćemo u kodu prolazak po bridovima ponavljati $n-1$ puta (n je broj vrhova u grafu) jer svaki najkraći put može sadržavati maksimalno $n-1$ brid pa će to uvijek biti dovoljno.
 
 Ako je još nešto ostalo zbunjujuće, bacite oko na ovaj simpa gif sa [kjaer.io](https://kjaer.io/algorithms/):
 

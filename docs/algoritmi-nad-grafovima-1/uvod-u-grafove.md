@@ -64,7 +64,7 @@ Pri bojanju grafa (_eng. colouring_) svakom je vrhu dodijeljena boja tako da ne 
 
 ## Zašto učiti grafove?
 
-Puno se problema u programiranju može prikazati pomoću grafova. Tipičan primjer takvog problema je mreža cesta i gradova. Ceste prikazujemo kao bridove, a gradove kao vrhove. Sada se možemo pitati postoji li put između neka dva grada ili, ako znamo da postoji više puteva, kolika je duljina najkraćeg puta? Koji gradovi čine povezanu cjelinu unutar koje postoji put između svih gradova? Ulice unutar gradova možemo prikazati kao usmjereni težinski graf gdje je težina brida duljina ulice, a smjer određuje je li ulica dvosmjerna ili jednosmjerna.
+Puno se problema u programiranju može prikazati pomoću grafova. Tipičan primjer takvog problema je mreža cesta i gradova. Ceste prikazujemo kao bridove, a gradove kao vrhove. Sada se možemo pitati postoji li put između neka dva grada ili, ako znamo da postoji više puteva, kolika je duljina najkraćeg puta. Koji gradovi čine povezanu cjelinu unutar koje postoji put između svih gradova? Ulice unutar gradova možemo prikazati kao usmjereni težinski graf gdje je težina brida duljina ulice, a smjer određuje je li ulica dvosmjerna ili jednosmjerna.
 
 Ipak, nisu svi problemi s grafovima tako očiti. Ponekad ćemo grafom prikazivati odnose zaposlenika u nekoj tvrtki ili obiteljsko stablo. Više-manje svi problemi koji se mogu riješiti dinamičkim programiranjem mogu se gledati kao problemi s grafovima.
 

@@ -35,9 +35,9 @@ $^1$ više o time limitu pročitajte ovdje.
 Postoji više algoritama koji rade u ovoj složenosti, ali njihovi detalji nisu toliko bitni za natjecateljsko programiranje pa ćemo ih ovdje samo spomenuti. Više o njima možete pročitati
 na dostupnim linkovima.
 
-- **merge sort** - sort koji se bazira na rekurziji, dijeli početnu listu na manje dijelove i sortira svaki zasebno, a potom ih spaja prilikom povratka u rekurziji. Više pročitajte [ovdje](https://www.geeksforgeeks.org/merge-sort/ "Merge sort").
-- **heap sort** - sort koji radi nad strukturom poznatom kao 'binary heap', sličan selection sortu. Detalji [ovdje](https://www.geeksforgeeks.org/heap-sort/ "Heap sort").
-- **quick sort** - izabire referentni element (pivot), a ostale raspodjeljuje u odnosu na njega. Postoji više različitih varijanti quick sorta, a razlikuju se u načinu izbora referentnog elementa. Detalji [ovdje](https://www.geeksforgeeks.org/quick-sort/ "Quick sort").
+-   **merge sort** - sort koji se bazira na rekurziji, dijeli početnu listu na manje dijelove i sortira svaki zasebno, a potom ih spaja prilikom povratka u rekurziji. Više pročitajte [ovdje](https://www.geeksforgeeks.org/merge-sort/ "Merge sort").
+-   **heap sort** - sort koji radi nad strukturom poznatom kao 'binary heap', sličan selection sortu. Detalji [ovdje](https://www.geeksforgeeks.org/heap-sort/ "Heap sort").
+-   **quick sort** - izabire referentni element (pivot), a ostale raspodjeljuje u odnosu na njega. Postoji više različitih varijanti quick sorta, a razlikuju se u načinu izbora referentnog elementa. Detalji [ovdje](https://www.geeksforgeeks.org/quick-sort/ "Quick sort").
 
 :::tipsavjet
 Prije nego počnete pisati kod, dobro razmislite o složenosti programa kojeg ste smislili. Pokušajte uvijek tražiti rješenje koje prolazi ograničenja, a zahtijeva minimalno vrijeme pisanja.

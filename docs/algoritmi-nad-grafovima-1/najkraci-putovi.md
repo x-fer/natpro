@@ -69,7 +69,7 @@ Dijkstrin algoritam, kao i Bellman-Ford, pronalazi duljine najkraćih puteva **o
 
 Ideja algoritma je slična BFS-u jer u svakom koraku obrađujemo jedan vrh i dodajemo u red njegove susjede koji još nisu obrađeni. Razlika je u tome što će ovoga puta vrh koji idući obrađujemo uvijek biti onaj koji trenutno ima najmanju udaljenost od početnog. Na taj ćemo način riješiti problem s početka lekcije.
 
-Ako si malo zaboravio BFS, ovo je odličan trenutak da se podsjetiš prije nego nastaviš dalje. 😄
+Ako si malo zaboravio/la BFS, ovo je odličan trenutak da se podsjetiš prije nego nastaviš dalje. 😄
 
 ### Kako radi?
 
@@ -164,5 +164,5 @@ Vremenska složenost ovog algoritma je $O(n^3)$ (ugniježđene petlje), a prosto
 |                        |           Bellman-Ford           |                   Dijkstra                   |       Floyd-Warshall       |
 | :--------------------: | :------------------------------: | :------------------------------------------: | :------------------------: |
 | duljina najkraćeg puta | od početnog vrha do svih ostalih |       od početnog vrha do svih ostalih       | između svih parova vrhova  |
-|       nedostatci       | ne radi ako ima negativan ciklus | ne radi ako postoje bridovi negativne težine | prostorna složenost O(n^2) |
+|       nedostatci       | ne radi ako ima negativan ciklus | ne radi ako postoje bridovi negativne težine | prostorna složenost $O(n^2)$ |
 |  vremenska složenost   |             $O(nm)$              |                $O(n+m\log m)$                |          $O(n^3)$          |

@@ -59,12 +59,12 @@ Ponekad želimo raditi pretraživanje na intervalu realnih brojeva. Ako koristim
 ```cpp
 double epsilon = 1e-7;
 ...
-int ternary_search(int l, int r, int x) {
+int ternary_search(double l, double r, double x) {
     if (r-l > epsilon) {
-        int mid1 = l + (r-l)/3;
-        int mid2 = r - (r-l)/3;
+        double mid1 = l + (r-l)/3;
+        double mid2 = r - (r-l)/3;
 
-        if (abs(array[mid1] - x) < epsilon)
+        if (abs(f(mid1) - f(x)) < epsilon)
             return mid1;
         ...
     }

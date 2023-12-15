@@ -99,6 +99,8 @@ while(!q.empty()) {
     q.pop();
 
     if(processed[a]) continue;
+    processed[a] = true;
+
     for(auto u : adjList[a]) {
         int b = u.first, w = u.second;
         if(distance[a]+w < distance[b]) {
@@ -128,9 +130,9 @@ Pogledajmo kako radi algoritam na sljedećem grafu:
 
 Prvo napravimo matricu udaljenosti na sljedeći način:
 
--   `distance[i][j]=0` ako je i=j
--   `distance[i][j]=w` ako postoji brid između vrhova i i j
--   `distance[i][j]=INF` ako ne postoji brid između vrhova i i j
+- `distance[i][j]=0` ako je i=j
+- `distance[i][j]=w` ako postoji brid između vrhova i i j
+- `distance[i][j]=INF` ako ne postoji brid između vrhova i i j
 
 <img src="/img/algoritmi-nad-grafovima-1/fw2.png" alt="floyd_warshall_table" width="300"/>
 
@@ -161,8 +163,8 @@ Vremenska složenost ovog algoritma je $O(n^3)$ (ugniježđene petlje), a prosto
 
 ## Usporedba algoritama
 
-|                        |           Bellman-Ford           |                   Dijkstra                   |       Floyd-Warshall       |
-| :--------------------: | :------------------------------: | :------------------------------------------: | :------------------------: |
-| duljina najkraćeg puta | od početnog vrha do svih ostalih |       od početnog vrha do svih ostalih       | između svih parova vrhova  |
+|                        |           Bellman-Ford           |                   Dijkstra                   |        Floyd-Warshall        |
+| :--------------------: | :------------------------------: | :------------------------------------------: | :--------------------------: |
+| duljina najkraćeg puta | od početnog vrha do svih ostalih |       od početnog vrha do svih ostalih       |  između svih parova vrhova   |
 |       nedostatci       | ne radi ako ima negativan ciklus | ne radi ako postoje bridovi negativne težine | prostorna složenost $O(n^2)$ |
-|  vremenska složenost   |             $O(nm)$              |                $O(n+m\log m)$                |          $O(n^3)$          |
+|  vremenska složenost   |             $O(nm)$              |                $O(n+m\log m)$                |           $O(n^3)$           |

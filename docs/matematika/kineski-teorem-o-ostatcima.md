@@ -52,7 +52,6 @@ int main(){
     for(int i = 0; i < n; i++) cin >> jed[i].first >> jed[i].second;
     cur = jed[0];
     for(int i = 1; i < n; i++){
-        for(int i = 1; i < n; i++){
     	bool flag = true;
         for(int k = 0; k < jed[i].second; k++){
             if((k * cur.second + cur.first) % jed[i].second == jed[i].first){

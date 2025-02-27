@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[8502],{7061:e=>{e.exports=JSON.parse('{"label":"natpro","permalink":"/blog/tags/natpro","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

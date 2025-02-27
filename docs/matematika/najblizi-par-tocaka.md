@@ -32,7 +32,7 @@ U C++-u je implementacija olakšana postojanjem tipa podatka _set_ implementiran
 
 ### Implementacija i analiza složenosti
 
-Sljedeći isječak koda koristi strukturu tocka uvedenu u ranijem poglavlju. Budući da koristimo set _struct_-ova, potrebno je definirati operator "<" za njihovo uspoređivanje kako bi se mogle držati sortiranima (po y-koordinati) u setu.
+Sljedeći isječak koda koristi strukturu tocka uvedenu u ranijem poglavlju. Budući da koristimo set _struct_-ova, potrebno je definirati operator "\<" za njihovo uspoređivanje kako bi se mogle držati sortiranima (po y-koordinati) u setu.
 
 ```cpp
 bool operator<(const tocka& t1, const tocka& t2){

@@ -68,7 +68,7 @@ Precrtani tekst radite koristeći dvije tilde. ~~Evo ovako.~~
 
 Ili ostaviti prve zagrade praznima i koristiti [sami tekst veze].
 
-URL-ovi i URL-ovi u šiljastim zagradama će se automatski pretvoriti u linkove. http://www.example.com/ ili <http://www.example.com/> a nekad i example.com (ne na GitHubu, na primjer).
+URL-ovi i URL-ovi u šiljastim zagradama će se automatski pretvoriti u linkove. http://www.example.com/ ili \<http://www.example.com/> a nekad i example.com (ne na GitHubu, na primjer).
 
 Ovaj tekst služi samo da pokažemo da nakon njega mogu slijediti veze referenci.
 

@@ -89,7 +89,7 @@ int main(){
         if(it == najmanji.end()) najmanji.push_back(x);
         else *it = x;
     }
-    cout << najmnji.size();
+    cout << najmanji.size() - 1;
     return 0;
 }
 ```
